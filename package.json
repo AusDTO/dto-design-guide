@@ -1,0 +1,22 @@
+{
+  "name": "dto-design-guide",
+  "version": "0.0.1",
+  "description": "How to use the UI-Kit CSS framework to build accessible and usable sites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AusDTO/dto-design-guide.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AusDTO/dto-design-guide/issues"
+  },
+  "homepage": "https://github.com/AusDTO/dto-design-guide#readme",
+  "devDependencies": {
+    "gov-au-ui-kit": "git+https://github.com/AusDTO/gov-au-ui-kit.git#1.8.0"
+  }
+}

@@ -11,5 +11,13 @@ url: "" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 theme: minima
-source: src
-destination: dist
+
+exclude: [node_modules]
+
+gems:
+  - jekyll-assets
+
+assets:
+  sources:
+    - _assets/scss
+    - node_modules
