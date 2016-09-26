@@ -5,5 +5,8 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### Jekyll Assets ###
+.asset-cache
+
 ### npm ###
 node_modules
