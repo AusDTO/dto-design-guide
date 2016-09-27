@@ -10,3 +10,6 @@ _site/
 
 ### npm ###
 node_modules
+
+### Generated data ###
+_data/*.json
