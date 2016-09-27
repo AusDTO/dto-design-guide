@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<h1>{{ page.header }}</h1>
+<p>
+  {{ page.description }}
+</p>
+
+{% unless page.markup == "" %}
+
+<h2>Markup</h2>
+
+{% highlight html %}
+{% endhighlight %}
+
+<h2>Example</h2>
+
+{% endunless %}
+
+{% if page.tags %}
+<dl>
+  <dt>Tags:</dt>
+  {% for tag in page.tags %}
+  <dd><a href="/tags/{{ tag }}">{{ tag }}</a></dd>
+  {% endfor %}
+</dl>
+{% endif %}
