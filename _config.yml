@@ -13,10 +13,10 @@ gems:
 assets:
   sources:
     - _assets/scss
-    - node_modules
+    - _assets/vendor
 
 page_gen:
-  - data: 'styleguide-sections'
+  - data: 'data-sections'
     template: 'section'
     name: 'header'
     dir: 'sections'
