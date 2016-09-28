@@ -9,12 +9,15 @@ layout: default
 
 {% unless page.markup == "" %}
 
+<h2>Example</h2>
+
+{% include {{ page.markup }} %}
+
 <h2>Markup</h2>
 
 {% highlight html %}
+{% include {{ page.markup }} %}
 {% endhighlight %}
-
-<h2>Example</h2>
 
 {% endunless %}
 
