@@ -11,6 +11,15 @@
   {% css main %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: full_base_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: full_base_url }}">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Open+Sans:400italic,700,400:latin,latin-ext']
+      }
+    });
+  </script>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
