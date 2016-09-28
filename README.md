@@ -22,6 +22,8 @@ cd dto-design-guide
 bundle install && bundle exec rake init
 ```
 
+**Note:** If you see the error `bundle: command not found`, run `gem install bundle` then try again.
+
 Fire up Jekyll:
 
 ```
