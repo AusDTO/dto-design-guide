@@ -1,0 +1,23 @@
+<nav class="local-nav" aria-label="main navigation">
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    {% assign pages = site.pages | where: "layout", "page" %}
+    {% for page in pages %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+    <li>
+      <a href="/styleguide.html">Styleguide</a>
+      <ul>
+      {% for section in site.data.data-sections %}
+        <li>
+          <a href="/sections/{{ section.header | slugify }}.html">{{ section.referenceNumber }}: {{ section.header }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>
