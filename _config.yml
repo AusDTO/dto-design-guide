@@ -16,7 +16,7 @@ assets:
     - _assets/vendor
 
 page_gen:
-  - data: 'data-sections'
-    template: 'section'
-    name: 'header'
-    dir: 'sections'
+  - data: "data-sections"
+    template: "section"
+    name: "header"
+    dir: "sections"
