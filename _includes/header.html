@@ -6,9 +6,7 @@
       <div class="govau--logo">
         <a href="/" class="logo">{{ site.title }}</a> <span class="badge--default">beta</span>
       </div>
-      <div class="feedback">
-        <a href="{{ site.github_url }}/issues/new" class="button--feedback" role="button">Give feedback</a>
-      </div>
+      {% include feedback.html %}
     </div>
   </section>
   {% if page.url == '/' %}
