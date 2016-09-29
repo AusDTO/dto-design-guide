@@ -1,7 +1,8 @@
 # Site settings
 title: DTO Design Guide
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+description: A living style guide of the UI-Kit CSS framework.
+github_url: https://github.com/AusDTO/gov-au-ui-kit
+google_analytics: UA-72255206-3
 
 markdown: kramdown
 

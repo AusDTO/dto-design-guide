@@ -7,14 +7,14 @@
         <a href="/" class="logo">{{ site.title }}</a> <span class="badge--default">beta</span>
       </div>
       <div class="feedback">
-        <a href="https://github.com/AusDTO/gov-au-ui-kit/issues/new" class="button--feedback" role="button">Give feedback</a>
+        <a href="{{ site.github_url }}/issues/new" class="button--feedback" role="button">Give feedback</a>
       </div>
     </div>
   </section>
   {% if page.url == '/' %}
   <section class="hero">
     <div class="wrapper">
-      <p class="tagline">A living style guide of the UI-Kit <abbr title="Sassy CSS">SCSS</abbr> framework.</p>
+      <p class="tagline">{{ site.description }}</p>
       <p>Documents UI-Kit release: v{% uikit_version %}</p>
       <p>Last updated: <time datetime="{{ site.time }}">{{ site.time | date: "%e %B %Y" }}</time></p>
     </div>
