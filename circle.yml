@@ -1,3 +1,3 @@
 test:
   override:
-    - gem install bundle && bundle install && bundle exec rake init && bundle exec jekyll build
+    - gem install bundler && bundle install && bundle exec rake init && bundle exec jekyll build
