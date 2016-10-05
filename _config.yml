@@ -7,9 +7,13 @@ uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/
 
 # Build settings
 markdown: kramdown
-exclude: [node_modules, _data, vendor]
+exclude: [node_modules, _data, vendor, bin, .DS_Store, Gemfile, Gemfile.lock, Rakefile, circle.yml]
+
+# Gem dependencies
 gems:
   - jekyll-assets
+
+# Asset sources
 assets:
   sources:
     - _assets/scss
