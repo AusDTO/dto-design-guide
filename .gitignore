@@ -13,3 +13,9 @@ node_modules
 
 ### Generated data ###
 _data/*.json
+
+### Bundle ###
+.bundle
+
+### Mac folder attrs. ###
+.DS_Store
