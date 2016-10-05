@@ -6,6 +6,5 @@ set -e
 curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&source=github'
 sudo dpkg -i cf-cli_amd64.deb
 cf -v
-cf login -a https://api.system.staging.digital.gov.au -o dto -s dtomisc -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
-cf target -o dto -s dtomisc
+cf login -a https://api.system.staging.digital.gov.au -o gov-ui -s gov-ui-kit -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
 cf push dto-design-guide$1 -b staticfile_buildpack -p ./_site -i 1
