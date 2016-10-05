@@ -1,3 +1,18 @@
+---
+general:
+  artifacts:
+    - "_site"
+
 test:
   override:
-    - gem install bundler && bundle install && bundle exec rake init && bundle exec jekyll build
+    - ./bin/cibuild.sh
+
+deployment:
+  development:
+    branch: develop
+    commands:
+      - ./bin/cideploy.sh -develop
+  prod:
+    branch: master
+    commands:
+      - ./bin/cideploy.sh

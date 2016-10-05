@@ -1,4 +1,4 @@
-namespace :db do
+namespace :uikit do
 
   desc "Install UI Kit and its dependencies"
   task :install do
@@ -11,7 +11,7 @@ namespace :db do
   end
 
   desc "Export styleguide data from UI Kit with KSS"
-  task :seed do
+  task :json_comments do
     # Export JSON from UI Kit & copy to _data directory
     @install_dir = `printf $(git submodule | awk '{ printf $2 }')`
     if @install_dir == ""
@@ -27,4 +27,4 @@ namespace :db do
 
 end
 
-task :init => ['db:install', 'db:seed']
+task :init => ['uikit:install', 'uikit:json_comments']
