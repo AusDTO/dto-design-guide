@@ -2,14 +2,18 @@
 title: DTO Design Guide
 description: A living style guide of the UI-Kit CSS framework.
 github_url: https://github.com/AusDTO/gov-au-ui-kit
-google_analytics: UA-72255206-3
+#google_analytics: UA-72255206-3
 uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/
 
 # Build settings
 markdown: kramdown
-exclude: [node_modules, _data, vendor]
+exclude: [node_modules, _data, vendor, bin, .DS_Store, Gemfile, Gemfile.lock, Rakefile, circle.yml]
+
+# Gem dependencies
 gems:
   - jekyll-assets
+
+# Asset sources
 assets:
   sources:
     - _assets/scss
