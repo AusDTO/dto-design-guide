@@ -2,4 +2,4 @@
 layout: default
 ---
 
-# Home
+I’m a lonely, empty page. :(

@@ -9,13 +9,21 @@
       {% include feedback.html %}
     </div>
   </section>
+
   {% if page.url == '/' %}
   <section class="hero">
     <div class="wrapper">
+      <h1>{{ site.title }}</h1>
       <p class="tagline">{{ site.description }}</p>
+
       <p>Documents UI-Kit release: v{% uikit_version %}</p>
       <p>Last updated: <time datetime="{{ site.time }}">{{ site.time | date: "%e %B %Y" }}</time></p>
+
+      <img src="https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield" alt="CircleCI build status">
+      <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT license">
+      <img src="https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000" alt="Current Release">
     </div>
   </section>
   {% endif %}
+
 </header>
