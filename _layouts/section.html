@@ -2,30 +2,74 @@
 layout: default
 ---
 
-<h1>{{ page.header }}</h1>
-<p>
+{% for section in site.data.data-sections %}
+  {% unless section.referenceNumber contains '.' %}
+    {% capture section_name %}{{ section.header }}{% endcapture %}
+  {% endunless %}
+
+  {% if section_name == page.header %}
+    {% assign section_title = page.header %}
+  {% endif %}
+{% endfor %}
+
+<header>
+  <h1>{{ section_title }}</h1>
+
+  <nav class="index-links">
+    <h2>In this section</h2>
+    <ul>
+    {% for section in site.data.data-sections %}
+      {% if section_title == section.header %}
+        {% for child in section.children %}
+
+      <li><a href="/sections/{{ section.header | slugify }}.html#{{ child.header | slugify }}">{{ child.header }}</a></li>
+
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </nav>
+
   {{ page.description }}
-</p>
 
-{% unless page.markup == "" %}
+</header>
 
-<h2>Example</h2>
+{% for section in site.data.data-sections %}
+  {% if section_title == section.header %}
+    {% for child in section.children %}
 
-{% include {{ page.markup }} %}
+<h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
 
-<h2>Markup</h2>
+{{ child.description }}
+
+{% unless child.markup == "" %}
+
+<h3>Rendered example</h3>
+
+{% include {{ child.markup }} %}
+
+<h3>Markup</h3>
 
 {% highlight html %}
-{% include {{ page.markup }} %}
+{% include {{ child.markup }} %}
 {% endhighlight %}
 
-{% endunless %}
+      {% endunless %}
 
-{% if page.tags %}
+      {% if child.tags %}
 <dl>
   <dt>Tags:</dt>
-  {% for tag in page.tags %}
-  <dd><a href="/tags/{{ tag }}">{{ tag }}</a></dd>
+  {% for tags in child.tags %}
+    {% assign tag_list = tags | split: ", " | sort %}
+    {% for tag in tag_list %}
+
+  <dd>{{ tag }}</dd>
+    {% endfor %}
   {% endfor %}
 </dl>
-{% endif %}
+      {% endif %}
+
+
+    {% endfor %}
+  {% endif %}
+{% endfor %}
