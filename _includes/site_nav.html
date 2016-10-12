@@ -13,10 +13,12 @@
       <a href="/styleguide.html">Styleguide</a>
       <ul>
       {% for section in site.data.data-sections %}
+      {% unless section.referenceNumber contains '.' %}
         <li>
-          <a href="/sections/{{ section.header | slugify }}.html">{{ section.referenceNumber }}: {{ section.header }}</a>
+          <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
         </li>
-        {% endfor %}
+      {% endunless %}
+      {% endfor %}
       </ul>
     </li>
   </ul>
