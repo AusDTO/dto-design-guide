@@ -12,6 +12,7 @@ exclude: [node_modules, _data, vendor, bin, .DS_Store, Gemfile, Gemfile.lock, Ra
 # Gem dependencies
 gems:
   - jekyll-assets
+  - rouge
 
 # Asset sources
 assets:
@@ -19,7 +20,9 @@ assets:
     - _assets/scss
     - _assets/vendor
 
-# Plugin settings
+highlighter: rouge
+
+# Custom plugin settings
 page_gen:
   - data: "data-sections"
     template: "section"
