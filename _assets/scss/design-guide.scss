@@ -1,0 +1,64 @@
+%scrolling-example {
+  width: 100%;
+}
+
+.content-main {
+  .guide-example {
+    border: solid 7px $non-white;
+    border-radius: $base-border-radius;
+    margin: $base-spacing 0;
+    padding-top: 0;
+
+    h3 {
+      @extend .content-full-width;
+
+      margin: 0;
+      background-color: $non-white;
+      padding: $small-spacing $medium-spacing;
+
+      span {
+        display: block;
+        margin-bottom: $tiny-spacing;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: $smaller-font-size;
+        color: $grey;
+      }
+    }
+
+    .guide-example--rendered {
+      margin: ($base-spacing * 1.5) 0;
+      padding: 0 ($medium-spacing + $small-spacing);
+    }
+
+    figure {
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+
+      pre {
+        @extend %scrolling-example;
+
+        margin: 0;
+        padding-top: $medium-spacing;
+        padding-left: ($medium-spacing + $small-spacing);
+        padding-right: $small-spacing;
+        font-size: rem(16);
+        overflow: auto;
+        white-space: pre;
+      }
+    }
+
+    cite {
+      display: block;
+      padding: $medium-spacing ($medium-spacing + $small-spacing);
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border-top: 1px solid lighten($navy, 7%);
+      background-color: $navy;
+      font-size: rem(15);
+      color: $non-white;
+
+      @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
+    }
+  }
+}
