@@ -13,6 +13,7 @@ node_modules
 
 ### Generated data ###
 _data/*.json
+_assets/scss/.sass-lint.yml
 
 ### Bundle ###
 .bundle

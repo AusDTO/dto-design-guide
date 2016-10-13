@@ -19,6 +19,7 @@ namespace :uikit do
     else
       @gulp = "#{@install_dir}/node_modules/gulp/bin/gulp.js"
       sh "#{@gulp} styleguide.data --cwd #{@install_dir} &&
+       cp #{@install_dir}/.sass-lint.yml _assets/scss/ &&
        cp #{@install_dir}/data-sections.json _data/ &&
        cp #{@install_dir}/assets/sass/components/templates/* _includes/templates"
       puts "→ Data & templates populated"
