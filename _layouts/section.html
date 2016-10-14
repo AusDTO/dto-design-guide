@@ -45,13 +45,17 @@ layout: default
       {% unless child.markup == "" %}
 
 <div class="guide-example">
-  <h3><span>Rendered example:</span> {{ child.header }}</h3>
+  <h3 class="guide-example--heading">
+    <span>Rendered example:</span> {{ child.header }}
+  </h3>
 
     <div class="guide-example--rendered">
   {% include {{ child.markup }} %}
     </div>
 
-  <h3><span>Code example:</span> {{ child.header }}</h3>
+  <h3 class="guide-example--heading">
+    <span><abbr>HTML</abbr>:</span> {{ child.header }}
+  </h3>
 
   <div class="guide-example--code">
     {% highlight html %}
@@ -59,8 +63,8 @@ layout: default
   {% endhighlight %}
   </div>
 
-  <cite>
-    Source on GitHub:
+  <cite class="guide-example--cite">
+    Stylesheet source on GitHub:
     <a href="
       https://github.com/AusDTO/gov-au-ui-kit/tree/master/{{ child.sourceFile.path }}#L{{ child.sourceFile.line}}"
       rel="external"><code>{{ child.sourceFile.name }}</code></a>, line {{ child.sourceFile.line }}

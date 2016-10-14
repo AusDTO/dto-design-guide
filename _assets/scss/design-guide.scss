@@ -14,7 +14,7 @@ table {
   margin: $base-spacing 0;
   padding-top: 0;
 
-  h3 {
+  .guide-example--heading {
     @extend .content-full-width;
 
     margin: 0;
@@ -53,7 +53,7 @@ table {
     }
   }
 
-  cite {
+  .guide-example--cite {
     display: block;
     padding: $medium-spacing ($medium-spacing + $small-spacing);
     border-bottom-left-radius: $base-border-radius;
@@ -67,7 +67,7 @@ table {
   }
 }
 
-// Custom styling for the Typography section Typeface eg blocks
+// Custom styling for the Typography section Typeface eg blocks.
 
 .guide-example--type {
   @extend %scrolling-example;
