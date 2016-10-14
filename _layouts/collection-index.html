@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<header>
+  <h1>{{ page.title }}</h1>
+</header>
+
+{{ content }}
+
+<ul>
+{% for collection in site.collections %}
+  {% if collection.label == page.collection %}
+
+  {% for doc in collection.docs %}
+  {% unless doc.layout == "collection-index" %}
+  <li>
+    <a href="{{ baseurl }}/{{ doc.url }}">{{ doc.title }}</a>
+  </li>
+  {% endunless %}
+  {% endfor %}
+  {% break %}
+  {% endif %}
+{% endfor %}
+</ul>
