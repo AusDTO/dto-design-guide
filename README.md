@@ -4,10 +4,12 @@ How to use the UI-Kit CSS framework to build accessible and usable sites.
 
 ## Development
 
-Platform & dependencies:
+Development dependencies:
+
 * Ruby (= 2.3.1)
 * Jekyll (= 3.2.1)
 * Jekyll Assets (= 2.2.8)
+* Rouge (~> 1.7)
 
 Clone the repo:
 
@@ -15,7 +17,7 @@ Clone the repo:
 git clone https://github.com/AusDTO/dto-design-guide.git
 ```
 
-Install dependencies and setup project:
+Install dependencies and set up project:
 
 ```
 cd dto-design-guide
