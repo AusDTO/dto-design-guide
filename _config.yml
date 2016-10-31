@@ -28,15 +28,3 @@ page_gen:
     template: "section"
     name: "header"
     dir: "sections"
-
-collections:
-  foundations:
-    output: true
-    title: "Foundations"
-    abstract: "Foundations are important to avoid wobbly scaffolding."
-  components:
-    title: "Components"
-    output: true
-  patterns:
-    title: "Patterns"
-    output: true
