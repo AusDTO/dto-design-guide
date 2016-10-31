@@ -6,6 +6,7 @@ How to use the UI-Kit CSS framework to build accessible and usable sites.
 
 ## Table of contents
 1. [Development](#development)
+1. [Contributing](#contributing)
 1. [Copyright & license](#copyright--license)
 
 ## Development
@@ -39,6 +40,10 @@ bundle exec jekyll serve
 ```
 
 Open the site at [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+
+## Contributing
+
+Open an issue first to discuss potential changes/additions. We encourage you to read our [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all contributors follow this guide we can maintain an inclusive and friendly community.
 
 ## Copyright & license
 
