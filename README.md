@@ -32,6 +32,8 @@ Fire up Jekyll:
 bundle exec jekyll serve
 ```
 
-
-
 Open the site at [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+
+## Copyright & license
+
+Copyright Digital Transformation Agency. Licensed under the [MIT license](https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md).
