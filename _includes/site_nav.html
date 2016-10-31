@@ -11,33 +11,25 @@
     </li>
     {% endfor %}
 
-    <li>
-      <a href="/styleguide.html">Styleguide</a>
+    {% for collection in site.collections %}
+    {% capture label %}{{ collection.label }}{% endcapture %}
 
-      <ul class="collections">
-      {% for collection in site.collections %}
-      {% capture label %}{{ collection.label }}{% endcapture %}
+      {% if label == "posts" %}
+        {% continue %}
+      {% endif %}
 
-        {% if label == "posts" %}
-          {% continue %}
-        {% endif %}
+      <li>
+        <a href="/{{ label }}">{{ label | capitalize }}</a>
+      </li>
+    {% endfor %}
 
-        <li>
-          <a href="/{{ label }}">{{ label | capitalize }}</a>
-        </li>
-      {% endfor %}
-      </ul>
+    {% for section in site.data.data-sections %}
+      {% unless section.referenceNumber contains '.' %}
+      <li>
+        <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
+      </li>
+      {% endunless %}
+    {% endfor %}
 
-      <ul>
-      {% for section in site.data.data-sections %}
-        {% unless section.referenceNumber contains '.' %}
-        <li>
-          <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
-        </li>
-        {% endunless %}
-      {% endfor %}
-      </ul>
-      
-    </li>
   </ul>
 </nav>
