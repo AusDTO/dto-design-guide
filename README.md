@@ -2,6 +2,12 @@
 
 How to use the UI-Kit CSS framework to build accessible and usable sites.
 
+---
+
+## Table of contents
+1. [Development](#development)
+1. [Copyright & license](#copyright--license)
+
 ## Development
 
 Development dependencies:
