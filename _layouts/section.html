@@ -2,30 +2,91 @@
 layout: default
 ---
 
-<h1>{{ page.header }}</h1>
-<p>
+{% for section in site.data.data-sections %}
+  {% unless section.referenceNumber contains '.' %}
+    {% capture section_name %}{{ section.header }}{% endcapture %}
+  {% endunless %}
+
+  {% if section_name == page.header %}
+    {% assign section_title = page.header %}
+  {% endif %}
+{% endfor %}
+
+<header>
+  <h1>{{ section_title }}</h1>
+
+  <nav class="index-links">
+    <h2>In this section</h2>
+    <ul>
+    {% for section in site.data.data-sections %}
+      {% if section_title == section.header %}
+        {% for child in section.children %}
+
+      <li><a href="/sections/{{ section.header | slugify }}.html#{{ child.header | slugify }}">{{ child.header }}</a></li>
+
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </nav>
+
   {{ page.description }}
-</p>
 
-{% unless page.markup == "" %}
+</header>
 
-<h2>Example</h2>
+{% for section in site.data.data-sections %}
+  {% if section_title == section.header %}
+    {% for child in section.children %}
 
-{% include {{ page.markup }} %}
+<h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
 
-<h2>Markup</h2>
+{{ child.description }}
 
-{% highlight html %}
-{% include {{ page.markup }} %}
-{% endhighlight %}
+      {% unless child.markup == "" %}
 
-{% endunless %}
+<div class="guide-example">
+  <h3 class="guide-example--heading">
+    <span>Rendered example:</span> {{ child.header }}
+  </h3>
 
-{% if page.tags %}
+    <div class="guide-example--rendered">
+  {% include {{ child.markup }} %}
+    </div>
+
+  <h3 class="guide-example--heading">
+    <span><abbr>HTML</abbr>:</span> {{ child.header }}
+  </h3>
+
+  <div class="guide-example--code">
+    {% highlight html %}
+{% include {{ child.markup }} %}
+  {% endhighlight %}
+  </div>
+
+  <cite class="guide-example--cite">
+    Stylesheet source on GitHub:
+    <a href="
+      https://github.com/AusDTO/gov-au-ui-kit/tree/master/{{ child.sourceFile.path }}#L{{ child.sourceFile.line}}"
+      rel="external"><code>{{ child.sourceFile.name }}</code></a>, line {{ child.sourceFile.line }}
+  </cite>
+</div>
+
+      {% endunless %}
+
+      {% if child.tags %}
 <dl>
   <dt>Tags:</dt>
-  {% for tag in page.tags %}
-  <dd><a href="/tags/{{ tag }}">{{ tag }}</a></dd>
+  {% for tags in child.tags %}
+    {% assign tag_list = tags | split: ", " | sort %}
+    {% for tag in tag_list %}
+
+  <dd>{{ tag }}</dd>
+    {% endfor %}
   {% endfor %}
 </dl>
-{% endif %}
+      {% endif %}
+
+
+    {% endfor %}
+  {% endif %}
+{% endfor %}
