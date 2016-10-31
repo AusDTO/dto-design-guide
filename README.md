@@ -41,13 +41,23 @@ bundle exec jekyll serve
 
 Open the site at [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
-### Updating content from UI Kit
+### Updating content from UI-Kit
 
-This guide includes the [UI Kit](https://github.com/AusDTO/gov-au-ui-kit) as a [git submodule](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules). There are two Rake tasks available for interacting with UI Kit: `uikit:install` sets up the submodule and installs UI Kit's npm dependencies and `uikit:json_comments` which pulls out the KSS comments from UI Kit's SASS files and adds it to the `_data` directory for Jekyll to use.
+This guide includes the [UI-Kit](https://github.com/AusDTO/gov-au-ui-kit) as a [git submodule](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules) to `_assets/vendor/dto-ui-kit`.
+
+```
+├── _assets
+│   └── vendor
+│       └── dto-ui-kit
+```
+
+There are two Rake tasks available for interacting with UI-Kit: `uikit:install` sets up the submodule and installs UI-Kit's npm dependencies. `uikit:json_comments` pulls out the KSS comments from UI-Kit's SASS files and adds it to the `_data` directory for Jekyll to use. It also copies UI-Kit's HTML template files into the `_includes` directory.
 
 ```
 ├── _data
 │   └── data-sections.json
+├── _includes
+│   └── templates
 ```
 
 ## Contributing
