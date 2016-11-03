@@ -1,6 +1,9 @@
 ---
 layout: collections/item
 title: Foundations&#58; Typography
+section: Typography
 ---
 
-## An overview of Typography
+## Overview
+
+Lorem ispum dolor sit amet
