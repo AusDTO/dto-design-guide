@@ -21,16 +21,8 @@ layout: default
   {{ section.description }}
 
   {% if child.tags %}
-  <dl>
-    <dt>Tags:</dt>
-    {% for tags in child.tags %}
-    {% assign tag_list = tags | split: ", " | sort %}
-    {% for tag in tag_list %}
-
-    <dd>{{ tag }}</dd>
-    {% endfor %}
-    {% endfor %}
-  </dl>
+  {% assign tags_array = child.tags | split: ", " | sort %}
+  {% include tags_list.html tags=tags_array %}
   {% endif %}
 
 </header>
