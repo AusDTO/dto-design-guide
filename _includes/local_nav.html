@@ -12,8 +12,7 @@
     {% endfor %}
 
     {% for collection in site.collections %}
-    {% capture label %}{{ collection.label }}{% endcapture %}
-
+      {% capture label %}{{ collection.label }}{% endcapture %}
       {% if label == "posts" %}
         {% continue %}
       {% endif %}
@@ -23,13 +22,19 @@
       </li>
     {% endfor %}
 
-    {% for section in site.data.data-sections %}
-      {% unless section.referenceNumber contains '.' %}
-      <li>
-        <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
-      </li>
-      {% endunless %}
-    {% endfor %}
+    <li><span class="placeholder-link">Components</span>
+      <ul>
+      {% for section in site.data.data-sections %}
+        {% unless section.referenceNumber contains '.' %}
+          {% unless section.collection %}
+          <li>
+            <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
+          </li>
+          {% endunless %}
+        {% endunless %}
+      {% endfor %}
+      </ul>
+    </li>
 
   </ul>
 </nav>

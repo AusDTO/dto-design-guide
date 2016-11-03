@@ -44,48 +44,18 @@ layout: default
 
       {% unless child.markup == "" %}
 
-<div class="guide-example">
-  <h3 class="guide-example--heading">
-    <span>Rendered example:</span> {{ child.header }}
-  </h3>
-
-    <div class="guide-example--rendered">
-  {% include {{ child.markup }} %}
-    </div>
-
-  <h3 class="guide-example--heading">
-    <span><abbr>HTML</abbr>:</span> {{ child.header }}
-  </h3>
-
-  <div class="guide-example--code">
-    {% highlight html %}
-{% include {{ child.markup }} %}
-  {% endhighlight %}
-  </div>
-
-  <cite class="guide-example--cite">
-    Stylesheet source on GitHub:
-    <a href="
-      https://github.com/AusDTO/gov-au-ui-kit/tree/master/{{ child.sourceFile.path }}#L{{ child.sourceFile.line}}"
-      rel="external"><code>{{ child.sourceFile.name }}</code></a>, line {{ child.sourceFile.line }}
-  </cite>
-</div>
+      {% include guide_example.html
+        title=child.header
+        markup=child.markup
+        sourceFile=child.sourceFile.path
+        sourceLine=child.sourceFile.line %}
 
       {% endunless %}
 
       {% if child.tags %}
-<dl>
-  <dt>Tags:</dt>
-  {% for tags in child.tags %}
-    {% assign tag_list = tags | split: ", " | sort %}
-    {% for tag in tag_list %}
-
-  <dd>{{ tag }}</dd>
-    {% endfor %}
-  {% endfor %}
-</dl>
+      {% assign tags_array = child.tags | split: ", " | sort %}
+      {% include tags_list.html tags=tags_array %}
       {% endif %}
-
 
     {% endfor %}
   {% endif %}
