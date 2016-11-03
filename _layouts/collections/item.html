@@ -38,8 +38,7 @@ layout: default
 {{ content }}
 
 {% for child in section.first.children %}
-  {% assign section_header = child.header | slugify %}
-  {% assign section_filename = section_header | append: ".md" %}
+  {% assign section_filename = child.header | slugify | append: ".md" %}
   {% capture section_path %}_{{ page.collection }}/{{ page.section | slugify }}/{% endcapture %}
   {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
 
