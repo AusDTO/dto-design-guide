@@ -25,9 +25,11 @@
 
     {% for section in site.data.data-sections %}
       {% unless section.referenceNumber contains '.' %}
-      <li>
-        <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
-      </li>
+        {% unless section.collection %}
+        <li>
+          <a href="/sections/{{ section.header | slugify }}.html">{{ section.header }}</a>
+        </li>
+        {% endunless %}
       {% endunless %}
     {% endfor %}
 
