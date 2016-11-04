@@ -1,9 +1,7 @@
 ---
 layout: collections/item
-title: Foundations&#58; Typography
+title: Typography - DTO Design Guide
 section: Typography
 ---
 
-## Overview
-
-Lorem ispum dolor sit amet
+**Principle (this needs to move above the `In this section`):** Use clear and accessible typography as the primary way to communicate with users.
