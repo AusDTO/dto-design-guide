@@ -16,3 +16,8 @@ deployment:
     branch: master
     commands:
       - ./bin/cideploy.sh
+
+# get relevant circle artifacts posted as links to github pull requests
+notify:
+  webhooks:
+    - url: https://qa-ice.apps.staging.digital.gov.au
