@@ -1,17 +1,12 @@
-### Guidance
-The types sizes are based on a perfect fourth modular scale.
-
-Use `.gov-speak` styles for complex content, for example annual reports.
-
-We are currently testing all styles for legibility and readability.
-
-#### Breakpoints
+### Breakpoints
 
 - Mobile (extra small devices): 8 columns, 420px maximum.
 - Tablet (small devices): 12 columns, 768px maximum.
 - Desktop (medium devices): 16 columns, 1200px maximum.
 
-#### Font size defaults
+Use `.gov-speak` styles for complex content, for example annual reports.
+
+### Font size defaults
 
 <table class="content-table">
   <caption>Global styles</caption>
