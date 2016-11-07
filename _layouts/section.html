@@ -22,7 +22,7 @@ layout: default
       {% if section_title == section.header %}
         {% for child in section.children %}
 
-      <li><a href="/sections/{{ section.header | slugify }}.html#{{ child.header | slugify }}">{{ child.header }}</a></li>
+      <li><a href="{{ site.baseurl }}/sections/{{ section.header | slugify }}.html#{{ child.header | slugify }}">{{ child.header }}</a></li>
 
         {% endfor %}
       {% endif %}

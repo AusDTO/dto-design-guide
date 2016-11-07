@@ -15,7 +15,7 @@ layout: default
     {% for doc in collection.docs %}
       {% unless doc.layout == "collections/overview" %}
   <li>
-    <a href="{{ doc.url }}">{{ doc.title }}</a>
+    <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
   </li>
       {% endunless %}
     {% endfor %}
