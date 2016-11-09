@@ -30,7 +30,6 @@ layout: default
   {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
 
   <h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
-  {{ child.description }}
 
   {% if section_filename_exists == "true" %}
     {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
@@ -44,6 +43,8 @@ layout: default
     markup=child.markup
     sourceFile=child.sourceFile.path
     sourceLine=child.sourceFile.line %}
+    
+    {{ child.description }}
 
   {% endunless %}
 
