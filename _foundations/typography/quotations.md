@@ -1,3 +1,3 @@
 - Use `q` for inline quotation.
 - Use `blockquote` for standard block quotes and larger editorial block quotes (pull quotes).
-- You can nest inline elements within block quotes.
+- You can nest inline elements in block quotes.
