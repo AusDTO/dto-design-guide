@@ -1,24 +1,11 @@
 Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font</a> family.
 
-<h3>Open Sans regular 400</h3>
-<div class="guide-example--type">
-  <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-  abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</p>
-</div>
-
-<h3>Open Sans regular 400 italic</h3>
-<div class="guide-example--type">
-  <p><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-  abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</em></p>
-</div>
-
-<h3>Open Sans bold 700</h3>
-<div class="guide-example--type">
-  <p><strong class="very-bold">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-  abcdefghijklmnopqrstuvwxyz<br />
-  1234567890(!@#s%g.,?:;)</strong></p>
+<div class="guide-example--type"><h3>New South Wales</h3>
+<p>Surry Hills Newtown Waterloo Marrickville Bondi Redfern</p>
+<h3>23,130,000 Australians</h3>
+<p><strong class="very-bold">Woden Valley Belconnen Weston Creek Tuggeranong Gungahlin</strong></p>
+<h3><em>Accessible to all</em></h3>
+<p><em>Wanneroo Armadale Balcatta Booragoon</em></p>
 </div>
 
 ### Webfonts
@@ -31,12 +18,9 @@ Load webfonts through the <a href="https://github.com/typekit/webfontloader" rel
 - Tablet (small devices): 12 columns, 768px maximum.
 - Desktop (medium devices): 16 columns, 1200px maximum.
 
-Use `.gov-speak` styles for complex content, for example annual reports.
-
-### Font size defaults
+### Global font sizes
 
 <table class="content-table">
-  <caption>Global styles</caption>
   <tr>
     <th>Style</th>
     <th>Mobile (default)</th>
@@ -44,39 +28,42 @@ Use `.gov-speak` styles for complex content, for example annual reports.
     <th>Desktop</th>
   </tr>
   <tr>
+    <td>h1 (bolded)</td>
+    <td><h1>24px</h1></td>
+    <td><h1>26px</h1></td>
+    <td><h1>32px</h1></td>
+  </tr>
+  <tr>
+    <td>h2</td>
+    <td><h2>32px</h2></td>
+    <td><h2>44px</h2></td>
+    <td><h2>44px</h2></td>
+  </tr>
+  <tr>
+    <td>h3 (bolded)</td>
+    <td><h3>24px</h3></td>
+    <td><h3>26px</h3></td>
+    <td><h3>26px</h3></td>
+  </tr>
+  <tr>
+    <td>h4, h5, h6 (all bolded)</td>
+    <td><h4>18px</h4></td>
+    <td><h4>18px</h4></td>
+    <td><h4>18px</h4></td>
+  </tr>
+  <tr>
     <td>p, ol, ul, dt, dd, dl</td>
     <td>17px</td>
     <td>17px</td>
     <td>17px</td>
-  </tr>
-  <tr>
-    <td>h1</td>
-    <td>24px</td>
-    <td>26px<br></td>
-    <td>32px</td>
-  </tr>
-  <tr>
-    <td>h2</td>
-    <td>32px</td>
-    <td>44px</td>
-    <td>44px</td>
-  </tr>
-  <tr>
-    <td>h3</td>
-    <td>24px</td>
-    <td>26px</td>
-    <td>26px</td>
-  </tr>
-  <tr>
-    <td>h4, h5, h6</td>
-    <td>18px</td>
-    <td>18px</td>
-    <td>18px</td>
   </tr>
 </table>
 
+### `.gov-speak` font sizes
+
+Use `.gov-speak` styles for complex content, for example annual reports.
+
 <table class="content-table">
-  <caption><code>.gov-speak</code> style</caption>
   <tr>
     <th>Style</th>
     <th>Mobile (default)</th>
@@ -84,46 +71,46 @@ Use `.gov-speak` styles for complex content, for example annual reports.
     <th>Desktop</th>
   </tr>
   <tr>
+    <td>h1</td>
+    <td><h1>32px</h1></td>
+    <td><h1>44px</h1></td>
+    <td><h1>40px</h1></td>
+  </tr>
+  <tr>
+    <td>h2</td>
+    <td><h2>28px</h2></td>
+    <td><h2>32px</h2></td>
+    <td><h2>32px</h2></td>
+  </tr>
+  <tr>
+    <td>h3</td>
+    <td><h3>24px</h3></td>
+    <td><h3>26px</h3></td>
+    <td><h3>26px</h3></td>
+  </tr>
+  <tr>
+    <td>h4</td>
+    <td><h4>19px</h4></td>
+    <td><h4>22px</h4></td>
+    <td><h4>22px</h4></td>
+  </tr>
+  <tr>
+    <td>h5</td>
+    <td><h5>16px</h5></td>
+    <td><h5>16px</h5></td>
+    <td><h5>16px</h5></td>
+  </tr>
+  <tr>
+    <td>h6</td>
+    <td><h6>16px</h6></td>
+    <td><h6>16px</h6></td>
+    <td><h6>16px</h6></td>
+  </tr>
+  <tr>
     <td>p, ol, ul, dt, dd, dl</td>
     <td>17px</td>
     <td>17px</td>
     <td>17px</td>
-  </tr>
-  <tr>
-    <td>h1</td>
-    <td>32px</td>
-    <td>44px<br></td>
-    <td>40px</td>
-  </tr>
-  <tr>
-    <td>h2</td>
-    <td>28px</td>
-    <td>32px</td>
-    <td>32px</td>
-  </tr>
-  <tr>
-    <td>h3</td>
-    <td>24px</td>
-    <td>26px</td>
-    <td>26px</td>
-  </tr>
-  <tr>
-    <td>h4</td>
-    <td>19px</td>
-    <td>22px</td>
-    <td>22px</td>
-  </tr>
-  <tr>
-    <td>h5</td>
-    <td>16px</td>
-    <td>16px</td>
-    <td>16px</td>
-  </tr>
-  <tr>
-    <td>h6</td>
-    <td>16px</td>
-    <td>16px</td>
-    <td>16px</td>
   </tr>
 </table>
 
