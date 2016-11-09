@@ -7,23 +7,18 @@ layout: default
 <header>
   <h1>{{ page.title }}</h1>
 
+  <div class="abstract">
+    {{ section.description }}
+  </div>
+
   <nav class="index-links">
     <h2>In this section</h2>
     <ul>
-      <li><a href="#overview">Overview</a></li>
-
     {% for child in section.first.children %}
       <li><a href="#{{ child.header | slugify }}">{{ child.header }}</a></li>
     {% endfor %}
     </ul>
   </nav>
-
-  {{ section.description }}
-
-  {% if child.tags %}
-  {% assign tags_array = child.tags | split: ", " | sort %}
-  {% include tags_list.html tags=tags_array %}
-  {% endif %}
 
 </header>
 
@@ -51,5 +46,5 @@ layout: default
     sourceLine=child.sourceFile.line %}
 
   {% endunless %}
-  
+
 {% endfor %}
