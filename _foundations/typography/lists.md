@@ -1,1 +1,1 @@
-More [complex list styles](section-list-styles.html) are available.
+<p class="abstract" style="border-bottom:hidden">Use lists to structure content so it is easier to understand.</p>

@@ -1,16 +1,8 @@
-Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font</a> family.
+<p class="abstract" style="border-bottom:hidden">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font</a> family. Open Sans is a sans-serif font selected for accessibility and readability.</p>
 
-<div class="guide-example--type"><h3>New South Wales</h3>
-<p>Surry Hills Newtown Waterloo Marrickville Bondi Redfern</p>
-<h3>23,130,000 Australians</h3>
-<p><strong class="very-bold">Woden Valley Belconnen Weston Creek Tuggeranong Gungahlin</strong></p>
-<h3><em>Accessible to all</em></h3>
-<p><em>Wanneroo Armadale Balcatta Booragoon</em></p>
-</div>
+![Specimen of Open Sans in regular 400, bold 700 and italic 400](/assets/font-specimen.png)
 
-### Webfonts
-
-Load webfonts through the <a href="https://github.com/typekit/webfontloader" rel="external">Google Web Font Loader</a> via `<script>`. Use this to add Open Sans in the HTML `head`.
+<!-- <p style="font-size:5em">Aa <strong>Aa</strong> <em>Aa</em></p> -->
 
 ### Breakpoints
 
@@ -28,83 +20,28 @@ Load webfonts through the <a href="https://github.com/typekit/webfontloader" rel
     <th>Desktop</th>
   </tr>
   <tr>
-    <td>h1 (bolded)</td>
-    <td><h1>24px</h1></td>
-    <td><h1>26px</h1></td>
-    <td><h1>32px</h1></td>
-  </tr>
-  <tr>
-    <td>h2</td>
-    <td><h2>32px</h2></td>
-    <td><h2>44px</h2></td>
-    <td><h2>44px</h2></td>
-  </tr>
-  <tr>
-    <td>h3 (bolded)</td>
-    <td><h3>24px</h3></td>
-    <td><h3>26px</h3></td>
-    <td><h3>26px</h3></td>
-  </tr>
-  <tr>
-    <td>h4, h5, h6 (all bolded)</td>
-    <td><h4>18px</h4></td>
-    <td><h4>18px</h4></td>
-    <td><h4>18px</h4></td>
-  </tr>
-  <tr>
-    <td>p, ol, ul, dt, dd, dl</td>
-    <td>17px</td>
-    <td>17px</td>
-    <td>17px</td>
-  </tr>
-</table>
-
-### `.gov-speak` font sizes
-
-Use `.gov-speak` styles for complex content, for example annual reports.
-
-<table class="content-table">
-  <tr>
-    <th>Style</th>
-    <th>Mobile (default)</th>
-    <th>Tablet</th>
-    <th>Desktop</th>
-  </tr>
-  <tr>
     <td>h1</td>
-    <td><h1>32px</h1></td>
-    <td><h1>44px</h1></td>
-    <td><h1>40px</h1></td>
+    <td>24px</td>
+    <td>26px</td>
+    <td>32px</td>
   </tr>
   <tr>
     <td>h2</td>
-    <td><h2>28px</h2></td>
-    <td><h2>32px</h2></td>
-    <td><h2>32px</h2></td>
+    <td>32px</td>
+    <td>44px</td>
+    <td>44px</td>
   </tr>
   <tr>
     <td>h3</td>
-    <td><h3>24px</h3></td>
-    <td><h3>26px</h3></td>
-    <td><h3>26px</h3></td>
+    <td>24px</td>
+    <td>26px</td>
+    <td>26px</td>
   </tr>
   <tr>
-    <td>h4</td>
-    <td><h4>19px</h4></td>
-    <td><h4>22px</h4></td>
-    <td><h4>22px</h4></td>
-  </tr>
-  <tr>
-    <td>h5</td>
-    <td><h5>16px</h5></td>
-    <td><h5>16px</h5></td>
-    <td><h5>16px</h5></td>
-  </tr>
-  <tr>
-    <td>h6</td>
-    <td><h6>16px</h6></td>
-    <td><h6>16px</h6></td>
-    <td><h6>16px</h6></td>
+    <td>h4, h5, h6</td>
+    <td>18px</td>
+    <td>18px</td>
+    <td>18px</td>
   </tr>
   <tr>
     <td>p, ol, ul, dt, dd, dl</td>
@@ -114,19 +51,36 @@ Use `.gov-speak` styles for complex content, for example annual reports.
   </tr>
 </table>
 
-### Usability
+<details open data-label="typeface-guidance-accordion" aria-expanded="true">
+  <summary>Guidance<span class="visuallyhidden"> for typeface</span></summary>
+  <div class="accordion-panel">
 
-- UI-Kit applies a maximum width of 38 rem (about 70 characters) to typographic elements in the main content container (`h1`-`h5`, `p`, `li` and `dl`). This gives a <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading" rel="external">readable line length</a>.
-- To use an element that spans across the maximum available space, use the class `.content-full-width`.
-- Set `line-height` (leading) to at least 1.5 (UI-Kit uses 1.6).
-- Don’t apply a <code>font-size</code> to a container element (for example, a <code>footer</code>).
-- Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element">kbd element</a> to show users which key to press.
+  <h4>Webfonts</h4>
+  <p>Load webfonts through the <a href="https://github.com/typekit/webfontloader" rel="external">Google Web Font Loader</a> via <code>&lt;script&gt;</code>. Use this to add Open Sans in the HTML <code>head</code>.</p>
 
-### Accessibility
+  <h4>Font size</h4>
+  <ul>
 
-- Use just 1 sans-serif font (Open Sans).
-- <a href="http://content-style-guide.apps.staging.digital.gov.au/writing-for-the-web/3-structure-your-page-for-readability.html" rel="external">Write short sentences</a>. Aim for less than 25 words.
-- Use sentence case for most content. For example &lsquo;Sign in&rsquo; button.
-- Use <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/t.html#titles" rel="external">title case for titles</a> like Department of Communications and the Arts.
-- Don't write in all *italics* or CAPITALS.
-- Avoid using **bold**. Bolding a word can help scannability. **But blocks of bold text are hard to read**.
+  <li>Set <code>line-height</code> (leading) to at least 1.5 (UI-Kit uses 1.6).</li>
+  <li>Don’t apply a <code>font-size</code> to a container element (for example, a <code>footer</code>).</li>
+  </ul>
+  <h4>.gov-speak class</h4>
+  <ul>
+  <li>The <code>.gov-speak</code> class defines a larger number of heading levels for long structured documents, for example annual reports.</li>
+  </ul>
+
+  <h4>Usability</h4>
+  <ul>
+  <li>Use just 1 sans-serif font (Open Sans).</li>
+  <li><a href="http://content-style-guide.apps.staging.digital.gov.au/writing-for-the-web/3-structure-your-page-for-readability.html" rel="external">Write short sentences</a>. Aim for less than 25 words.</li>
+  <li>UI-Kit applies a maximum width of 38 rem (about 70 characters) to typographic elements in the main content container (<code>h1</code>-<code>h5</code>, <code>p</code>, <code>li</code> and <code>dl</code>). This gives a <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading" rel="external">readable line length</a>.</li>
+  <li>To use an element that spans across the maximum available space, use the class <code>.content-full-width</code>.</li>
+  <li>Use sentence case for most content. For example &lsquo;Sign in&rsquo; button.</li>
+  <li>Use <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/t.html#titles" rel="external">title case for titles</a> like Department of Communications and the Arts.</li>
+  <li>Don&#39;t write in all <em>italics</em> or CAPITALS.</li>
+  <li>Avoid using <strong>bold</strong>. Bolding a word can help scannability. <strong>But blocks of bold text are hard to read</strong>.</li>
+  <li>Use the <a href="http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element">kbd element</a> to show users which key to press.</li>
+  </ul>
+
+</div>
+</details>
