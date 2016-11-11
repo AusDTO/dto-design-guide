@@ -1,6 +1,6 @@
 ---
 layout: collections/item
-title: Typography - DTO Design Guide
+title: Typography
 section: Typography
 ---
 
