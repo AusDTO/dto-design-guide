@@ -32,20 +32,20 @@ layout: default
 
   <h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
 
+  {% unless child.markup == "" %}
+
+    {% include guide_example.html
+      title=child.header
+      markup=child.markup
+      sourceFile=child.sourceFile.path
+      sourceLine=child.sourceFile.line %}
+
+  {% endunless %}
+
   {% if section_filename_exists == "true" %}
     {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
     {{ section_filename_contents | markdownify }}
   {% endif %}
-
-  {% unless child.markup == "" %}
-
-  {% include guide_example.html
-    title=child.header
-    markup=child.markup
-    sourceFile=child.sourceFile.path
-    sourceLine=child.sourceFile.line %}
-
-  {% endunless %}
 
   {{ child.description }}
 
