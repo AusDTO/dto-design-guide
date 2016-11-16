@@ -1,6 +1,6 @@
 <p class="abstract" style="border-bottom:hidden">Only write what the user needs to know.</p>
 
-<details open data-label="headings-body-copy-guidance-accordion" aria-expanded="false">
+<details open data-label="body-copy-guidance-accordion" aria-expanded="false">
   <summary>Guidance <span class="visuallyhidden">for quotations</span></summary>
   <div class="accordion-panel">
   <ul>

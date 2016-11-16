@@ -1,6 +1,6 @@
 <p class="abstract" style="border-bottom:hidden">Use headings to create a clear and consistent structure.</p>
 
-<details open data-label="headings-body-copy-guidance-accordion" aria-expanded="false">
+<details open data-label="headings-guidance-accordion" aria-expanded="false">
   <summary>Guidance <span class="visuallyhidden">for quotations</span></summary>
   <div class="accordion-panel">
   <ul>
