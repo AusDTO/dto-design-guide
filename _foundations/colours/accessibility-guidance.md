@@ -1,4 +1,4 @@
-Accessible combinations
+### Accessible combinations
 <p class="guide-colour-block bg-non-black">non-white on non-black<span class="invert">AAA</span></p>
 <p class="guide-colour-block bg-grey">white on grey <span class="invert">AA</span></p>
 <p class="guide-colour-block bg-light-grey">non-black on light-grey <span class="invert">AAA</span></p>

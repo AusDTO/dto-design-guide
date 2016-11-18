@@ -4,11 +4,9 @@ title: Colours
 section: Colours
 sections:
   - ID: Colours palette
-    title: Colours palette
-  - ID: Contextual colours palette
-    title: Contextual colours palette
+    title: Palette
   - ID: Accessibility
-    title: Accessibility
+    title: Text accessibility
 ---
 
 <p class="abstract" style="border-bottom:hidden">A basic palette of colours that are clear and accessible.<p>
