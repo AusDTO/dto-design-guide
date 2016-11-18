@@ -9,6 +9,8 @@ sections:
     title: Headings
   - ID: Body copy
     title: Body copy
+  - ID: Links
+    title: Links
   - ID: Lists
     title: Lists
   - ID: Quotations
