@@ -15,9 +15,16 @@ layout: default
   <h1><span style="font-size:0.5em; color:#6f777b;">DTA Design Guide</span><br />
   <span>{{ page.title }}</span></h1>
 
-  <div class="abstract">
+
+  {% comment %}
+    Content of the index.md file
+  {% endcomment %}
+  {{ content }}
+
+
+  {% comment %}<div class="abstract">
     {{ section.description }}
-  </div>
+  </div>{% endcomment %}
 
   <nav class="index-links">
     <h2>In this section</h2>
@@ -34,12 +41,6 @@ layout: default
   </nav>
 
 </header>
-
-
-{% comment %}
-  Content of the index.md file
-{% endcomment %}
-{{ content }}
 
 
 {% comment %}
@@ -73,7 +74,7 @@ layout: default
     Include the top bit of this section if it exists
     [page_section]-top.md
   {% endcomment %}
-  {% assign section_filename = page_section.ID | slugify | append: "-top.md" %}
+  {% assign section_filename = page_section.title | slugify | append: "-top.md" %}
   {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
   {% if section_filename_exists == "true" %}
     {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
@@ -99,7 +100,7 @@ layout: default
     Include the guidance bit of this section if it exists
     [page_section]-guidance.md
   {% endcomment %}
-  {% assign section_filename = page_section.ID | slugify | append: "-guidance.md" %}
+  {% assign section_filename = page_section.title | slugify | append: "-guidance.md" %}
   {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
   {% if section_filename_exists == "true" %}
     {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
@@ -112,4 +113,15 @@ layout: default
     The description coming from SCSS
   {% endcomment %}
   {{ SCSS_content.description }}
+
+
+  {% comment %}
+    Page description as defined in SCSS
+  {% endcomment %}
+  {% comment %}{{ section.first.description }}{% endcomment %}
+
+  {% comment %}
+    The version of the UI kit
+  {% endcomment %}
+  {% comment %}version: {% uikit_version %}{% endcomment %}
 {% endfor %}
