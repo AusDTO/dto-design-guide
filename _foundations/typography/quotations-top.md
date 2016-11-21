@@ -1,1 +1,1 @@
-<p class="abstract" style="border-bottom:hidden">Use quotations to signpost important information.</p>
+<p class="abstract">Use quotations to signpost important information.</p>

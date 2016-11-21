@@ -1,1 +1,1 @@
-<p class="abstract" style="border-bottom:hidden">Use lists to make writing more scannable.</p>
+<p class="abstract">Use lists to make writing more scannable.</p>

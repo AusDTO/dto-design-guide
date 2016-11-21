@@ -25,8 +25,6 @@
     <pre><code><meta name="viewport" content="width=device-width, initial-scale=1.0"></code></pre>
     <h4>Wrapper class</h4>
     <p>There is a wrapper class (<code>&lt;div class=&quot;wrapper&quot;&gt;</code>) for wrapping the contents of a block within the grid, while allowing its outer container to run the full viewport width.</p>
-    <p>This is currently used for the page <code>header</code> and <code>footer</code>, and also for the <a href="section-navigation.html#kssref-navigation-2-breadcrumbs">breadcrumbs</a>.
-    layout.</p>
-    layout</a>.</p>
+    <p>This is currently used for the page <code>header</code> and <code>footer</code>, and also for the <a href="section-navigation.html#kssref-navigation-2-breadcrumbs">breadcrumbs</a>.</p>
   </div>
 </details>

@@ -17,4 +17,4 @@ sections:
     title: Quotations
 ---
 
-<p class="abstract" style="border-bottom:hidden">Use clear and accessible typography as the primary way to communicate with users.<p>
+<p class="abstract">Use clear and accessible typography as the primary way to communicate with users.<p>
