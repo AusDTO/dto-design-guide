@@ -1,5 +1,5 @@
 <details open data-label="body-copy-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for quotations</span></summary>
+  <summary>Guidance <span class="visuallyhidden">for body copy</span></summary>
   <div class="accordion-panel">
     <ul>
       <li>Write the most important information in the first paragraph.</li>

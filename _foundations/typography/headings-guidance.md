@@ -1,5 +1,5 @@
 <details open data-label="headings-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for quotations</span></summary>
+  <summary>Guidance <span class="visuallyhidden">for headings</span></summary>
   <div class="accordion-panel">
     <ul>
       <li>The page title should clearly state what the page is about. Put the most important information at the start of the title.
