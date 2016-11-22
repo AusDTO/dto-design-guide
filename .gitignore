@@ -20,3 +20,8 @@ _assets/scss/.sass-lint.yml
 
 ### Mac folder attrs. ###
 .DS_Store
+
+### Sublime ###
+*.sublime-project
+*.sublime-workspace
+
