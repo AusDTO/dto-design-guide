@@ -9,7 +9,7 @@ table {
 // Custom styling for the rendered example and code blocks.
 
 .guide-example {
-  border: solid 7px $non-white;
+  border: solid 7px darken($non-white, 5%);
   border-radius: $base-border-radius;
   margin: $base-spacing 0;
   padding-top: 0;
@@ -18,7 +18,7 @@ table {
     @extend .content-full-width;
 
     margin: 0;
-    background-color: $non-white;
+    background-color: darken($non-white, 5%);
     padding: $small-spacing $medium-spacing;
 
     span {
@@ -58,12 +58,12 @@ table {
     padding: $medium-spacing ($medium-spacing + $small-spacing);
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
-    border-top: 1px solid lighten($navy, 7%);
-    background-color: $navy;
+    border-top: solid 7px darken($non-white, 5%);
+    background-color: transparent;
     font-size: rem(15);
     color: $non-white;
 
-    @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
+    @include link-colours($non-black, $light-aqua, $non-black);
   }
 }
 
@@ -92,6 +92,20 @@ table {
   }
 }
 
+// Custom styling for the accordion
+
+details,
+.accordion {
+  border-right: 1px solid $border-colour;
+  border-left: 1px solid $border-colour;
+}
+
+// Custom styling for abstract
+
+p.abstract {
+  border-bottom: none;
+  padding-bottom: 0;
+}
 
 // Custom styling for the Colours section, specifically for the palette.
 

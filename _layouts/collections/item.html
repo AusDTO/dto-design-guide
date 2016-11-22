@@ -2,51 +2,126 @@
 layout: default
 ---
 
+{% comment %}
+  Let's grab the data from our SCSS relevant for this page
+{% endcomment %}
 {% assign section = site.data.data-sections | where: "header", page.section %}
 
+
+{% comment %}
+  Header
+{% endcomment %}
 <header>
   <h1><span style="font-size:0.5em; color:#6f777b;">DTA Design Guide</span><br />
   <span>{{ page.title }}</span></h1>
 
-  <div class="abstract">
+
+  {% comment %}
+    Content of the index.md file
+  {% endcomment %}
+  {{ content }}
+
+
+  {% comment %}<div class="abstract">
     {{ section.description }}
-  </div>
+  </div>{% endcomment %}
 
   <nav class="index-links">
     <h2>In this section</h2>
     <ul>
-    {% for child in section.first.children %}
-      <li><a href="#{{ child.header | slugify }}">{{ child.header }}</a></li>
-    {% endfor %}
+      {% comment %}
+        Page sections as ordered in front matter in index.md
+      {% endcomment %}
+      {% for page_section in page.sections %}
+        <li>
+          <a href="#{{ page_section.title | slugify }}">{{ page_section.title }}</a>
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 
 </header>
 
-{{ content }}
 
-{% for child in section.first.children %}
-  {% assign section_filename = child.header | slugify | append: ".md" %}
+{% comment %}
+  Page sections as ordered in front matter in index.md
+{% endcomment %}
+{% for page_section in page.sections %}
+
+  {% comment %}
+    We unfortunately can't use the where filter here as it breaks on keys that have values with spaces in them like "Body copy" or "Calendar table"
+    https://github.com/jekyll/jekyll/issues/5586
+    https://github.com/jekyll/jekyll/blob/master/lib/jekyll/filters.rb#L242
+    {% assign SCSS_content = section.first.children | where: "header", page_section.ID | first %}
+  {% endcomment %}
+  {% for child in section.first.children %}
+    {% if child.header == page_section.ID %}
+      {% assign SCSS_content = child %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %}
+    Building the path to the current collection file
+  {% endcomment %}
   {% capture section_path %}_{{ page.collection }}/{{ page.section | slugify }}/{% endcapture %}
+
+
+  <h2 id="{{ page_section.title | slugify }}">{{ page_section.title }}</h2>
+
+
+  {% comment %}
+    Include the top bit of this section if it exists
+    [page_section]-top.md
+  {% endcomment %}
+  {% assign section_filename = page_section.title | slugify | append: "-top.md" %}
   {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
-
-  <h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
-
   {% if section_filename_exists == "true" %}
     {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
     {{ section_filename_contents | markdownify }}
   {% endif %}
+  {% assign section_filename_contents = "" %}
 
-  {% unless child.markup == "" %}
 
-  {% include guide_example.html
-    title=child.header
-    markup=child.markup
-    sourceFile=child.sourceFile.path
-    sourceLine=child.sourceFile.line %}
-
+  {% comment %}
+    Show the SCSS content from our data-sections.json
+  {% endcomment %}
+  {% unless SCSS_content.markup == nil or SCSS_content.markup == "" %}
+    {% include guide_example.html
+      title = SCSS_content.header
+      markup = SCSS_content.markup
+      sourceFile = SCSS_content.sourceFile.path
+      sourceLine = SCSS_content.sourceFile.line
+    %}
   {% endunless %}
 
-  {{ child.description }}
 
+  {% comment %}
+    Include the guidance bit of this section if it exists
+    [page_section]-guidance.md
+  {% endcomment %}
+  {% assign section_filename = page_section.title | slugify | append: "-guidance.md" %}
+  {% capture section_filename_exists %}{% file_exists {{ section_filename | prepend: section_path }} %}{% endcapture %}
+  {% if section_filename_exists == "true" %}
+    {% capture section_filename_contents %}{% include_relative {{ section_filename }} %}{% endcapture %}
+    {{ section_filename_contents | markdownify }}
+  {% endif %}
+  {% assign section_filename_contents = "" %}
+
+
+  {% comment %}
+    The description coming from SCSS
+  {% endcomment %}
+  {{ SCSS_content.description }}
+
+
+  {% comment %}
+    Page description as defined in SCSS
+  {% endcomment %}
+  {% comment %}{{ section.first.description }}{% endcomment %}
+
+  {% comment %}
+    The version of the UI kit
+  {% endcomment %}
+  {% comment %}version: {% uikit_version %}{% endcomment %}
 {% endfor %}
