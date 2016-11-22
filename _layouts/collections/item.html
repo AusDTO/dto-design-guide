@@ -26,19 +26,24 @@ layout: default
     {{ section.description }}
   </div>{% endcomment %}
 
-  <nav class="index-links">
-    <h2>In this section</h2>
-    <ul>
-      {% comment %}
-        Page sections as ordered in front matter in index.md
-      {% endcomment %}
-      {% for page_section in page.sections %}
-        <li>
-          <a href="#{{ page_section.title | slugify }}">{{ page_section.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  {% comment %}
+    We only show the "In this section" bit if we have more than one section available
+  {% endcomment %}
+  {% unless page.sections.size == 1 %}
+    <nav class="index-links">
+      <h2>In this section</h2>
+      <ul>
+        {% comment %}
+          Page sections as ordered in front matter in index.md
+        {% endcomment %}
+        {% for page_section in page.sections %}
+          <li>
+            <a href="#{{ page_section.title | slugify }}">{{ page_section.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endunless %}
 
 </header>
 
@@ -67,7 +72,12 @@ layout: default
   {% capture section_path %}_{{ page.collection }}/{{ page.section | slugify }}/{% endcapture %}
 
 
-  <h2 id="{{ page_section.title | slugify }}">{{ page_section.title }}</h2>
+  {% comment %}
+    We only show the "header if we have more than one section available
+  {% endcomment %}
+  {% unless page.sections.size == 1 %}
+    <h2 id="{{ page_section.title | slugify }}">{{ page_section.title }}</h2>
+  {% endunless %}
 
 
   {% comment %}
