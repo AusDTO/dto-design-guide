@@ -1,4 +1,4 @@
-<p class="abstract" style="border-bottom:hidden">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font</a> family. Open Sans is a sans-serif font selected for accessibility and readability.</p>
+<p class="abstract">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font family</a>. Open Sans is a sans-serif font selected for accessibility and readability.</p>
 
 ![Specimen of Open Sans in regular 400, bold 700 and italic 400](/assets/font-specimen.png)
 

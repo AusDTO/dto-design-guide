@@ -1,5 +1,5 @@
 <details open data-label="lists-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for quotations</span></summary>
+  <summary>Guidance <span class="visuallyhidden">for lists</span></summary>
   <div class="accordion-panel">
     <ul>
       <li>Use bullet point (unordered) lists to display text in no specific order.</li>

@@ -1,0 +1,1 @@
+<p class="abstract">The <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">recommended colour contrast ratio</a> for text and interactive elements should be at least 4.5:1.</p>
