@@ -7,12 +7,12 @@ sections:
   title: Text input
 - ID: Text area input
   title: Text area input
-- ID: Badges2
-  title: Checkbox input
-- ID: Badges3
+- ID: Radio button input
   title: Radio button input
-- ID: Badges4
-  title: Switch (toggle) buttons     
+- ID: Checkbox input
+  title: Checkbox input
+- ID: Accessibility
+  title: Accessibility  
 ---
 
 <p class="abstract">Keep forms as simple as possible &mdash; only ask what is needed for the transaction.<p>
