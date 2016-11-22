@@ -17,6 +17,13 @@ header[role='banner'] {
   }
 }
 
+// Custom styling for the site nav active state
+
+.site-nav__wrapper li a.is-active {
+  border-color: $site-nav-border-colour--hover;
+  color: $link-colour;
+}
+
 // Custom styling for the rendered example and code blocks.
 
 .guide-example {

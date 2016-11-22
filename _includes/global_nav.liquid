@@ -10,7 +10,9 @@
     {% assign pages = site.pages | where: "layout", "page" %}
     {% for page in pages %}
       <li>
-        <a href="{{ page.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
       </li>
     {% endfor %}
 
@@ -23,6 +25,7 @@
       Iterating over all collections
     {% endcomment %}
     {% for collection in collections %}
+      {% capture thisURL %}/{{ collection.label }}/index.html{% endcapture %}
 
       {% comment %}
         Skip if this is filed under posts
@@ -32,7 +35,9 @@
       {% endif %}
 
       <li>
-        <a href="/{{ collection.label }}">{{ collection.title }}</a>
+        <a href="{{ thisURL }}"{% if thisURL == page.url or collection.label == page.parent %} class="is-active"{% endif %}>
+          {{ collection.title }}
+        </a>
       </li>
     {% endfor %}
   </ul>

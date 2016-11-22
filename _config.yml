@@ -51,3 +51,54 @@ collections:
     title: "Templates"
     abstract: "TBC."
     order: 4
+
+# Navigation
+defaults:
+- scope:
+    path: get-started
+  values:
+    parent: get-started
+    children:
+
+- scope:
+    path: _foundations
+  values:
+    parent: foundations
+    children:
+      - folder: colours
+        title: Colours
+      - folder: typography
+        title: Typography
+
+- scope:
+    path: _components
+  values:
+    parent: components
+    children:
+      - folder: accordions
+        title: Accordions
+      - folder: buttons
+        title: Buttons
+      - folder: forms
+        title: Forms
+      - folder: grid
+        title: Grid
+      - folder: link styles
+        title: Link styles
+      - folder: list styles
+        title: List styles
+      - folder: navigation
+        title: Navigation
+      - folder: tables
+        title: Tables
+- scope:
+    path: _patterns
+  values:
+    parent: patterns
+    children:
+
+- scope:
+    path: _templates
+  values:
+    parent: templates
+    children:
