@@ -12,15 +12,15 @@
   </h3>
 
   <div class="guide-example--code">
-    {% highlight html %}
-{% include {{ include.markup }} %}
-  {% endhighlight %}
+    {% highlight html %}{% include {{ include.markup }} %}{% endhighlight %}
   </div>
 
   <cite class="guide-example--cite">
     Stylesheet source on GitHub:
-    <a href="
-      {{ site.github_url }}/tree/master/{{ include.sourceFile }}"
-      rel="external"><code>{{ include.sourceFile }}</code></a>
+    <a
+      href="{{ site.github_url }}/tree/master/{{ include.sourceFile }}"
+      rel="external">
+      <code>{{ include.sourceFile }}</code>
+    </a>
   </cite>
 </div>

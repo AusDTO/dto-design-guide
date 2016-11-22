@@ -107,6 +107,31 @@ p.abstract {
   padding-bottom: 0;
 }
 
+
+// Custom styling for code examples
+
+.guide-example--code {
+  padding-bottom: 1.2em;
+}
+
+
+// Custom styling for sidebar
+
+main .sidebar {
+  float: left;
+
+  @include media($tablet) {
+    margin-left: 0;
+    margin-right: 2.74614%;
+  }
+
+  @include media($desktop) {
+    float: left;
+    margin-left: 0;
+    margin-right: 2.04556%;
+  }
+}
+
 // Custom styling for the Colours section, specifically for the palette.
 
 .guide-colour {

@@ -35,7 +35,19 @@ collections:
     output: true
     title: "Foundations"
     abstract: "TBC."
+    order: 1
   components:
     output: true
     title: "Components"
     abstract: "TBC."
+    order: 2
+  patterns:
+    output: true
+    title: "Patterns"
+    abstract: "TBC."
+    order: 3
+  templates:
+    output: true
+    title: "Templates"
+    abstract: "TBC."
+    order: 4
