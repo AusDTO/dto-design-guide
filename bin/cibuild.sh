@@ -17,3 +17,6 @@ bundle exec rake init
 
 # Run Jekyll
 bundle exec jekyll build
+
+# Set up the site in $CIRCLE_ARTIFACTS
+bundle exec jekyll build --destination $CIRCLE_ARTIFACTS/site --baseurl /0/$CIRCLE_ARTIFACTS/site
