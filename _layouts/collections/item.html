@@ -69,7 +69,7 @@ layout: default
   {% comment %}
     Building the path to the current collection file
   {% endcomment %}
-  {% capture section_path %}_{{ page.collection }}/{{ page.section | slugify }}/{% endcapture %}
+  {% capture section_path %}_{{ page.parent }}/{{ page.section | slugify }}/{% endcapture %}
 
 
   {% comment %}
