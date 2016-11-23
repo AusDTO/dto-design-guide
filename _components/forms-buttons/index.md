@@ -1,7 +1,7 @@
 ---
 layout: collections/item
 title: Forms & buttons
-section: Forms-buttons
+section: Forms
 sections:
 - ID: Text input
   title: Text input
