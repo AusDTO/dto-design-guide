@@ -6,6 +6,24 @@ table {
   margin-bottom: $base-spacing * 2;
 }
 
+// Custom styling for the inverted feedback button in the header.
+// This will likely be removed/replaced by a global site search.
+// The @extend .inverted is not working in:
+// https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
+
+header[role='banner'] {
+  .feedback {
+    @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+  }
+}
+
+// Custom styling for the site nav active state
+
+.site-nav__wrapper li a.is-active {
+  border-color: $site-nav-border-colour--hover;
+  color: $link-colour;
+}
+
 // Custom styling for the rendered example and code blocks.
 
 .guide-example {
@@ -105,6 +123,31 @@ details,
 p.abstract {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+
+// Custom styling for code examples
+
+.guide-example--code {
+  padding-bottom: 1.2em;
+}
+
+
+// Custom styling for sidebar
+
+main .sidebar {
+  float: left;
+
+  @include media($tablet) {
+    margin-left: 0;
+    margin-right: 2.74614%;
+  }
+
+  @include media($desktop) {
+    float: left;
+    margin-left: 0;
+    margin-right: 2.04556%;
+  }
 }
 
 // Custom styling for the Colours section, specifically for the palette.

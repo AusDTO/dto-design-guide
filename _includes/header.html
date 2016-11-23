@@ -1,29 +1,38 @@
 {% include templates/skip-link.html %}
 
 <header role="banner">
-  <section class="govau--header">
+  <section class="page-header">
     <div class="wrapper">
-      <div class="govau--logo">
+      <div class="page-header__logo">
         <a href="/" class="logo">{{ site.title }}</a> <span class="badge--default">beta</span>
       </div>
+
       {% include feedback.html %}
+
+      <div class="site-nav">
+        {% include global_nav.liquid %}
+      </div>
+
     </div>
   </section>
 
+  {% comment %}
+    Only show if this is the homepage
+  {% endcomment %}
   {% if page.url == '/' %}
-  <section class="hero">
-    <div class="wrapper">
-      <h1>{{ site.title }}</h1>
-      <p class="tagline">{{ site.description }}</p>
+    <section class="hero">
+      <div class="wrapper">
+        <h1>{{ site.title }}</h1>
+        <p class="tagline">{{ site.description }}</p>
 
-      <p>Documents UI-Kit release: v{% uikit_version %}</p>
-      <p>Last updated: <time datetime="{{ site.time }}">{{ site.time | date: "%e %B %Y" }}</time></p>
+        <p>Documents UI-Kit release: v{% uikit_version %}</p>
+        <p>Last updated: <time datetime="{{ site.time }}">{{ site.time | date: "%e %B %Y" }}</time></p>
 
-      <img src="https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield" alt="CircleCI build status">
-      <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT license">
-      <img src="https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000" alt="Current Release">
-    </div>
-  </section>
+        <img src="https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield" alt="CircleCI build status">
+        <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT license">
+        <img src="https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=2592000" alt="Current Release">
+      </div>
+    </section>
   {% endif %}
 
 </header>

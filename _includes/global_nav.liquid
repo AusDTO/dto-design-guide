@@ -1,0 +1,44 @@
+<nav class="site-nav__wrapper" aria-label="main navigation">
+  <ul>
+    <li>
+      <a href="/get-started">Get Started</a>
+    </li>
+
+    {% comment %}
+      List all documents with layout: page
+    {% endcomment %}
+    {% assign pages = site.pages | where: "layout", "page" %}
+    {% for page in pages %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
+      </li>
+    {% endfor %}
+
+    {% comment %}
+      Making sure we have control over the order of the items via the "weight" attribute
+    {% endcomment %}
+    {% assign collections = site.collections | sort: "order" %}
+
+    {% comment %}
+      Iterating over all collections
+    {% endcomment %}
+    {% for collection in collections %}
+      {% capture thisURL %}/{{ collection.label }}/index.html{% endcapture %}
+
+      {% comment %}
+        Skip if this is filed under posts
+      {% endcomment %}
+      {% if collection.label == "posts" %}
+        {% continue %}
+      {% endif %}
+
+      <li>
+        <a href="{{ thisURL }}"{% if thisURL == page.url or collection.label == page.parent %} class="is-active"{% endif %}>
+          {{ collection.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
