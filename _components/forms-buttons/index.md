@@ -1,7 +1,7 @@
 ---
 layout: collections/item
 title: Forms & buttons
-section: Forms
+section: Forms-buttons
 sections:
 - ID: Text input
   title: Text input
@@ -11,6 +11,8 @@ sections:
   title: Radio button input
 - ID: Checkbox input
   title: Checkbox input
+- ID: Buttons
+  title: Buttons
 - ID: Accessibility
   title: Accessibility  
 ---
