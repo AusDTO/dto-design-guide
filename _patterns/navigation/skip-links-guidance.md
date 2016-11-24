@@ -8,7 +8,7 @@ Include skip links between the opening of the `<body>` and the page `<header>`.
   </p>
   <ul>
     <li>Skip to main content</li>
-    <li>Skip to section navigation</li>
+    <li>Ski to section navigation</li>
   </ul>
   <p>(The example space will be visually empty until the skip links receive focus.)</p>
 </div>
