@@ -120,6 +120,11 @@ GEN.json = (() => {
           }
         });
 
+        //adding last iteration to object
+        kit[ ID ] = {
+          templates: templates,
+        };
+
         //writing the object to file
         Fs.writeFile( GEN.KIT, JSON.stringify( kit ), ( error ) => {
           if( error ) {
