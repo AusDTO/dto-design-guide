@@ -93,7 +93,7 @@ layout: default
     {% capture scssPath %}{{ page_section.code[ 0 ].scss }}.scss{% endcapture %}
     {% capture markupPath %}templates/{{ page_section.code[ 1 ].markup | slugify }}.html{% endcapture %}
 
-    {% include guide_example.html
+    {% include guide_example.liquid
       title = headline
       markup = markupPath
       sourceFile = scssPath

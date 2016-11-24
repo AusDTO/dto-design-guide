@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+  {% include head.liquid %}
 
   <body>
 
-  {% include header.html %}
+  {% include header.liquid %}
 
     <main role="main">
 
       <aside class="sidebar">
 
-        {% include local_nav.html %}
+        {% include local_nav.liquid %}
 
       </aside>
 
@@ -22,7 +22,7 @@
       </article>
     </main>
 
-  {% include footer.html %}
+  {% include footer.liquid %}
 
   </body>
 

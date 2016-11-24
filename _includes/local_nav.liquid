@@ -15,9 +15,9 @@
       Page sections as ordered inherited from our config file _config.yml
     {% endcomment %}
     {% for page_section in page.children %}
-      {% capture thisURL %}/{{ page.parent}}/{{ page_section.folder }}/index.html{% endcapture %}
+      {% capture thisURL %}/{{ page.parent | slugify }}/{{ page_section.folder | slugify }}/index.html{% endcapture %}
       <li>
-        <a href="{{ thisURL }}/"{% if thisURL == page.url %} class="is-active"{% endif %}>
+        <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active"{% endif %}>
           {{ page_section.title }}
         </a>
       </li>

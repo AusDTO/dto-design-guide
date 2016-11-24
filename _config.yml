@@ -37,9 +37,15 @@ gems:
 # Asset sources
 # More info: https://github.com/jekyll/jekyll-assets
 assets:
+  compress:
+    css: true
+  assets:
+    - "*.png"
+    - "*.gif"
   sources:
     - _assets/scss
-    - _assets/vendor
+    - _assets/vendor/dto-ui-kit/assets/sass/ui-kit
+    - _assets/img
 
 
 # Highlight engine
