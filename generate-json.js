@@ -17,16 +17,47 @@ const Fs = require(`fs`);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 const GEN = (() => { //constructor factory
 
+  return {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Settings
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-  return {
     UIKIT: '_assets/vendor/dto-ui-kit',
     UIKIT_SCSS: 'assets/sass',
     UIKIT_templates: 'assets/sass/components/templates',
 
     KIT: '_data/uikit.json',
     TEMPLATES: '_includes/templates',
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Log to console.log
+//
+// @method  success                    Log success info
+//          @param   [text]  {string}  The sting you want to log
+//          @return  [ansi]            output
+//
+// @method  error                      Log error info
+//          @param   [text]  {string}  The sting you want to log
+//          @return  [ansi]            output
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+    log: {
+
+      success: ( text ) => {
+        CFonts.say(`✅  ${text}/`, {
+          font: 'console',
+          space: false,
+          colors: ['green'],
+        });
+      },
+
+      error: ( text ) => {
+        CFonts.say(`❎  ${text}`, {
+          font: 'console',
+          space: false,
+          colors: ['red'],
+        });
+      },
+    },
   }
 })();
 
@@ -90,16 +121,12 @@ GEN.json = (() => {
         });
 
         //writing the object to file
-        Fs.writeFile( GEN.KIT, JSON.stringify( kit ), (error) => {
+        Fs.writeFile( GEN.KIT, JSON.stringify( kit ), ( error ) => {
           if( error ) {
             throw error;
           }
 
-          CFonts.say(`✅  successfully generated ${GEN.KIT} file`, {
-            font: 'console',
-            space: false,
-            colors: ['green'],
-          });
+          GEN.log.success(`successfully generated ${GEN.KIT} file`);
 
           console.log(`\n\n`);
         });
@@ -132,38 +159,29 @@ GEN.copy = (() => {
 // Module init method
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
     init: () => {
-      Exec(`rm ${GEN.TEMPLATES}/*.html`, (error, stdout, stderr) => {
-        if(error) {
-          CFonts.say(`❎  exec error: ${error}`, {
-            font: 'console',
-            space: false,
-            colors: ['red'],
-          });
+      //remove all html files in the folder so we don't produce garbage files
+      let script = `rm ${GEN.TEMPLATES}/*.html`;
+
+      Exec(script, ( error ) => {
+        if( error ) {
+          GEN.log.error(`exec error: ${error}`);
           return;
         }
 
-        CFonts.say(`✅  successfully removed all files from ${GEN.TEMPLATES}/`, {
-          font: 'console',
-          space: false,
-          colors: ['green'],
-        });
+        GEN.log.success(`successfully removed all files from ${GEN.TEMPLATES}/`);
       });
 
-      Exec(`cp ${GEN.UIKIT}/${GEN.UIKIT_templates}/* ${GEN.TEMPLATES}`, (error, stdout, stderr) => {
-        if(error) {
-          CFonts.say(`❎  exec error: ${error}`, {
-            font: 'console',
-            space: false,
-            colors: ['red'],
-          });
+
+      //copy files from submodule to includes folder of jekyll
+      script = `cp ${GEN.UIKIT}/${GEN.UIKIT_templates}/* ${GEN.TEMPLATES}`;
+
+      Exec(script, ( error ) => {
+        if( error ) {
+          GEN.log.error(`exec error: ${error}`);
           return;
         }
 
-        CFonts.say(`✅  successfully copied all files from ${GEN.UIKIT}/${GEN.UIKIT_templates}/ to ${GEN.TEMPLATES}`, {
-          font: 'console',
-          space: false,
-          colors: ['green'],
-        });
+         GEN.log.success(`successfully copied all files from ${GEN.UIKIT}/${GEN.UIKIT_templates}/ to ${GEN.TEMPLATES}`);
       });
     },
   }
