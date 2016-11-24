@@ -6,7 +6,7 @@
       {% endcomment %}
       {% capture thisURL %}/{{ page.parent }}/index.html{% endcapture %}
 
-      <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active"{% endif %}>
+      <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active is-current"{% endif %}>
         Overview
       </a>
     </li>
@@ -17,7 +17,7 @@
     {% for page_section in page.children %}
       {% capture thisURL %}/{{ page.parent | slugify }}/{{ page_section.folder | slugify }}/index.html{% endcapture %}
       <li>
-        <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active"{% endif %}>
+        <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active is-current"{% endif %}>
           {{ page_section.title }}
         </a>
       </li>
