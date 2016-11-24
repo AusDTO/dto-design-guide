@@ -1,9 +1,9 @@
 ---
 layout: collections/item
 title: List styles
-section: List styles
+section: list-styles
 sections:
-- ID: Highlighted word style
+- ID: Highlighted words style
   title: Highlighted words style
 - ID: Vertical style
   title: Vertical style

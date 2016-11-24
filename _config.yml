@@ -77,10 +77,9 @@ defaults:
   values:
     parent: components
     children:
-
       - folder: forms-buttons
         title: Forms & buttons
-      - folder: link styles
+      - folder: link-styles
         title: Link styles
       - folder: accordions
         title: Accordions
@@ -90,13 +89,13 @@ defaults:
         title: List styles
       - folder: tables
         title: Tables
-      - folder: in-page-tabs
-        title: In-page tabs
 - scope:
     path: _patterns
   values:
     parent: patterns
     children:
+      - folder: navigation
+        title: Navigation
 
 - scope:
     path: _templates
