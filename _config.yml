@@ -95,40 +95,38 @@ defaults:
   values:
     parent: foundations
     children:
-      - folder: colours
-        title: Colours
       - folder: typography
         title: Typography
+      - folder: layout
+        title: Layout
+      - folder: colours
+        title: Colours
 
 - scope: # COMPONENTS CATEGORY
     path: _components
   values:
     parent: components
     children:
-      - folder: accordions
-        title: Accordions
-      - folder: buttons
-        title: Buttons
       - folder: forms-buttons
         title: Forms & buttons
-      - folder: grid
-        title: Grid
-      - folder: link styles
+      - folder: link-styles
         title: Link styles
-      - folder: list styles
-        title: List styles
-      - folder: navigation
-        title: Navigation
-      - folder: tables
-        title: Tables
+      - folder: accordions
+        title: Accordions
       - folder: badges
         title: Badges
+      - folder: list styles
+        title: List styles
+      - folder: tables
+        title: Tables
 
 - scope: # PATTERNS CATEGORY
     path: _patterns
   values:
     parent: patterns
     children:
+      - folder: navigation
+        title: Navigation
 
 - scope: # TEMPLATES CATEGORY
     path: _templates
