@@ -1,6 +1,9 @@
 <nav id="nav" class="local-nav" aria-label="category navigation">
   <ul>
     <li>
+      {% comment %}
+        Build current URL
+      {% endcomment %}
       {% capture thisURL %}/{{ page.parent }}/index.html{% endcapture %}
 
       <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active"{% endif %}>
@@ -14,7 +17,7 @@
     {% for page_section in page.children %}
       {% capture thisURL %}/{{ page.parent}}/{{ page_section.folder }}/index.html{% endcapture %}
       <li>
-        <a href="{{ page_section.folder }}/"{% if thisURL == page.url %} class="is-active"{% endif %}>
+        <a href="{{ thisURL }}/"{% if thisURL == page.url %} class="is-active"{% endif %}>
           {{ page_section.title }}
         </a>
       </li>
