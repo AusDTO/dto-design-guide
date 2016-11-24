@@ -1,7 +1,7 @@
 ---
 layout: collections/item
 title: Forms & buttons
-section: Forms
+section: forms-buttons
 sections:
 - ID: Text input
   title: Text input
@@ -13,8 +13,10 @@ sections:
   title: Checkbox input
 - ID: Buttons
   title: Buttons
+- ID: Hint text
+  title: Hint text
 - ID: Accessibility
-  title: Accessibility  
+  title: Accessibility
 ---
 
 <p class="abstract">Keep forms as simple as possible &mdash; only ask what is needed for the transaction.<p>
