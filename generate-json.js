@@ -24,7 +24,9 @@ const GEN = (() => { //constructor factory
     UIKIT: '_assets/vendor/dto-ui-kit',
     UIKIT_SCSS: 'assets/sass',
     UIKIT_templates: 'assets/sass/components/templates',
+
     KIT: '_data/uikit.json',
+    TEMPLATES: '_includes/templates',
   }
 })();
 
@@ -41,7 +43,6 @@ const GEN = (() => { //constructor factory
 // Dependencies
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 const KSS = require(`kss`);
-const Path = require(`path`);
 
 
 GEN.json = (() => {
@@ -95,12 +96,75 @@ GEN.json = (() => {
           }
 
           CFonts.say(`✅  successfully generated ${GEN.KIT} file`, {
-              font: 'console',
-              colors: ['green'],
+            font: 'console',
+            space: false,
+            colors: ['green'],
           });
+
+          console.log(`\n\n`);
         });
        }
       );
+    },
+  }
+
+})();
+
+
+/***************************************************************************************************************************************************************
+ *
+ * MODULE
+ *
+ * Copy template files into jekyll _includes folder
+ *
+ **************************************************************************************************************************************************************/
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Dependencies
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+const Exec = require('child_process').exec;
+
+
+GEN.copy = (() => {
+
+  return {
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Module init method
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+    init: () => {
+      Exec(`rm ${GEN.TEMPLATES}/*.html`, (error, stdout, stderr) => {
+        if(error) {
+          CFonts.say(`❎  exec error: ${error}`, {
+            font: 'console',
+            space: false,
+            colors: ['red'],
+          });
+          return;
+        }
+
+        CFonts.say(`✅  successfully removed all files from ${GEN.TEMPLATES}/`, {
+          font: 'console',
+          space: false,
+          colors: ['green'],
+        });
+      });
+
+      Exec(`cp ${GEN.UIKIT}/${GEN.UIKIT_templates}/* ${GEN.TEMPLATES}`, (error, stdout, stderr) => {
+        if(error) {
+          CFonts.say(`❎  exec error: ${error}`, {
+            font: 'console',
+            space: false,
+            colors: ['red'],
+          });
+          return;
+        }
+
+        CFonts.say(`✅  successfully copied all files from ${GEN.UIKIT}/${GEN.UIKIT_templates}/ to ${GEN.TEMPLATES}`, {
+          font: 'console',
+          space: false,
+          colors: ['green'],
+        });
+      });
     },
   }
 
@@ -132,7 +196,10 @@ GEN.init = () => {
       space: false,
   });
 
+  console.log(`\n`);
+
   GEN.json.init();
+  GEN.copy.init();
 };
 
 GEN.init();
