@@ -2,9 +2,6 @@
 layout: default
 ---
 
-18F GOV.UK
-
-
 # Getting started
 
 ## What is this?
@@ -98,10 +95,8 @@ We aim to provide stable, usable releases at the end of each sprint.
 
 We are wary about breaking changes. We will work to ensure we will gracefully deprecate any changes that cause things to break.
 
-### Installer/wrapper
-
-We may create an installer wrapper (likely node-based), or release via git submodules.
-
 ## Copyright & license
+
+18F GOV.UK
 
 Copyright Digital Transformation Office. <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external license">Licensed under the MIT license</a>.

@@ -102,6 +102,8 @@ defaults:
     children:
       - folder: Developers
         title: Developers
+      - folder: design-principles
+        title: Design principles
 
 - scope: # FOUNDATION CATEGORY
     path: _foundations
