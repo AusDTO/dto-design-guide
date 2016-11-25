@@ -1,0 +1,26 @@
+{
+  "name": "dta-design-guide",
+  "version": "0.1.0",
+  "description": "TODO",
+  "homepage": "TODO",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AusDTO/dto-design-guide"
+  },
+  "bugs": {
+    "url": "https://github.com/AusDTO/dto-design-guide/issues"
+  },
+  "keywords": [
+    "docs",
+    "ui-kit",
+    "js"
+  ],
+  "scripts": {
+    "start": "node generate-json.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cfonts": "^1.0.2",
+    "kss": "^3.0.0-beta.16"
+  }
+}

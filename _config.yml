@@ -1,35 +1,64 @@
-# Site settings
-title: DTO Design Guide
+# SITE SETTINGS
+title: DTA Design Guide
 description: A living style guide of the UI-Kit CSS framework.
 github_url: https://github.com/AusDTO/gov-au-ui-kit
 #google_analytics: UA-72255206-3
+
+# UI Kit URL for javascript includes
 uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/
 
-# Build settings
+# Markdown flavor
 markdown: kramdown
-exclude: [node_modules, _data, vendor, bin, .DS_Store, Gemfile, Gemfile.lock, Rakefile, circle.yml]
+
+# Exclude files from being moved into the _site folder
+exclude: [
+  "node_modules",
+  "_data",
+  "vendor",
+  "bin",
+  ".DS_Store",
+  "Gemfile",
+  "Gemfile.lock",
+  "Rakefile",
+  "circle.yml",
+  "yarn.lock",
+  "LICENSE.md",
+  "README.md",
+  "*.sublime-project"
+]
+
 
 # Gem dependencies
 gems:
-  - jekyll-assets
-  - rouge
+  - jekyll-assets # https://github.com/jekyll/jekyll-assets
+  - rouge # https://github.com/jneen/rouge
+
 
 # Asset sources
+# More info: https://github.com/jekyll/jekyll-assets
 assets:
+  compress:
+    css: true
+  assets:
+    - "*.png"
+    - "*.gif"
   sources:
     - _assets/scss
-    - _assets/vendor
+    - _assets/vendor/dto-ui-kit/assets/sass/ui-kit
+    - _assets/img
 
+
+# Highlight engine
 highlighter: rouge
 
-# Custom plugin settings
-page_gen:
-  - data: "data-sections"
-    template: "section"
-    name: "header"
-    dir: "sections"
 
-# Collections configuration
+# COLLECTIONS CONFIGURATION
+#
+# @required
+#   output    {boolean}  Whether or not to render the pages out
+#   title     {string}   The name of the collection for display in navigation
+#   abstract  {string}   Text for category description
+#   order     {integer}  The order attribute is used to sort the navigation.
 collections:
   foundations:
     output: true
@@ -52,15 +81,22 @@ collections:
     abstract: "TBC."
     order: 4
 
-# Navigation
+
+# NAVIGATION
+#
+# @required
+#   parent    {string}  The name of the parent. This can be slugified or not
+#   children  {object}  All child pages, Format:
+#     folder  {string}  The folder name in which the content sits
+#     title   {string}  The title that will display on the page
 defaults:
-- scope:
+- scope: # GET STARTED CATEGORY
     path: get-started
   values:
     parent: get-started
     children:
 
-- scope:
+- scope: # FOUNDATION CATEGORY
     path: _foundations
   values:
     parent: foundations
@@ -72,7 +108,7 @@ defaults:
       - folder: colours
         title: Colours
 
-- scope:
+- scope: # COMPONENTS CATEGORY
     path: _components
   values:
     parent: components
@@ -89,7 +125,8 @@ defaults:
         title: List styles
       - folder: tables
         title: Tables
-- scope:
+
+- scope: # PATTERNS CATEGORY
     path: _patterns
   values:
     parent: patterns
@@ -97,7 +134,7 @@ defaults:
       - folder: navigation
         title: Navigation
 
-- scope:
+- scope: # TEMPLATES CATEGORY
     path: _templates
   values:
     parent: templates

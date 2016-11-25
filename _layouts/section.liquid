@@ -44,7 +44,7 @@ layout: default
 
       {% unless child.markup == "" %}
 
-      {% include guide_example.html
+      {% include guide_example.liquid
         title=child.header
         markup=child.markup
         sourceFile=child.sourceFile.path
@@ -54,7 +54,7 @@ layout: default
 
       {% if child.tags %}
       {% assign tags_array = child.tags | split: ", " | sort %}
-      {% include tags_list.html tags=tags_array %}
+      {% include tags_list.liquid tags=tags_array %}
       {% endif %}
 
     {% endfor %}
