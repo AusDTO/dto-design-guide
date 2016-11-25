@@ -91,9 +91,9 @@ collections:
 #     title   {string}  The title that will display on the page
 defaults:
 - scope: # GET STARTED CATEGORY
-    path: get-started
+    path: getting-started
   values:
-    parent: get-started
+    parent: getting-started
     children:
 
 - scope: # FOUNDATION CATEGORY

@@ -1,16 +1,36 @@
 ---
 layout: collections/item
 title: List styles
-section: list-styles
+section: List styles
 sections:
-- ID: Highlighted words style
-  title: Highlighted words style
-- ID: Vertical style
-  title: Vertical style
-- ID: Vertical style
-  title: Horizontal style
-- ID: Small list style
-  title: Small list style
+
+- headline: Highlighted words style
+- md: Highlighted words style top
+- code:
+  - scss: assets/sass/components/_lists
+  - markup: lists-highlighted
+- md: Highlighted words style guidance
+
+- headline: Vertical style
+- md: Vertical style top
+- code:
+  - scss: assets/sass/components/_lists
+  - markup: lists-vertical
+- md: Vertical style guidance
+
+- headline: Horizontal style
+- md: Horizontal style top
+- code:
+  - scss: assets/sass/components/_lists
+  - markup: lists-horizontal
+- md: Horizontal style guidance
+
+- headline: Small list style
+- md: Small list style top
+- code:
+  - scss: assets/sass/components/_lists
+  - markup: lists-small
+- md: Small list style guidance
 ---
 
 <p class="abstract">List styles make collections of similar content more usable and discoverable.<p>
