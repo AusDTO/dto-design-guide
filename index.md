@@ -2,6 +2,9 @@
 layout: default
 ---
 
+18F GOV.UK
+
+
 # Getting started
 
 ## What is this?
@@ -74,12 +77,6 @@ Teams building Australian Government sites. This was designed for GOV.AU teams, 
 The <a href="https://www.dto.gov.au/standard/" rel="external">Digital Service Standard</a> requires teams to <a href="https://www.dto.gov.au/standard/6-consistent-and-responsive/" rel="external">build services using common design patterns</a>. This is draft work on the framework and guidance that will eventually become the design patterns for digital content.
 
 You should use this with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">draft <strong>Content Style Guide</strong></a> for Digital Transformation Office projects.
-
-## Make GOV.AU UI-Kit better
-
-- Contribute to our <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">GitHub issue register</a> by logging new issues and joining the discussion.
-- Contribute to this repository. Please see [CONTRIBUTING.md](CONTRIBUTING.md), [Contributor Code of Conduct](code_of_conduct.md) and [our code Conventions](conventions.md), (also see <a href="http://getbem.com/" rel="external">Block Element Modifier</a>), first.
-- Contact us via the DTO slack in `#guides-uikit`.
 
 ## Project goal
 

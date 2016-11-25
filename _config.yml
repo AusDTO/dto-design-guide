@@ -1,11 +1,11 @@
 # SITE SETTINGS
 title: DTA Design Guide
-description: A living style guide of the UI-Kit CSS framework.
-github_url: https://github.com/AusDTO/gov-au-ui-kit
+description: A design guide for the UI-Kit CSS framework.
+github_url: https://github.com/AusDTO/dto-design-guide
 #google_analytics: UA-72255206-3
 
 # UI Kit URL for javascript includes
-uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/
+uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/
 
 # Markdown flavor
 markdown: kramdown
@@ -60,6 +60,11 @@ highlighter: rouge
 #   abstract  {string}   Text for category description
 #   order     {integer}  The order attribute is used to sort the navigation.
 collections:
+  getting-started:
+    output: true
+    title: "Getting started"
+    abstract: "TBC."
+    order: 0
   foundations:
     output: true
     title: "Foundations"
@@ -90,11 +95,13 @@ collections:
 #     folder  {string}  The folder name in which the content sits
 #     title   {string}  The title that will display on the page
 defaults:
-- scope: # GET STARTED CATEGORY
-    path: getting-started
+- scope: # GETTING STARTED CATEGORY
+    path: _getting-started
   values:
     parent: getting-started
     children:
+      - folder: Developers
+        title: Developers
 
 - scope: # FOUNDATION CATEGORY
     path: _foundations
