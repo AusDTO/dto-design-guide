@@ -8,19 +8,3 @@ layout: default
 </header>
 
 {{ content }}
-
-<ul>
-{% for collection in site.collections %}
-  {% if collection.label == page.collection %}
-
-    {% for doc in collection.docs %}
-      {% unless doc.layout == "collections/overview" %}
-  <li>
-    <a href="{{ doc.url }}">{{ doc.title }}</a>
-  </li>
-      {% endunless %}
-    {% endfor %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-</ul>
