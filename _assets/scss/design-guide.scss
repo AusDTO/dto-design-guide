@@ -1,5 +1,11 @@
 $lighter-grey:    lighten($grey, 40%);
 
+$spacing-double: ($base-spacing * 2);
+$spacing-three-quarter: ($medium-spacing + $small-spacing);
+$spacing-half: $medium-spacing;
+$spacing-quarter: $small-spacing;
+$spacing-eighth: $tiny-spacing;
+
 $guide-eg-border-width: 7px;
 
 %scrolling-example {
@@ -25,7 +31,7 @@ header[role='banner'] {
 
 // Extract the repeating bits plz
 .guide-example {
-  border: solid $guide-eg-border-width: $lighter-grey;
+  border: solid $guide-eg-border-width $lighter-grey;
   border-radius: $base-border-radius;
   margin: $base-spacing 0;
   padding-top: 0;
