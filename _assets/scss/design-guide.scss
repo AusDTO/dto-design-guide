@@ -1,3 +1,7 @@
+$lighter-grey:    lighten($grey, 40%);
+
+$guide-eg-border-width: 7px;
+
 %scrolling-example {
   width: 100%;
 }
@@ -19,8 +23,9 @@ header[role='banner'] {
 
 // Custom styling for the rendered example and code blocks.
 
+// Extract the repeating bits plz
 .guide-example {
-  border: solid 7px darken($non-white, 5%);
+  border: solid $guide-eg-border-width: $lighter-grey;
   border-radius: $base-border-radius;
   margin: $base-spacing 0;
   padding-top: 0;
@@ -29,7 +34,7 @@ header[role='banner'] {
     @extend .content-full-width;
 
     margin: 0;
-    background-color: darken($non-white, 5%);
+    background-color: $lighter-grey;
     padding: $small-spacing $medium-spacing;
 
     span {
@@ -69,7 +74,7 @@ header[role='banner'] {
     padding: $medium-spacing ($medium-spacing + $small-spacing);
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
-    border-top: solid 7px darken($non-white, 5%);
+    border-top: solid $guide-eg-border-width $lighter-grey;
     background-color: transparent;
     font-size: rem(15);
     color: $non-white;
@@ -112,7 +117,8 @@ details,
 }
 
 // Custom styling for abstract
-
+//
+// This seems defunkt?
 p.abstract {
   border-bottom: none;
   padding-bottom: 0;
@@ -122,11 +128,17 @@ p.abstract {
 // Custom styling for code examples
 
 .guide-example--code {
-  padding-bottom: 1.2em;
+  padding-bottom: 1.2em; // not base-spacing?
 }
 
 
 // Custom styling for sidebar
+//
+// We are hard-coding these % values from Neat results of the this grid setup.
+// We are doing this to get the sidebar floated to the left, w/ the right.
+// of margins.
+//
+// We should be able to remove this in the future when UI-Kit provides this.
 
 main .sidebar {
   float: left;
@@ -194,6 +206,7 @@ main .sidebar {
   }
 }
 
+// Maybe we can simplify this stuff into a mixin?
 .bg-non-black {
   background-color: $non-black;
   color: $non-white;
