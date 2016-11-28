@@ -1,16 +1,19 @@
 ---
 layout: collections/item
-title: Developers
-section: Developers
+title: For developers
+section: developers
 sections:
-  - headline: Build the UI-Kit
-  - md: build
+  - headline: Precompiled files
+  - md: Install
+
+  - headline: Local build
+  - md: Build
+
   - headline: Accessibility tests
-  - md: accessibility
-  - headline: Key libraries
-  - md: libraries
+  - md: Accessibility
+
   - headline: Contribute
-  - md: contribute
+  - md: Contribute
 ---
 
-<p class="abstract">How to use UI-Kit.</p>
+<p class="abstract">UI-Kit is a CSS and JS framework using <a href="http://bourbon.io/" rel="external">Bourbon</a> and <a href="http://neat.bourbon.io/" rel="external">Neat</a>.</p>

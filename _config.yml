@@ -1,6 +1,6 @@
 # SITE SETTINGS
 title: DTA Design Guide
-description: A design guide for the UI-Kit CSS framework.
+description: A design guide for the <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS framework</a>.
 github_url: https://github.com/AusDTO/dto-design-guide
 #google_analytics: UA-72255206-3
 
@@ -100,10 +100,11 @@ defaults:
   values:
     parent: getting-started
     children:
-      - folder: Developers
-        title: Developers
       - folder: design-principles
         title: Design principles
+      - folder: Developers
+        title: For developers
+
 
 - scope: # FOUNDATION CATEGORY
     path: _foundations
