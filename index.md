@@ -4,25 +4,25 @@ layout: default
 
 ## Getting started
 
-How to start building services with <a href="" rel="external">UI‑Kit</a>.
+How to start building Australian government services with <a href="" rel="external">UI‑Kit</a>.
 
 <a href="/getting-started/" role="button">View getting started</a>
 
 ## Foundations
 
-Typography, layout and colours.
+Typography, layout, grid and colours.
 
 <a href="/foundations/" role="button">View foundations</a>
 
 ## Components
 
-Simple UI elements.
+Simple UI elements such as forms,  buttons, tables and badges.
 
 <a href="/components/" role="button">View components</a>
 
 ## Patterns
 
-Common combinations of components.
+Common combinations of components such as navigation, headers and footers.
 
 <a href="" role="button">View patterns</a>
 
@@ -32,9 +32,7 @@ Common kinds of service pages.
 
 <button disabled>View templates</button>
 
-## Copyright & license
-
-Copyright <a href="https://www.dta.gov.au/" rel="external">Digital Transformation Agency</a>.
+## License
 
 <a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external">Licensed under the MIT license</a>.
 
