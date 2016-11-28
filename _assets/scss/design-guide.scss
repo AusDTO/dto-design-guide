@@ -1,4 +1,4 @@
-$lighter-grey:    lighten($grey, 40%);
+$lighter-grey:    lighten($grey, 48%);
 
 $spacing-double: ($base-spacing * 2);
 $spacing-three-quarter: ($medium-spacing + $small-spacing);
@@ -24,6 +24,40 @@ table {
 header[role='banner'] {
   .feedback {
     @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+  }
+}
+
+main {
+  header {
+    h1 {
+      .guide-title {
+        display: block;
+        font-size: 0.5em;
+        color: #6f777b;
+      }
+    }
+  }
+  // Custom styling for sidebar
+  //
+  // We are hard-coding these % values from Neat results of the this grid setup.
+  // We are doing this to get the sidebar floated to the left, w/ the right.
+  // of margins.
+  //
+  // We should be able to remove this in the future when UI-Kit provides this.
+
+  .sidebar {
+    float: left;
+
+    @include media($tablet) {
+      margin-left: 0;
+      margin-right: 2.74614%;
+    }
+
+    @include media($desktop) {
+      float: left;
+      margin-left: 0;
+      margin-right: 2.04556%;
+    }
   }
 }
 
@@ -135,30 +169,6 @@ p.abstract {
 
 .guide-example--code {
   padding-bottom: 1.2em; // not base-spacing?
-}
-
-
-// Custom styling for sidebar
-//
-// We are hard-coding these % values from Neat results of the this grid setup.
-// We are doing this to get the sidebar floated to the left, w/ the right.
-// of margins.
-//
-// We should be able to remove this in the future when UI-Kit provides this.
-
-main .sidebar {
-  float: left;
-
-  @include media($tablet) {
-    margin-left: 0;
-    margin-right: 2.74614%;
-  }
-
-  @include media($desktop) {
-    float: left;
-    margin-left: 0;
-    margin-right: 2.04556%;
-  }
 }
 
 // Custom styling for the Colours section, specifically for the palette.
