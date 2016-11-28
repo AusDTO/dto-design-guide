@@ -33,6 +33,7 @@ main {
       .guide-title {
         display: block;
         font-size: 0.5em;
+        font-weight: normal;
         color: $grey;
       }
     }
@@ -204,7 +205,7 @@ p.abstract {
   }
 }
 
-.guide-colour-examples {
+.guide-example--colour {
   @include outer-container;
 }
 
@@ -222,189 +223,90 @@ p.abstract {
   }
 }
 
-// Maybe we can simplify this stuff into a mixin?
-.bg-non-black {
-  background-color: $non-black;
-  color: $non-white;
+@mixin colour-palette ($fg-colour, $bg-colour) {
+  color: $fg-colour;
+  background-color: $bg-colour;
 
   .invert {
-    background-color: $non-white;
-    color: $non-black;
+    color: $bg-colour;
+    background-color: $fg-colour;
   }
+}
+
+.bg-non-black {
+  @include colour-palette($non-white, $non-black);
 }
 
 .bg-grey {
-  background-color: $grey;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $grey;
-  }
+  @include colour-palette($white, $grey);
 }
 
 .bg-light-grey {
-  background-color: $light-grey;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-grey;
-  }
+  @include colour-palette($non-black, $light-grey);
 }
 
 .bg-non-white {
-  background-color: $non-white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $non-white;
-  }
+  @include colour-palette($non-black, $non-white);
 }
 
 .bg-white {
-  background-color: $white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $white;
-  }
+  @include colour-palette($non-black, $white);
 }
 
 .bg-aqua {
-  background-color: $aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $aqua;
-  }
+  @include colour-palette($non-white, $aqua);
 }
 
 .bg-dark-aqua {
-  background-color: $dark-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-aqua;
-  }
+  @include colour-palette($non-white, $dark-aqua);
 }
 
 .bg-darker-aqua {
-  background-color: $darker-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $darker-aqua;
-  }
+  @include colour-palette($non-white, $darker-aqua);
 }
 
 .bg-light-aqua {
-  background-color: $light-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-aqua;
-  }
+  @include colour-palette($non-black, $light-aqua);
 }
 
 .bg-lighter-aqua {
-  background-color: $lighter-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $lighter-aqua;
-  }
+  @include colour-palette($non-black, $lighter-aqua);
 }
 
 .bg-navy {
-  background-color: $navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $navy;
-  }
+  @include colour-palette($non-white, $navy);
 }
 
 .bg-dark-navy {
-  background-color: $dark-navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-navy;
-  }
+  @include colour-palette($non-white, $dark-navy);
 }
 
 .bg-maroon {
-  background-color: $maroon;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $maroon;
-  }
+  @include colour-palette($white, $maroon);
 }
 
 .bg-error-red {
-  background-color: $red;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $red;
-  }
+  @include colour-palette($white, $error-colour);
 }
 
 .bg-light-red {
-  background-color: $light-red;
-  color: $red;
-
-  .invert {
-    background-color: $red;
-    color: $light-red;
-  }
+  @include colour-palette($error-colour, $light-red);
 }
 
 .bg-success-green {
-  background-color: $green;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $green;
-  }
+  @include colour-palette($white, $green);
 }
 
 .bg-light-green {
-  background-color: $light-green;
-  color: $green;
-
-  .invert {
-    background-color: $green;
-    color: $light-green;
-  }
+  @include colour-palette($green, $light-green);
 }
 
 .bg-warning-yellow {
-  background-color: $yellow;
+  background-color: $warning-colour;
 }
 
 .bg-light-yellow {
-  background-color: $light-yellow;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-yellow;
-  }
+  @include colour-palette($non-black, $light-yellow);
 }
 
 .bg-info-blue {
@@ -412,11 +314,5 @@ p.abstract {
 }
 
 .bg-light-blue {
-  background-color: $light-blue;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-blue;
-  }
+  @include colour-palette($non-black, $light-blue);
 }

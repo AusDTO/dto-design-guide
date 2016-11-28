@@ -1,4 +1,4 @@
-<div class="guide-colour-examples">
+<div class="guide-example--colour">
   <div class="guide-colour">
     <div class="swatch bg-non-black"></div>
     <p class="text"><strong>Non-black</strong><br/>
