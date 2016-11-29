@@ -1,1 +1,1 @@
-<p class="abstract">Horizontal style provides a single column of list items.</p>
+<p class="abstract">Horizontal style displays 1 column of list items.</p>

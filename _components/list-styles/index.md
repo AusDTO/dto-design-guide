@@ -33,4 +33,4 @@ sections:
 - md: Small list style guidance
 ---
 
-<p class="abstract">Styles for content lists.</p>
+<p class="abstract">Styles for lists of content.</p>
