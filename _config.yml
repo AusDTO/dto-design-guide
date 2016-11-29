@@ -5,6 +5,7 @@ github_url: https://github.com/AusDTO/dto-design-guide
 #google_analytics: UA-72255206-3
 
 # UI Kit URL for javascript includes
+uikit_github_url: https://github.com/AusDTO/gov-au-ui-kit
 uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/
 
 # Markdown flavor
