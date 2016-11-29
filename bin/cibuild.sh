@@ -19,6 +19,8 @@ main() {
       # Not using for now: --config _config.yml,_config-production.yml
       ;;
     develop)
+      echo "Cloning UI-Kit as a submodule, and installing npm deps and building JSON"
+      bundle exec rake uikit:install
       echo "Building with development/staging jekyll config"
       JEKYLL_ENV=production bundle exec jekyll build
       # Not suing for now: --config _config.yml,_config-develop.yml
