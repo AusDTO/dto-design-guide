@@ -7,10 +7,6 @@ sections:
   - md: Palette top
   - md: Palette guidance
 
-  - headline: Functional palette
-  - md: functional palette top
-  - md: functional palette guidance
-
   - headline: Text accessibility
   - md: Text accessibility top
   - md: Text accessibility guidance
