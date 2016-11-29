@@ -24,6 +24,16 @@ table {
 header[role='banner'] {
   .feedback {
     @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+
+    display: block;
+    float: none;
+    margin-top: $base-spacing;
+    margin-left: 0;
+
+    @include media($tablet) {
+      float: none;
+      margin-left: 0;
+    }
   }
 }
 
