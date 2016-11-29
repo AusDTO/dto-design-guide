@@ -7,9 +7,14 @@ sections:
   - md: Palette top
   - md: Palette guidance
 
+  - headline: Functional palette
+  - md: functional palette top
+  - md: functional palette guidance
+
   - headline: Text accessibility
   - md: Text accessibility top
   - md: Text accessibility guidance
 ---
 
-<p class="abstract">A basic palette of colours that are clear and accessible.<p>
+A basic palette of colours that are clear and accessible.
+{: .abstract }
