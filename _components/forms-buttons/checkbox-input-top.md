@@ -1,1 +1,1 @@
-<p class="abstract">Single line text inputs.</p>
+<p class="abstract">Checkboxes allow users to select more than 1 option from a visible list.</p>

@@ -38,18 +38,20 @@ sections:
     - markup: buttons-examples
   - md: Buttons guidance
 
+  - headline: Optional & mandatory fields
+  - md: Mandatory top
+  - md: Mandatory guidance
+
+  - headline: Labels
+  - md: Labels top
+  - md: Labels guidance
+
   - headline: Hint text
   - md: Hint text top
   - code:
     - scss: assets/sass/components/_forms
     - markup: hint-text
   - md: Hint text guidance
-
-  - headline: Accessibility
-  - md: Accessibility top
-  - md: Accessibility guidance
 ---
 
-<p class="abstract">Keep forms as simple as possible &mdash; only ask what is needed for the transaction.<p>
-
-Ask only 1 question per page.
+<p class="abstract">Keep forms as simple as possible. Only ask what is needed for the service.<p>
