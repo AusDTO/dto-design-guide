@@ -1,18 +1,23 @@
 ---
+machine:
+  ruby:
+    version: 2.3.1
+
 general:
   artifacts:
     - "_site"
 
+dependencies:
+  override:
+    - bin/ciprepare.sh
+
 test:
   override:
-    - ./bin/cibuild.sh
+    - bin/cibuild.sh
+    - bin/citest.sh
 
 deployment:
-  development:
-    branch: develop
+  all:
+    branch: /.*/
     commands:
-      - ./bin/cideploy.sh -develop
-  prod:
-    branch: master
-    commands:
-      - ./bin/cideploy.sh
+      - bin/cideploy.sh
