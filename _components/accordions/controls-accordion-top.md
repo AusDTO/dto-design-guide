@@ -1,1 +1,1 @@
-<p class="abstract">Use controls accordions to make page controls easier to use.</p>
+<p class="abstract">Use controls accordions to show only the controls the user needs.</p>

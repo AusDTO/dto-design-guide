@@ -3,6 +3,10 @@ layout: collections/item
 title: Accordions
 section: Accordions
 sections:
+  - headline: Usability
+  - md: Usability top
+  - md: Usability guidance
+
   - headline: Content accordion
   - md: Content accordion top
   - code:
@@ -15,10 +19,8 @@ sections:
     - scss: assets/sass/components/_accordion
     - markup: controls-accordion
 
-  - headline: Usability
-  - md: Usability top
+  - headline: Building accordions
+  - md: Building top
 ---
 
-<p class="abstract">Accordions help users find only the content they need.<p>
-
-The expand/collapse all feature will be provided soon — this will be mandatory if using a series of accordion elements.
+<p class="abstract">Accordions help users see only the content they need.<p>
