@@ -13,7 +13,6 @@ set -o pipefail
 # echo out each line of the shell as it executes
 set -x
 
-
 # Run jekyll hyde
 # Note - this will clobber the sitemap.xml using the site.url, so we just use production's
 # config as that's the only place where we need a valid sitemap

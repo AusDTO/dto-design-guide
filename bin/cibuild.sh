@@ -20,12 +20,22 @@ main() {
       ;;
     develop)
       echo "Cloning UI-Kit as a submodule, and installing npm deps and building JSON"
-      bundle exec rake uikit:install
+      git submodule init
+      git submodule update
+      INSTALL_DIR="`printf $(git submodule | awk '{ printf $2 }')`"
+      npm --prefix ${INSTALL_DIR} install ${INSTALL_DIR}
+      npm start
       echo "Building with development/staging jekyll config"
       JEKYLL_ENV=production bundle exec jekyll build
       # Not suing for now: --config _config.yml,_config-develop.yml
       ;;
     *)
+      echo "Cloning UI-Kit as a submodule, and installing npm deps and building JSON"
+      git submodule init
+      git submodule update
+      INSTALL_DIR="`printf $(git submodule | awk '{ printf $2 }')`"
+      npm --prefix ${INSTALL_DIR} install ${INSTALL_DIR}
+      npm start
       echo "Building with normal jekyll config"
       bundle exec jekyll build
       exit 0
