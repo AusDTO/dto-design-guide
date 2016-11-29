@@ -125,7 +125,6 @@ main {
 }
 
 // Custom styling for the Typography section Typeface eg blocks.
-
 .guide-example--type {
   @extend %scrolling-example;
 
@@ -150,7 +149,6 @@ main {
 }
 
 // Custom styling for the accordion
-
 details,
 .accordion {
   border-right: 1px solid $border-colour;
@@ -163,24 +161,25 @@ details,
 p.abstract {
   border-bottom: none;
   padding-bottom: 0;
+
+  @include media($tablet) {
+    max-width: 85%;
+  }
 }
 
-
 // Custom styling for code examples
-
 .guide-example--code {
   padding-bottom: 1.2em; // not base-spacing?
 }
 
 // Custom styling for the Colours section, specifically for the palette.
-
 .guide-colour {
   float: left;
   width: 43%;
   margin-right: 3%;
   margin-bottom: $gutter;
-  border: solid 1px $light-grey;
-  border-radius: 1px;
+  border: solid 1px $border-colour;
+  border-radius: $base-border-radius;
 
   @include media($tablet) {
     float: none;
@@ -191,7 +190,7 @@ p.abstract {
 
   .swatch {
     padding: 50% 0;
-    border-bottom: solid 1px $light-grey;
+    border-bottom: solid 1px $border-colour;
   }
 
   .text {
@@ -211,8 +210,9 @@ p.abstract {
 
 .guide-colour-block {
   padding: $small-spacing $small-spacing $small-spacing $medium-spacing;
+  border-radius: $base-border-radius;
 
-  .invert {
+  .inverted {
     float: right;
     width: 3.8rem;
     padding: 0 0.5em;
@@ -227,10 +227,14 @@ p.abstract {
   color: $fg-colour;
   background-color: $bg-colour;
 
-  .invert {
+  .inverted {
     color: $bg-colour;
     background-color: $fg-colour;
   }
+}
+
+.bg-black {
+  @include colour-palette($white, $black);
 }
 
 .bg-non-black {
@@ -285,6 +289,7 @@ p.abstract {
   @include colour-palette($white, $maroon);
 }
 
+.bg-red,
 .bg-error-red {
   @include colour-palette($white, $error-colour);
 }
@@ -293,6 +298,7 @@ p.abstract {
   @include colour-palette($error-colour, $light-red);
 }
 
+.bg-green,
 .bg-success-green {
   @include colour-palette($white, $green);
 }
@@ -301,6 +307,7 @@ p.abstract {
   @include colour-palette($green, $light-green);
 }
 
+.bg-yellow,
 .bg-warning-yellow {
   background-color: $warning-colour;
 }
@@ -309,6 +316,7 @@ p.abstract {
   @include colour-palette($non-black, $light-yellow);
 }
 
+.bg-blue,
 .bg-info-blue {
   background-color: $blue;
 }
