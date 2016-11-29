@@ -25,4 +25,4 @@ sections:
   - md: In-page tabs guidance
 ---
 
-<p class="abstract">Styles to organise content on the page.<p>
+<p class="abstract">Styles for lists of links.<p>
