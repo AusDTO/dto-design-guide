@@ -1,1 +1,1 @@
-<p class="abstract">Vertical style provides multiple columns of list items.</p>
+<p class="abstract">Vertical style displays items in multiple columns.</p>
