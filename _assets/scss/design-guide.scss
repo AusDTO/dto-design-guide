@@ -8,6 +8,12 @@ $spacing-eighth: $tiny-spacing;
 
 $guide-eg-border-width: 7px;
 
+// Something for uikit?
+%base-border {
+  border: 1px solid $border-colour;
+  border-radius: $base-border-radius;
+}
+
 %scrolling-example {
   width: 100%;
 }
@@ -22,6 +28,11 @@ table {
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
 header[role='banner'] {
+  .badge--beta {
+    margin-left: 0.5em;
+    vertical-align: super;
+  }
+
   .feedback {
     @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
 
@@ -34,6 +45,10 @@ header[role='banner'] {
       float: none;
       margin-left: 0;
     }
+  }
+
+  .breadcrumbs--inverted {
+    background-color: $darker-aqua;
   }
 }
 
@@ -183,12 +198,12 @@ p.abstract {
 
 // Custom styling for the Colours section, specifically for the palette.
 .guide-colour {
+  @extend %base-border;
+
   float: left;
   width: 43%;
   margin-right: 3%;
   margin-bottom: $gutter;
-  border: solid 1px $border-colour;
-  border-radius: $base-border-radius;
 
   @include media($tablet) {
     float: none;
