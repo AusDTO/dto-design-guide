@@ -4,7 +4,8 @@
   <section class="page-header">
     <div class="wrapper">
       <div class="page-header__logo">
-        <a href="/" class="logo">{{ site.title }}</a> <span class="badge--beta">beta</span>
+        <a href="/" class="logo">{{ site.title }}
+          <span class="uikit--version">{% uikit_version %}</span></a> <span class="badge--beta">beta</span>
       </div>
 
       <div class="site-nav">
@@ -40,7 +41,7 @@
       The capture is only done for brevity and future re-use.
 
       The if condition sets the page title to ‘Overview’ if it’s the index page
-      for the its page.parent.
+      for its page.parent.
     {% endcomment %}
     {% capture page_title_slugified %}{{ page.title | slugify }}{% endcapture %}
     <div class="wrapper">
@@ -48,13 +49,16 @@
         <li><a href="/">Home</a></li>
         <li><a href="/{{ page.parent }}">{{ page.parent | capitalize }}</a></li>
         <li>
-          <a href="/{{ page.parent }}/{{ page_title_slugified }}">
-            {% if page_title_slugified == page.parent %}
+          {% if page_title_slugified == page.parent %}
+            <a href="/{{ page.parent }}/">
               Overview
-            {% else %}
+            </a>
+          {% else %}
+            <a href="/{{ page.parent }}/{{ page_title_slugified }}">
               {{ page.title }}
-            {% endif %}
-        </a></li>
+            </a>
+          {% endif %}
+        </li>
       </ul>
     </div>
   </nav>
