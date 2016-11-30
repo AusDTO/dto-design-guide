@@ -1,0 +1,97 @@
+{% comment %}
+  Put all content of all pages including collections into a js object for lunrjs to search through
+
+  Usage:
+    {% include search_map.liquid %}
+
+  Required:
+    - none -
+
+  Return:
+    {{ search_output }}  [string]  The js output ready to be ingested by lunrjs
+
+{% endcomment %}
+
+
+{% comment %}
+  We need a unique iterator for each add
+{% endcomment %}
+{% assign iterator = 0 %}
+{% comment %}
+  The output variable is where we stick all our output into
+{% endcomment %}
+{% assign search_output = '' %}
+
+
+{% comment %}
+  Iterate over all pages that are not in collections
+{% endcomment %}
+{% for page in site.pages %}
+  {% comment %}
+    Skipping the search page
+  {% endcomment %}
+  {% if page.url == "/search.html" %}
+    {% continue %}
+  {% endif %}
+
+  {% comment %}
+    Generate the js object for lunrjs
+  {% endcomment %}
+  {% include lunrjs_object.liquid
+    iterator = iterator
+    title = page.title
+    thisURL = page.url
+    thisContent = page.content
+  %}
+
+  {% comment %}
+    Add this page to our output
+  {% endcomment %}
+  {% capture search_output %}{{ search_output }}{{ lunrjs }}{% endcapture %}
+
+  {% comment %}
+    Increase the iterator
+  {% endcomment %}
+  {% assign iterator = iterator | plus: 1 %}
+{% endfor %}
+
+
+{% comment %}
+  Iterate over collections
+{% endcomment %}
+{% for collection in site.collections %}
+
+  {% comment %}
+    Skip posts
+  {% endcomment %}
+  {% if collection.label == "posts" %}
+    {% continue %}
+  {% endif %}
+
+
+  {% comment %}
+    Now let's iterate over each file we have in this collection
+  {% endcomment %}
+  {% for p in collection.docs %}
+
+    {% comment %}
+      Generate the js object for lunrjs
+    {% endcomment %}
+    {% include lunrjs_object.liquid
+      iterator = iterator
+      title = p.title
+      thisURL = p.url
+      thisContent = p
+    %}
+
+    {% comment %}
+      Add this page to our output
+    {% endcomment %}
+    {% capture search_output %}{{ search_output }}{{ lunrjs }}{% endcapture %}
+
+    {% comment %}
+      Increase the iterator
+    {% endcomment %}
+    {% assign iterator = iterator | plus: 1 %}
+  {% endfor %}
+{% endfor %}

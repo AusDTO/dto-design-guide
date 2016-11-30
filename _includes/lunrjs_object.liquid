@@ -1,0 +1,38 @@
+{% comment %}
+  This snippet prints a lunrjs object
+
+  Usage:
+    {% include lunrjs_object.liquid
+      iterator = "1"
+      title = "Homepage"
+      thisURL = "/"
+      thisContent = "homepage content"
+    %}
+
+  Required:
+    {{ iterator }}     [string]  A unique number to iterate the object
+    {{ title }}        [string]  The title of the page
+    {{ thisURL }}      [string]  The URL of the page
+    {{ thisContent }}  [string]  The content of the page, it will be cleaned, html will be stripped and as much whitespace as possible
+
+  Return:
+    {{ lunrjs }}  [string]  The output is returned in a variable for later printing
+
+{% endcomment %}
+
+
+{% capture lunrjs %}
+  pages[ {{ include.iterator }} ] = {
+    id: {{ include.iterator }},
+    title: "{{ include.title | escape }}",
+    url: "{{ include.thisURL }}",
+  };
+
+  index.add({
+    id: {{ include.iterator }},
+    title: "{{ include.title | escape }}",
+    url: "{{ include.thisURL }}",
+    body: "{{ include.thisContent | strip_html | replace: "\n" | replace: "\r" | replace: "\r\n" | replace: "\n\r" | replace: "
+", " " | replace: "    ", " " | replace: "   ", " " | replace: "  ", " " | strip | escape }}"
+  });
+{% endcapture %}
