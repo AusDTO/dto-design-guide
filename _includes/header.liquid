@@ -60,13 +60,9 @@
         <li><a href="/{{ page.parent }}">{{ page.parent | capitalize }}</a></li>
         <li>
           {% if page_title_slugified == page.parent %}
-            <a href="/{{ page.parent }}/">
-              Overview
-            </a>
+            Overview
           {% else %}
-            <a href="/{{ page.parent }}/{{ page_title_slugified }}">
-              {{ page.title }}
-            </a>
+            {{ page.title }}
           {% endif %}
         </li>
       </ul>
