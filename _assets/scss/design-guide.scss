@@ -64,22 +64,33 @@ body > main {
     }
   }
 
-  h2[id]:hover {
+  // This gives us a little pilcrow (trad. paragraph marker) to the left of any
+  // h2s that have an ID and contain an anchor with the .headline-slug-link
+  // class on hover.
+  //
+  // This feature is used to give users a visual hover effect and hint that the
+  // heading has an ID and URL that can be copied to provide a link directly to
+  // this heading on the page.
+  //
+  // Might want to consider moving this into UI-Kit in the future.
+  h2[id] {
     .headline-slug-link {
       border-bottom: none;
-      padding: 0 12px 6px 3px;
-      border-radius: $base-border-radius;
-
-      &:before {
-        content: '\00B6'; // pilcrow
-        font-size: $smaller-font-size;
-        margin-left: $tiny-spacing;
-        color: $green;
-      }
+      position: relative;
 
       &:hover {
         border-bottom: none;
-        background-color: $light-green;
+        background-color: $background-colour;
+
+        &:after {
+          content: '\00B6'; // pilcrow character
+          position: absolute;
+          width: rem(24);
+          left: -(rem(24));
+          top: 0.5em;
+          font-size: $smaller-font-size;
+          color: $grey;
+        }
       }
     }
   }
