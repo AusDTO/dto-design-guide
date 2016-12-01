@@ -1,1 +1,1 @@
-<p class="abstract">Breadcrumbs help the user understand where they are in the service and how they got there.</p>
+<p class="abstract">Breadcrumbs help users understand where they are in the service and how they got there.</p>

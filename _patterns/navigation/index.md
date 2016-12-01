@@ -3,6 +3,10 @@ layout: collections/item
 title: Navigation
 section: Navigation
 sections:
+- headline: Building navigation
+- md: Building top
+- md: Building guidance
+
 - headline: Site navigation
 - md: Site navigation top
 - code:
@@ -44,10 +48,6 @@ sections:
   - scss: assets/sass/components/_navigation
   - markup: footer-navigation
 - md: Footer navigation guidance
-
-- headline: Accessibility
-- md: Accessibility top
-- md: Accessibility guidance
 ---
 
 <p class="abstract">Make sure users understand where they are in the service, where they have been and where they can go.<p>

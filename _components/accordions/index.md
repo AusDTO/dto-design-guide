@@ -23,4 +23,4 @@ sections:
   - md: Building top
 ---
 
-<p class="abstract">Accordions help users see only the content they need.<p>
+<p class="abstract">Accordions help users to see only the content they need.<p>

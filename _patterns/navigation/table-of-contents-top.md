@@ -1,1 +1,1 @@
-<p class="abstract">Contents links (index links) help users understand the page structure.</p>
+<p class="abstract">Use contents links (index links) to help the user scan the page.</p>
