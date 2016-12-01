@@ -10,13 +10,13 @@ sections:
   - headline: Content accordion
   - md: Content accordion top
   - code:
-    - scss: assets/sass/components/_accordion
+    - scss: assets/sass/components/_accordions
     - markup: content-accordion
 
   - headline: Controls accordion
   - md: Controls accordion top
   - code:
-    - scss: assets/sass/components/_accordion
+    - scss: assets/sass/components/_accordions
     - markup: controls-accordion
 
   - headline: Building accordions
