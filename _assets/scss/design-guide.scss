@@ -33,6 +33,10 @@ header[role='banner'] {
     vertical-align: super;
   }
 
+  .breadcrumbs {
+    background-color: $background-colour;
+  }
+
   .feedback {
     @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
 
