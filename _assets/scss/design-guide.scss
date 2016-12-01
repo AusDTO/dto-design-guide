@@ -8,6 +8,12 @@ $spacing-eighth: $tiny-spacing;
 
 $guide-eg-border-width: 7px;
 
+// Something for uikit?
+%base-border {
+  border: 1px solid $border-colour;
+  border-radius: $base-border-radius;
+}
+
 %scrolling-example {
   width: 100%;
 }
@@ -22,8 +28,27 @@ table {
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
 header[role='banner'] {
+  .badge--default {
+    margin-left: 0.5em;
+    vertical-align: super;
+  }
+
+  .breadcrumbs {
+    background-color: $background-colour;
+  }
+
   .feedback {
     @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+
+    display: block;
+    float: none;
+    margin-top: $base-spacing;
+    margin-left: 0;
+
+    @include media($tablet) {
+      float: none;
+      margin-left: 0;
+    }
   }
 }
 
@@ -32,7 +57,8 @@ main {
     h1 {
       .guide-title {
         display: block;
-        font-size: 0.5em;
+        font-size: 0.425em; // 17px.
+        font-weight: normal;
         color: $grey;
       }
     }
@@ -79,7 +105,6 @@ main {
 
     span {
       display: block;
-      margin-bottom: $tiny-spacing;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: $smaller-font-size;
@@ -124,7 +149,6 @@ main {
 }
 
 // Custom styling for the Typography section Typeface eg blocks.
-
 .guide-example--type {
   @extend %scrolling-example;
 
@@ -149,7 +173,6 @@ main {
 }
 
 // Custom styling for the accordion
-
 details,
 .accordion {
   border-right: 1px solid $border-colour;
@@ -162,24 +185,25 @@ details,
 p.abstract {
   border-bottom: none;
   padding-bottom: 0;
+
+  @include media($tablet) {
+    max-width: 85%;
+  }
 }
 
-
 // Custom styling for code examples
-
 .guide-example--code {
   padding-bottom: 1.2em; // not base-spacing?
 }
 
 // Custom styling for the Colours section, specifically for the palette.
-
 .guide-colour {
+  @extend %base-border;
+
   float: left;
   width: 43%;
   margin-right: 3%;
   margin-bottom: $gutter;
-  border: solid 1px $light-grey;
-  border-radius: 1px;
 
   @include media($tablet) {
     float: none;
@@ -189,8 +213,8 @@ p.abstract {
   }
 
   .swatch {
-    padding: 50% 0;
-    border-bottom: solid 1px $light-grey;
+    padding: 45% 0;
+    border-bottom: solid 1px $border-colour;
   }
 
   .text {
@@ -199,19 +223,20 @@ p.abstract {
 
     small {
       display: block;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   }
 }
 
-.guide-colour-examples {
+.guide-example--colour {
   @include outer-container;
 }
 
 .guide-colour-block {
   padding: $small-spacing $small-spacing $small-spacing $medium-spacing;
+  border-radius: $base-border-radius;
 
-  .invert {
+  .inverted {
     float: right;
     width: 3.8rem;
     padding: 0 0.5em;
@@ -222,201 +247,104 @@ p.abstract {
   }
 }
 
-// Maybe we can simplify this stuff into a mixin?
-.bg-non-black {
-  background-color: $non-black;
-  color: $non-white;
+@mixin colour-palette ($fg-colour, $bg-colour) {
+  color: $fg-colour;
+  background-color: $bg-colour;
 
-  .invert {
-    background-color: $non-white;
-    color: $non-black;
+  .inverted {
+    color: $bg-colour;
+    background-color: $fg-colour;
   }
+}
+
+.bg-black {
+  @include colour-palette($white, $black);
+}
+
+.bg-non-black {
+  @include colour-palette($non-white, $non-black);
 }
 
 .bg-grey {
-  background-color: $grey;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $grey;
-  }
+  @include colour-palette($white, $grey);
 }
 
 .bg-light-grey {
-  background-color: $light-grey;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-grey;
-  }
+  @include colour-palette($non-black, $light-grey);
 }
 
 .bg-non-white {
-  background-color: $non-white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $non-white;
-  }
+  @include colour-palette($non-black, $non-white);
 }
 
 .bg-white {
-  background-color: $white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $white;
-  }
+  @include colour-palette($non-black, $white);
 }
 
 .bg-aqua {
-  background-color: $aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $aqua;
-  }
+  @include colour-palette($non-white, $aqua);
 }
 
 .bg-dark-aqua {
-  background-color: $dark-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-aqua;
-  }
+  @include colour-palette($non-white, $dark-aqua);
 }
 
 .bg-darker-aqua {
-  background-color: $darker-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $darker-aqua;
-  }
+  @include colour-palette($non-white, $darker-aqua);
 }
 
 .bg-light-aqua {
-  background-color: $light-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-aqua;
-  }
+  @include colour-palette($non-black, $light-aqua);
 }
 
 .bg-lighter-aqua {
-  background-color: $lighter-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $lighter-aqua;
-  }
+  @include colour-palette($non-black, $lighter-aqua);
 }
 
 .bg-navy {
-  background-color: $navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $navy;
-  }
+  @include colour-palette($non-white, $navy);
 }
 
 .bg-dark-navy {
-  background-color: $dark-navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-navy;
-  }
+  @include colour-palette($non-white, $dark-navy);
 }
 
 .bg-maroon {
-  background-color: $maroon;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $maroon;
-  }
+  @include colour-palette($white, $maroon);
 }
 
+.bg-red,
 .bg-error-red {
-  background-color: $red;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $red;
-  }
+  @include colour-palette($white, $error-colour);
 }
 
 .bg-light-red {
-  background-color: $light-red;
-  color: $red;
-
-  .invert {
-    background-color: $red;
-    color: $light-red;
-  }
+  @include colour-palette($error-colour, $light-red);
 }
 
+.bg-green,
 .bg-success-green {
-  background-color: $green;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $green;
-  }
+  @include colour-palette($white, $green);
 }
 
 .bg-light-green {
-  background-color: $light-green;
-  color: $green;
-
-  .invert {
-    background-color: $green;
-    color: $light-green;
-  }
+  @include colour-palette($green, $light-green);
 }
 
+.bg-yellow,
 .bg-warning-yellow {
-  background-color: $yellow;
+  background-color: $warning-colour;
 }
 
 .bg-light-yellow {
-  background-color: $light-yellow;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-yellow;
-  }
+  @include colour-palette($non-black, $light-yellow);
 }
 
+.bg-blue,
 .bg-info-blue {
   background-color: $blue;
 }
 
 .bg-light-blue {
-  background-color: $light-blue;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-blue;
-  }
+  @include colour-palette($non-black, $light-blue);
 }
