@@ -47,6 +47,7 @@ assets:
   assets:
     - "*.png"
     - "*.gif"
+    - "*.svg"
   sources:
     - _assets/scss
     - _assets/vendor/dto-ui-kit/assets/sass/ui-kit
