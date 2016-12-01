@@ -28,9 +28,66 @@ table {
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
 header[role='banner'] {
+  .page-header__logo {
+    padding-top: 0;
+    height: 6em;
+    margin-bottom: ($base-spacing * 1.8);
+
+    @include media($tablet) {
+      height: 8em;
+      margin-bottom: 0;
+    }
+
+    .logo {
+      display: inline-block;
+      position: relative;
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        width: rem(48);
+        height: auto;
+
+        @include media($tablet) {
+          width: rem(64);
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: rem(50);
+        margin-left: rem(60);
+        border-bottom: 1px solid $light-aqua;
+
+        @include media($tablet) {
+          margin-top: rem(50);
+          margin-left: rem(80);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $light-aqua;
+          color: $link-colour;
+        }
+      }
+    }
+  }
+
   .badge--default {
+    display: inline-block;
     margin-left: 0.5em;
     vertical-align: super;
+
+    // I feel a bit dirty too, but hey -- this lets the badge wrap nicely.
+    @include media(min-width 300px max-width 410px) {
+      margin: $small-spacing 0 0 rem(60);
+    }
   }
 
   .breadcrumbs {
