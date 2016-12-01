@@ -64,7 +64,9 @@ layout: default
     {% assign headline = page_section.first[ 1 ] %}
 
     {% unless headlines == 1 %}
-      <h2 id="{{ headline | slugify }}">{{ headline }}</h2>
+      <h2 id="{{ headline | slugify }}">{{ headline }}
+        <a href="{{ page.url }}/#{{ headline | slugify }}" class="headline-slug-link"></a>
+      </h2>
     {% endunless %}
 
     {% continue %}
