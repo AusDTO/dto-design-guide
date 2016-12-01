@@ -1,7 +1,13 @@
-Primary content is always contained in 12 columns. This allows for seamless introduction of a sidebar/side navigation.
-
-Maximum page width is set to 1200px. Gutters between the columns are a minimum of 32px.
-
-The following diagram shows how the main content area takes up 12 of 16 columns at `$desktop` and above:
-
 ![Diagram of the layout across 16 columns](/assets/img_grid_layout.png)
+
+### Spacing
+
+- Main content area: 12 of 16 columns at `$desktop` and above.
+- Maximum page width: 1200px.
+- Gutters between the columns: minimum 32px.
+
+### Breakpoints
+
+- Mobile (default): 8 columns, 420px maximum.
+- Tablet: 12 columns, 768px maximum.
+- Desktop: 16 columns, 1200px maximum.

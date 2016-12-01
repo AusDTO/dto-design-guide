@@ -1,28 +1,20 @@
 <details open data-label="sidebar-guidance-accordion" aria-expanded="false">
   <summary>Guidance <span class="visuallyhidden">for sidebar</span></summary>
   <div class="accordion-panel">
-    <p>By default the sidebar sits to the right of the main content. When the sidebar contains content controls (eg filters), instead of navigation, it can sit on the left side. Use the class <code>.sidebar-has-controls</code> on the parent <code>main</code> element:</p>
 
-    <pre>
-    <code><main class="sidebar-has-controls">
-      <aside class="sidebar">
-      ...
-      </aside>
-      <article role="main" id="content" class="content-main">
-      ...
-      </article>
-    </main></code>
-    </pre>
+  <p>The sidebar sits to the right of the main content by default.</p>
 
-    <h4>Header & footer</h4>
+  <p>Use the class <code>.sidebar-has-controls</code> on the parent <code>main</code> element:</p>
 
-    <p>The site header and footer are targeted by their ARIA roles, not a <code>class</code> or <code>id</code>. Use <code>banner</code> and <code>contentinfo</code> roles, respectively.</p>
-  </div>
-</details>
+  <pre><code>&lt;main class=&quot;sidebar-has-controls&quot;&gt;
+    &lt;aside class=&quot;sidebar&quot;&gt;
+    ...
+    &lt;/aside&gt;
+    &lt;article role=&quot;main&quot; id=&quot;content&quot; class=&quot;content-main&quot;&gt;
+    ...
+    &lt;/article&gt;
+  &lt;/main&gt;
+  </code></pre>
 
-<details open data-label="sidebar-accessibility-accordion" aria-expanded="false">
-  <summary>Accessibility <span class="visuallyhidden">guidance for sidebar</span></summary>
-  <div class="accordion-panel">
-    <p>Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.</p>
   </div>
 </details>
