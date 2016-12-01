@@ -22,8 +22,12 @@ exclude: [
   "Gemfile.lock",
   "Rakefile",
   "circle.yml",
-  "yarn.lock",
+  "_config*.yml",
+  "config.ru",
+  "ld_library_path",
   "LICENSE.md",
+  "manifest*.yml",
+  "yarn.lock",
   "README.md",
   "*.sublime-project"
 ]

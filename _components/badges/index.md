@@ -10,4 +10,4 @@ sections:
     - markup: Badges
 ---
 
-<p class="abstract">There is styling for badges to indicate status.<p>
+<p class="abstract">Use badges to show the status of a service.<p>

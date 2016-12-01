@@ -1,1 +1,1 @@
-<p class="abstract">You can present a list of links as a horizontal block using an unsorted list with the `.inline-links` class.</p>
+<p class="abstract">Use inline blocks to display links in 1 horizontal row.</p>

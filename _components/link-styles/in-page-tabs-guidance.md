@@ -4,7 +4,7 @@
     <ul>
     <li>Use tab navigation in the main content area only.</li>
     <li>Client-side context is not affected by the tabs.</li>
-    <li>Set current location using `class="is-current"`.</li>
+    <li>Tabs wrap on top of each other for smaller breakpoints.</li>
     </ul>
   </div>
 </details>
