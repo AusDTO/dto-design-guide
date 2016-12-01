@@ -34,4 +34,8 @@ collections:
   foundations:
     output: true
     title: "Foundations"
-    abstract: "Foundations are important to avoid wobbly scaffolding."
+    abstract: "TBC."
+  components:
+    output: true
+    title: "Components"
+    abstract: "TBC."

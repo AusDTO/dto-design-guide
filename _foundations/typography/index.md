@@ -1,9 +1,7 @@
 ---
 layout: collections/item
-title: Foundations&#58; Typography
+title: Typography
 section: Typography
 ---
 
-## Overview
-
-Lorem ispum dolor sit amet
+<p class="abstract" style="border-bottom:hidden">Use clear and accessible typography as the primary way to communicate.<p>
