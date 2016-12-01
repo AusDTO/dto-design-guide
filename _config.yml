@@ -51,6 +51,7 @@ assets:
     - _assets/scss
     - _assets/vendor/dto-ui-kit/assets/sass/ui-kit
     - _assets/img
+    - _assets/js
 
 
 # Highlight engine
