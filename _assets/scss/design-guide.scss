@@ -28,13 +28,7 @@ table {
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
 header[role='banner'] {
-  .uikit--version {
-    color: $dark-navy;
-    font-size: $smaller-font-size;
-    vertical-align: top;
-  }
-
-  .badge--beta {
+  .badge--default {
     margin-left: 0.5em;
     vertical-align: super;
   }
@@ -59,7 +53,7 @@ main {
     h1 {
       .guide-title {
         display: block;
-        font-size: 0.5em;
+        font-size: 0.425em; // 17px.
         font-weight: normal;
         color: $grey;
       }
