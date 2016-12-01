@@ -4,7 +4,16 @@
   <section class="page-header">
     <div class="wrapper">
       <div class="page-header__logo">
-        <a href="/" class="logo">{{ site.title }}</a> <span class="badge--default">Draft</span>
+        <a href="/" class="logo">
+          <svg role="img" title="Logo" aria-labelledby="dg_logo-title">
+            <title id="dg_logo-title" lang="en">Design Guide logo</title>
+            <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
+          </svg>
+
+          {{ site.title }}
+        </a>
+
+        <span class="badge--default">Draft</span>
       </div>
 
       <div class="site-nav">
