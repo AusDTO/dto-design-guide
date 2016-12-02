@@ -9,6 +9,6 @@ Use the DTA Design Guide with the <a href="http://content-style-guide.apps.stagi
 
 ## Get help
 
-Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI-Kit GitHub issue register</a>.
-
-If you work in a DTA team join the Slack channel  `#guides-uikit`
+- [Email the Guides team.](mailto:guides@digital.gov.au)
+- Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI-Kit GitHub issue register</a>.
+- If you work in a Digital Transformation Agency team join the Slack channel  `#guides-uikit`
