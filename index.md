@@ -4,31 +4,31 @@ layout: default
 
 ## Getting started
 
-How to start building Australian Government services with UI‑Kit.
+Design principles and basics for designers and developers.
 
 <a href="/getting-started/" role="button">View getting started</a>
 
 ## Foundations
 
-Typography, layout, grid and colours.
+Typography, layout and colours.
 
 <a href="/foundations/" role="button">View foundations</a>
 
 ## Components
 
-Simple UI elements such as forms,  buttons, tables and badges.
+Form fields and buttons, list styles, accordions, badges and tables.
 
 <a href="/components/" role="button">View components</a>
 
 ## Patterns
 
-Common combinations of components such as navigation, headers and footers.
+Global, local and inline navigation.
 
 <a href="" role="button">View patterns</a>
 
 ## Templates
 
-Common kinds of service pages.
+We are working on templates for common service pages.
 
 <button disabled>View templates</button>
 
