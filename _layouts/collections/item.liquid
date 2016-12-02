@@ -41,7 +41,7 @@ layout: default
   {% endcomment %}
   {% unless headlines == 1 %}
     <nav class="index-links">
-      <h2>Contents</h2>
+      <h2 id="index-links">Contents</h2>
       <ul>
         {{ navigation }}
       </ul>
@@ -64,6 +64,16 @@ layout: default
     {% assign headline = page_section.first[ 1 ] %}
 
     {% unless headlines == 1 %}
+
+      {% comment %}
+        We’re checking to see if it’s the first sub section; if it isn’t we
+        provide a skip back to the index links anchor.
+      {% endcomment %}
+      {% capture page_section_first %}{{ page.sections | first }}{% endcapture %}
+      {% unless page_section_first contains page_section.first[ 1 ] %}
+        <span class="back-to-index-link"><a href="#index-links">Back to section index &uarr;</a></span>
+      {% endunless %}
+
       <h2 id="{{ headline | slugify }}">
         <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
       </h2>
