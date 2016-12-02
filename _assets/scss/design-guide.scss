@@ -34,7 +34,7 @@ header[role='banner'] {
 
   .page-header__logo {
     padding-top: 0;
-    margin-bottom: ($base-spacing * 1.8);
+    margin-bottom: $tiny-spacing;
 
     @include media($tablet) {
       height: rem(132);
