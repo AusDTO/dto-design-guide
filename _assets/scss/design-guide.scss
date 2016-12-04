@@ -1,3 +1,19 @@
+$lighter-grey:    lighten($grey, 48%);
+
+$spacing-double: ($base-spacing * 2);
+$spacing-three-quarter: ($medium-spacing + $small-spacing);
+$spacing-half: $medium-spacing;
+$spacing-quarter: $small-spacing;
+$spacing-eighth: $tiny-spacing;
+
+$guide-eg-border-width: 7px;
+
+// Something for uikit?
+%base-border {
+  border: 1px solid $border-colour;
+  border-radius: $base-border-radius;
+}
+
 %scrolling-example {
   width: 100%;
 }
@@ -6,10 +22,176 @@ table {
   margin-bottom: $base-spacing * 2;
 }
 
+// Custom styling for the inverted feedback button in the header.
+// This will likely be removed/replaced by a global site search.
+// The @extend .inverted is not working in:
+// https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
+
+header[role='banner'] {
+  .page-header {
+    padding-top: 0;
+  }
+
+  .page-header__logo {
+    padding-top: 0;
+    margin-bottom: $tiny-spacing;
+
+    @include media($tablet) {
+      height: rem(132);
+      margin-bottom: 0;
+    }
+
+    .logo {
+      display: inline-block;
+      position: relative;
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        width: rem(48);
+        height: auto;
+
+        @include media($tablet) {
+          width: rem(64);
+        }
+      }
+
+      span {
+        display: inline-block;
+        margin-top: rem(50);
+        margin-left: rem(60);
+        border-bottom: 1px solid $light-aqua;
+
+        @include media($tablet) {
+          margin-top: rem(50);
+          margin-left: rem(80);
+        }
+
+        &:hover,
+        &:focus {
+          background-color: $light-aqua;
+          color: $link-colour;
+        }
+      }
+    }
+  }
+
+  .badge--default {
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: super;
+
+    // I feel a bit dirty too, but hey -- this lets the badge wrap nicely.
+    @include media(min-width 300px max-width 410px) {
+      margin: $small-spacing 0 0 rem(60);
+    }
+  }
+
+  .breadcrumbs {
+    background-color: $background-colour;
+  }
+
+  .feedback {
+    @include button-colours(transparent, $button-bg-colour--hover, $button-bg-colour--active, $button-bg-colour--hover, $button-text-colour);
+
+    display: block;
+    float: none;
+    margin-top: $base-spacing;
+    margin-left: 0;
+
+    @include media($tablet) {
+      float: none;
+      margin-left: 0;
+    }
+  }
+}
+
+main {
+  header {
+    h1 {
+      .guide-title {
+        display: block;
+        font-size: rem(15);
+        font-weight: normal;
+        color: $grey;
+
+        @include media($tablet) {
+          font-size: rem(16);
+        }
+
+        @include media($desktop) {
+          font-size: rem(17);
+        }
+      }
+    }
+  }
+
+  // This gives us a little pilcrow (trad. paragraph marker) to the left of any
+  // h2s that have an ID and contain an anchor with the .headline-slug-link
+  // class on hover.
+  //
+  // This feature is used to give users a visual hover effect and hint that the
+  // heading has an ID and URL that can be copied to provide a link directly to
+  // this heading on the page.
+  //
+  // Might want to consider moving this into UI-Kit in the future.
+  h2[id] {
+    .headline-slug-link {
+      border-bottom: none;
+      position: relative;
+
+      &:hover {
+        border-bottom: none;
+        background-color: $background-colour;
+
+        &:after {
+          content: '\00B6'; // pilcrow character
+          position: absolute;
+          width: rem(24);
+          left: -(rem(24));
+          top: 0.5em;
+          font-size: $smaller-font-size;
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  // Custom styling for sidebar
+  //
+  // We are hard-coding these % values from Neat results of the this grid setup.
+  // We are doing this to get the sidebar floated to the left, w/ the right.
+  // of margins.
+  //
+  // We should be able to remove this in the future when UI-Kit provides this.
+
+  .sidebar {
+    float: left;
+
+    @include media($tablet) {
+      margin-left: 0;
+      margin-right: 2.74614%;
+    }
+
+    @include media($desktop) {
+      float: left;
+      margin-left: 0;
+      margin-right: 2.04556%;
+    }
+  }
+}
+
 // Custom styling for the rendered example and code blocks.
 
+// Extract the repeating bits plz
 .guide-example {
-  border: solid 7px $non-white;
+  border: solid $guide-eg-border-width $lighter-grey;
   border-radius: $base-border-radius;
   margin: $base-spacing 0;
   padding-top: 0;
@@ -18,12 +200,11 @@ table {
     @extend .content-full-width;
 
     margin: 0;
-    background-color: $non-white;
+    background-color: $lighter-grey;
     padding: $small-spacing $medium-spacing;
 
     span {
       display: block;
-      margin-bottom: $tiny-spacing;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: $smaller-font-size;
@@ -58,17 +239,16 @@ table {
     padding: $medium-spacing ($medium-spacing + $small-spacing);
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
-    border-top: 1px solid lighten($navy, 7%);
-    background-color: $navy;
+    border-top: solid $guide-eg-border-width $lighter-grey;
+    background-color: transparent;
     font-size: rem(15);
     color: $non-white;
 
-    @include link-colours($link-inverted-colour, $link-inverted-colour, $controls-bg-colour);
+    @include link-colours($non-black, $light-aqua, $non-black);
   }
 }
 
 // Custom styling for the Typography section Typeface eg blocks.
-
 .guide-example--type {
   @extend %scrolling-example;
 
@@ -92,16 +272,38 @@ table {
   }
 }
 
+// Custom styling for the accordion
+details,
+.accordion {
+  border-right: 1px solid $border-colour;
+  border-left: 1px solid $border-colour;
+}
+
+// Custom styling for abstract
+//
+// This seems defunkt?
+p.abstract {
+  border-bottom: none;
+  padding-bottom: 0;
+
+  @include media($tablet) {
+    max-width: 85%;
+  }
+}
+
+// Custom styling for code examples
+.guide-example--code {
+  padding-bottom: 1.2em; // not base-spacing?
+}
 
 // Custom styling for the Colours section, specifically for the palette.
-
 .guide-colour {
+  @extend %base-border;
+
   float: left;
   width: 43%;
   margin-right: 3%;
   margin-bottom: $gutter;
-  border: solid 1px $light-grey;
-  border-radius: 1px;
 
   @include media($tablet) {
     float: none;
@@ -111,8 +313,8 @@ table {
   }
 
   .swatch {
-    padding: 50% 0;
-    border-bottom: solid 1px $light-grey;
+    padding: 45% 0;
+    border-bottom: solid 1px $border-colour;
   }
 
   .text {
@@ -121,19 +323,20 @@ table {
 
     small {
       display: block;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   }
 }
 
-.guide-colour-examples {
+.guide-example--colour {
   @include outer-container;
 }
 
 .guide-colour-block {
   padding: $small-spacing $small-spacing $small-spacing $medium-spacing;
+  border-radius: $base-border-radius;
 
-  .invert {
+  .inverted {
     float: right;
     width: 3.8rem;
     padding: 0 0.5em;
@@ -144,200 +347,104 @@ table {
   }
 }
 
-.bg-non-black {
-  background-color: $non-black;
-  color: $non-white;
+@mixin colour-palette ($fg-colour, $bg-colour) {
+  color: $fg-colour;
+  background-color: $bg-colour;
 
-  .invert {
-    background-color: $non-white;
-    color: $non-black;
+  .inverted {
+    color: $bg-colour;
+    background-color: $fg-colour;
   }
+}
+
+.bg-black {
+  @include colour-palette($white, $black);
+}
+
+.bg-non-black {
+  @include colour-palette($non-white, $non-black);
 }
 
 .bg-grey {
-  background-color: $grey;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $grey;
-  }
+  @include colour-palette($white, $grey);
 }
 
 .bg-light-grey {
-  background-color: $light-grey;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-grey;
-  }
+  @include colour-palette($non-black, $light-grey);
 }
 
 .bg-non-white {
-  background-color: $non-white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $non-white;
-  }
+  @include colour-palette($non-black, $non-white);
 }
 
 .bg-white {
-  background-color: $white;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $white;
-  }
+  @include colour-palette($non-black, $white);
 }
 
 .bg-aqua {
-  background-color: $aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $aqua;
-  }
+  @include colour-palette($non-white, $aqua);
 }
 
 .bg-dark-aqua {
-  background-color: $dark-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-aqua;
-  }
+  @include colour-palette($non-white, $dark-aqua);
 }
 
 .bg-darker-aqua {
-  background-color: $darker-aqua;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $darker-aqua;
-  }
+  @include colour-palette($non-white, $darker-aqua);
 }
 
 .bg-light-aqua {
-  background-color: $light-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-aqua;
-  }
+  @include colour-palette($non-black, $light-aqua);
 }
 
 .bg-lighter-aqua {
-  background-color: $lighter-aqua;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $lighter-aqua;
-  }
+  @include colour-palette($non-black, $lighter-aqua);
 }
 
 .bg-navy {
-  background-color: $navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $navy;
-  }
+  @include colour-palette($non-white, $navy);
 }
 
 .bg-dark-navy {
-  background-color: $dark-navy;
-  color: $non-white;
-
-  .invert {
-    background-color: $non-white;
-    color: $dark-navy;
-  }
+  @include colour-palette($non-white, $dark-navy);
 }
 
 .bg-maroon {
-  background-color: $maroon;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $maroon;
-  }
+  @include colour-palette($white, $maroon);
 }
 
+.bg-red,
 .bg-error-red {
-  background-color: $red;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $red;
-  }
+  @include colour-palette($white, $error-colour);
 }
 
 .bg-light-red {
-  background-color: $light-red;
-  color: $red;
-
-  .invert {
-    background-color: $red;
-    color: $light-red;
-  }
+  @include colour-palette($error-colour, $light-red);
 }
 
+.bg-green,
 .bg-success-green {
-  background-color: $green;
-  color: $white;
-
-  .invert {
-    background-color: $white;
-    color: $green;
-  }
+  @include colour-palette($white, $green);
 }
 
 .bg-light-green {
-  background-color: $light-green;
-  color: $green;
-
-  .invert {
-    background-color: $green;
-    color: $light-green;
-  }
+  @include colour-palette($green, $light-green);
 }
 
+.bg-yellow,
 .bg-warning-yellow {
-  background-color: $yellow;
+  background-color: $warning-colour;
 }
 
 .bg-light-yellow {
-  background-color: $light-yellow;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-yellow;
-  }
+  @include colour-palette($non-black, $light-yellow);
 }
 
+.bg-blue,
 .bg-info-blue {
   background-color: $blue;
 }
 
 .bg-light-blue {
-  background-color: $light-blue;
-  color: $non-black;
-
-  .invert {
-    background-color: $non-black;
-    color: $light-blue;
-  }
+  @include colour-palette($non-black, $light-blue);
 }

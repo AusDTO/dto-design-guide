@@ -1,0 +1,5 @@
+- Keep accordion headings and labels short but descriptive.
+- Accordions can be set to open or closed initially using `aria-expanded=true` or `aria-expanded=false`.
+- JavaScript is used to replace the browser default for `<details>`.
+- For multiple accordion elements each `details` element must have its own `data-label` attribute.
+- You can run a text/string search of accordion content, even when collapsed. The string stays hidden until the accordion is opened.

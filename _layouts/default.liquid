@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.liquid %}
+
+  <body>
+
+  {% include header.liquid %}
+
+    <main role="main">
+
+      <aside class="sidebar">
+
+        {% include local_nav.liquid %}
+
+      </aside>
+
+      <article id="content" class="content-main">
+
+        {{ content }}
+
+      </article>
+    </main>
+
+  {% include footer.liquid %}
+
+  </body>
+
+</html>

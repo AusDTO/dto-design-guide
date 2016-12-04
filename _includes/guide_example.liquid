@@ -1,0 +1,26 @@
+<div class="guide-example">
+  <h3 class="guide-example--heading">
+    <span>Example<span class="visuallyhidden"> of {{ include.title }}</span></span>
+  </h3>
+
+    <div class="guide-example--rendered">
+  {% include {{ include.markup }} %}
+    </div>
+
+  <h3 class="guide-example--heading">
+    <span><abbr>HTML</abbr><span class="visuallyhidden"> for {{ include.title }}</span></span>
+  </h3>
+
+  <div class="guide-example--code">
+    {% highlight html %}{% include {{ include.markup }} %}{% endhighlight %}
+  </div>
+
+  <cite class="guide-example--cite">
+    Stylesheet source on GitHub:
+    <a
+      href="{{ site.uikit_github_url }}/blob/master/{{ include.sourceFile }}"
+      rel="external">
+      <code>{{ include.sourceFile }}</code>
+    </a>
+  </cite>
+</div>
