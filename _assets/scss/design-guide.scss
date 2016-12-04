@@ -28,13 +28,16 @@ table {
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
 header[role='banner'] {
+  .page-header {
+    padding-top: 0;
+  }
+
   .page-header__logo {
     padding-top: 0;
-    height: 6em;
-    margin-bottom: ($base-spacing * 1.8);
+    margin-bottom: $tiny-spacing;
 
     @include media($tablet) {
-      height: 8em;
+      height: rem(132);
       margin-bottom: 0;
     }
 
