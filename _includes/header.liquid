@@ -57,7 +57,12 @@
     <div class="wrapper">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/{{ page.parent }}">{{ page.parent | capitalize }}</a></li>
+        {% for collection in site.collections %}
+          {% if collection.label == page.parent %}
+            <li><a href="/{{ page.parent }}">{{ collection.title }}</a></li>
+            {% break %}
+          {% endif %}
+        {% endfor %}
         <li>
           {% if page_title_slugified == page.parent %}
             Overview
