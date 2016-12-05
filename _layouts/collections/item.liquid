@@ -19,7 +19,7 @@ layout: default
 
   {% comment %}
     Page sections as ordered in front matter in index.md and Headlines signify different parts in our page
-    We populate {{ navigation }} with the lis for each section and count {{ headlines }} to see if we have more than one
+    We populate {{ navigation }} with the list for each section and count {{ headlines }} to see if we have more than one
   {% endcomment %}
   {% assign headlines = 0 %}
   {% for page_section in page.sections %}
@@ -39,14 +39,14 @@ layout: default
   {% comment %}
     We only show the "In this section" bit if we have more than one headlines available
   {% endcomment %}
-  {% unless headlines == 1 %}
+  {% if headlines > 1 %}
     <nav class="index-links">
       <h2 id="index-links">Contents</h2>
       <ul>
         {{ navigation }}
       </ul>
     </nav>
-  {% endunless %}
+  {% endif %}
 
 </header>
 
@@ -63,21 +63,11 @@ layout: default
   {% if page_section.first[ 0 ] == 'headline' %}
     {% assign headline = page_section.first[ 1 ] %}
 
-    {% unless headlines == 1 %}
-
-      {% comment %}
-        We’re checking to see if it’s the first sub section; if it isn’t we
-        provide a skip back to the index links anchor.
-      {% endcomment %}
-      {% capture page_section_first %}{{ page.sections | first }}{% endcapture %}
-      {% unless page_section_first contains page_section.first[ 1 ] %}
-        <span class="back-to-index-link"><a href="#index-links">Back to section index &uarr;</a></span>
-      {% endunless %}
-
+    {% if headlines > 1 %}
       <h2 id="{{ headline | slugify }}">
         <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
       </h2>
-    {% endunless %}
+    {% endif %}
 
     {% continue %}
   {% endif %}
@@ -115,3 +105,12 @@ layout: default
   {% endif %}
 
 {% endfor %}
+
+{% comment %}
+  This uses clipboard.js v1.5.15, as included minified in _assets/js/.
+
+  For documentation see: https://github.com/zenorocha/clipboard.js
+{% endcomment %}
+<script>
+  var clipboard = new Clipboard('.js-copypasta');
+</script>

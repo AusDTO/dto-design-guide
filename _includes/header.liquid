@@ -5,7 +5,7 @@
     <div class="wrapper">
       <div class="page-header__logo">
         <a href="/" class="logo">
-          <svg role="img" title="Logo" aria-labelledby="dg_logo-title">
+          <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
             <title id="dg_logo-title" lang="en">Design Guide logo</title>
             <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
           </svg>
@@ -57,16 +57,17 @@
     <div class="wrapper">
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/{{ page.parent }}">{{ page.parent | capitalize }}</a></li>
+        {% for collection in site.collections %}
+          {% if collection.label == page.parent %}
+            <li><a href="/{{ page.parent }}">{{ collection.title }}</a></li>
+            {% break %}
+          {% endif %}
+        {% endfor %}
         <li>
           {% if page_title_slugified == page.parent %}
-            <a href="/{{ page.parent }}/">
-              Overview
-            </a>
+            Overview
           {% else %}
-            <a href="/{{ page.parent }}/{{ page_title_slugified }}">
-              {{ page.title }}
-            </a>
+            {{ page.title }}
           {% endif %}
         </li>
       </ul>

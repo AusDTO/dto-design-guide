@@ -1,9 +1,10 @@
-<p class="abstract">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font family</a>. Open Sans is a sans-serif font selected for accessibility and readability.</p>
+<p class="abstract">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font family</a>.</p>
 
 ![Specimen of Open Sans in regular 400, bold 700 and italic 400](/assets/font-specimen.png)
 
 <!-- <p style="font-size:5em">Aa <strong>Aa</strong> <em>Aa</em></p> -->
 
+<!--
 ### Breakpoints
 
 - Mobile (default): 8 columns, 420px maximum.
@@ -50,3 +51,4 @@
     <td>17px</td>
   </tr>
 </table>
+-->

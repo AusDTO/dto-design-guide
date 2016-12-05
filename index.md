@@ -2,33 +2,38 @@
 layout: default
 ---
 
+<svg role="img" title="Hero image" aria-labelledby="design_hero-title">
+  <title id="design_hero-title" lang="en">Design Guide hero image</title>
+  <use xlink:href="/assets/spritesheet.svg#design_hero"/>
+</svg>
+
 ## Getting started
 
-How to start building Australian Government services with UI‑Kit.
+Design system principles and basics for designers and developers.
 
 <a href="/getting-started/" role="button">View getting started</a>
 
 ## Foundations
 
-Typography, layout, grid and colours.
+Guidance on the UI&#8209;Kit core modules: typography, layout and colours.
 
 <a href="/foundations/" role="button">View foundations</a>
 
 ## Components
 
-Simple UI elements such as forms,  buttons, tables and badges.
+How to use the building blocks of UI‑Kit: forms and buttons, list styles, accordions, badges and tables.
 
 <a href="/components/" role="button">View components</a>
 
 ## Patterns
 
-Common combinations of components such as navigation, headers and footers.
+We are building a library of patterns that meet user needs. Find guidance on global, local and inline navigation.
 
 <a href="" role="button">View patterns</a>
 
 ## Templates
 
-Common kinds of service pages.
+We are working on templates for common types of service pages.
 
 <button disabled>View templates</button>
 

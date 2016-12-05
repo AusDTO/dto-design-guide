@@ -3,4 +3,4 @@ title: Templates
 layout: collections/overview
 ---
 
-This is the overview page for the Templates collection.
+We are working on templates for common service pages.
