@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<svg role="img" title="Hero image" aria-labelledby="design_hero-title">
+  <title id="design_hero-title" lang="en">Design Guide hero image</title>
+  <use xlink:href="/assets/spritesheet.svg#design_hero"/>
+</svg>
+
 ## Getting started
 
 Design principles and basics for designers and developers.
