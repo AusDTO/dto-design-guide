@@ -3,7 +3,7 @@
     <span>Example<span class="visuallyhidden"> of {{ include.title }}</span></span>
   </h3>
 
-    <div class="guide-example--rendered">
+    <div class="guide-example--rendered" id="rendered-{{ include.title | slugify }}">
   {% include {{ include.markup }} %}
     </div>
 
@@ -11,20 +11,27 @@
     <span><abbr>HTML</abbr><span class="visuallyhidden"> for {{ include.title }}</span></span>
   </h3>
 
-  <button id="clipboard-{{ include.title | slugify }}" data-clipboard-target="#html-{{ include.title | slugify }}">Copy <abbr>HTML</abbr> to clipboard</button>
-
   <div class="guide-example--code" id="html-{{ include.title | slugify }}">
     {% highlight html %}{% include {{ include.markup }} %}{% endhighlight %}
   </div>
 
-  <cite class="guide-example--cite">
-    Stylesheet source on GitHub:
-    <a
-      href="{{ site.uikit_github_url }}/blob/master/{{ include.sourceFile }}"
-      rel="external">
-      <code>{{ include.sourceFile }}</code>
-    </a>
-  </cite>
+  <div class="guide-example--meta">
+    <div class="guide-example--html-copy">
+      <button class="btn-clipboard-copy" id="clipboard-{{ include.title | slugify }}" data-clipboard-target="#html-{{ include.title | slugify }}">Copy <abbr>HTML</abbr> to clipboard</button>
+    </div>
+    <cite class="guide-example--cite">
+      <svg role="img" title="GitHub icon" aria-labelledby="fa-github-alt-source">
+        <title id="fa-github-alt-source" lang="en">Design Guide logo</title>
+        <use xlink:href="/assets/spritesheet.svg#fa-github"/>
+      </svg>
+      Stylesheet source on GitHub:
+      <a
+        href="{{ site.uikit_github_url }}/blob/master/{{ include.sourceFile }}"
+        rel="external">
+        <code>{{ include.sourceFile }}</code>
+      </a>
+    </cite>
+  </div>
 </div>
 
 

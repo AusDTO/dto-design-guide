@@ -234,17 +234,49 @@ main {
     }
   }
 
-  .guide-example--cite {
-    display: block;
+  // We're making a linting exception here on purpose:
+  //
+  // This targets the visually hidden skip link rendered example to increase the
+  // height of the example space, and to place a message into the space
+  // notifying users that the space is intentionally visually empty until
+  // manually activated.
+  #rendered-skip-links {
+    padding-bottom: $base-spacing;
+
+    &:after {
+      content: 'This example space contains a visually hidden feature.';
+      font-size: $small-font-size;
+    }
+  }
+
+  .guide-example--meta {
     padding: $medium-spacing ($medium-spacing + $small-spacing);
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
     border-top: solid $guide-eg-border-width $lighter-grey;
-    background-color: transparent;
-    font-size: rem(15);
-    color: $non-white;
 
-    @include link-colours($non-black, $light-aqua, $non-black);
+    .guide-example--html-copy {
+      @include button-colours(transparent, $dark-aqua, $dark-aqua, $dark-aqua, $non-white);
+
+      margin-bottom: $small-spacing;
+
+      button {
+        border-radius: $base-border-radius;
+        font-size: $small-font-size;
+      }
+    }
+
+    .guide-example--cite {
+      font-size: $small-font-size;
+
+      svg,
+      img {
+        width: rem(22);
+        height: rem(22);
+        margin-right: $tiny-spacing;
+        vertical-align: text-bottom;
+      }
+    }
   }
 }
 
