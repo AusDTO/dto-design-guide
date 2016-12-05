@@ -105,3 +105,12 @@ layout: default
   {% endif %}
 
 {% endfor %}
+
+{% comment %}
+  This uses clipboard.js v1.5.15, as included minified in _assets/js/.
+
+  For documentation see: https://github.com/zenorocha/clipboard.js
+{% endcomment %}
+<script>
+  var clipboard = new Clipboard('.js-copypasta');
+</script>
