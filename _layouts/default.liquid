@@ -9,17 +9,26 @@
 
     <main role="main">
 
-      <aside class="sidebar">
+      {% comment %}
+      The aside sidebar that holds the site’s local-nav.
 
-        {% include local_nav.liquid %}
+      Logic: only show if it isn’t the homepage.
+      {% endcomment %}
+      {% if page.url != '/' %}
+        <aside class="sidebar">
+          {% include local_nav.liquid %}
+        </aside>
+      {% endif %}
 
-      </aside>
-
-      <article id="content" class="content-main">
-
+      {% if page.url == '/' %}
         {{ content }}
+      {% elsif page.url contains '/' and page.url != '/' %}
+        <article id="content" class="content-main">
+          {{ content }}
+        </article>
+      {% else %}
+      {% endif %}
 
-      </article>
     </main>
 
   {% include footer.liquid %}

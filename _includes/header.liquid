@@ -1,6 +1,12 @@
 {% include templates/skip-link.html %}
 
 <header role="banner">
+  {% comment %}
+    This is the (internal) site logo and site-nav.
+
+    Logic: only show if it isn’t the homepage.
+  {% endcomment %}
+  {% if page.url != '/' %}
   <section class="page-header">
     <div class="wrapper">
       <div class="page-header__logo">
@@ -22,9 +28,12 @@
 
     </div>
   </section>
+  {% endif %}
 
   {% comment %}
-    Only show if this is the homepage
+    This is the homepage header hero.
+
+    Logic: only show if this is the homepage.
   {% endcomment %}
   {% if page.url == '/' %}
     <section class="hero">
