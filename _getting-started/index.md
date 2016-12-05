@@ -9,12 +9,12 @@ The DTA Design Guide documents the design system and branding the Digital Transf
 
 ## Use the UI-Kit
 
-- [Read the design principles for using UI-Kit](http://127.0.0.1:4000/getting-started/design-principles/index.html).
+- [Read the design principles for using UI&#8209;Kit](/getting-started/design-principles/).
 - [Read guidance for developing with UI-Kit](/getting-started/developers/).
 - Use the DTA Design Guide with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">Content Style Guide for writing</a>.
 
 ## Get help
 
-- [Email the Guides team.](mailto:guides@digital.gov.au)
-- Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI-Kit GitHub issue register</a>.
-- If you work in a Digital Transformation Agency team join the Slack channel  <a href="https://ausdto.slack.com/messages/guides-uikit/" rel="external">#guides-uikit</a>.
+- [Email the Guides team](mailto:guides@digital.gov.au).
+- Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI&#8209;Kit GitHub issue register</a>.
+- If you work in a Digital Transformation Agency team join the Slack channel  <a href="https://ausdto.slack.com/messages/guides-uikit/" rel="external">#guides&#8209;uikit</a>.

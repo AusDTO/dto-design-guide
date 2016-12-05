@@ -1,4 +1,4 @@
-UI-Kit aims to be WCAG2 AA compliant, and AAA where possible.
+UI&#8209;Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
 Run accessibility tests:
 

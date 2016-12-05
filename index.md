@@ -4,31 +4,31 @@ layout: default
 
 ## Getting started
 
-Design principles and basics for designers and developers.
+Design system principles and basics for designers and developers.
 
 <a href="/getting-started/" role="button">View getting started</a>
 
 ## Foundations
 
-Typography, layout and colours.
+Guidance on the UI&#8209;Kit core modules: typography, layout and colours.
 
 <a href="/foundations/" role="button">View foundations</a>
 
 ## Components
 
-Form fields and buttons, list styles, accordions, badges and tables.
+How to use the building blocks of UI‑Kit: forms and buttons, list styles, accordions, badges and tables.
 
 <a href="/components/" role="button">View components</a>
 
 ## Patterns
 
-Global, local and inline navigation.
+We are building a library of patterns that meet user needs. Find guidance on global, local and inline navigation.
 
 <a href="" role="button">View patterns</a>
 
 ## Templates
 
-We are working on templates for common service pages.
+We are working on templates for common types of service pages.
 
 <button disabled>View templates</button>
 
