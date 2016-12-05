@@ -142,6 +142,8 @@ main {
   //
   // Might want to consider moving this into UI-Kit in the future.
   h2[id] {
+    // @include clearfix;
+
     .headline-slug-link {
       border-bottom: none;
       position: relative;
@@ -161,6 +163,13 @@ main {
         }
       }
     }
+  }
+
+  .back-to-index-link {
+    display: block;
+    font-size: $small-font-size;
+    float: right;
+    margin-top: rem(82);
   }
 
   // Custom styling for sidebar
