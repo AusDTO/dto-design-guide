@@ -3,9 +3,15 @@ title: Getting started
 layout: collections/overview
 ---
 
-<p class="abstract">How to start building Australian Government services with <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI&#8209;Kit</a>.</p>
+<p class="abstract">How to start building Australian Government services with UI-Kit.</p>
 
-Use the DTA Design Guide with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">Content Style Guide for writing</a>.
+The DTA Design Guide documents the design system and branding the Digital Transformation Agency is building with the <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS and JS framework</a>.
+
+## Use the UI-Kit
+
+- [Read the design principles for using UI-Kit](http://127.0.0.1:4000/getting-started/design-principles/index.html).
+- [Read guidance for developing with UI-Kit](/getting-started/developers/).
+- Use the DTA Design Guide with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">Content Style Guide for writing</a>.
 
 ## Get help
 

@@ -21,4 +21,4 @@ sections:
 
 <p class="abstract">UI-Kit is a CSS and JS framework using <a href="http://bourbon.io/" rel="external">Bourbon</a> and <a href="http://neat.bourbon.io/" rel="external">Neat</a>.</p>
 
-<a href="https://github.com/AusDTO/gov-au-ui-kit/archive/master.zip">Download  UI-Kit <code>v{% uikit_version %}</code> ZIP</a> (224 KB).
+<a href="https://github.com/AusDTO/gov-au-ui-kit/blob/develop/RELEASING.md" rel="external">Fork UI-Kit on GitHub</a>.
