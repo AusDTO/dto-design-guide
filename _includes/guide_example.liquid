@@ -17,7 +17,7 @@
 
   <div class="guide-example--meta">
     <div class="guide-example--html-copy">
-      <button class="btn-clipboard-copy" id="clipboard-{{ include.title | slugify }}" data-clipboard-target="#html-{{ include.title | slugify }}">Copy <abbr>HTML</abbr> to clipboard</button>
+      <button class="btn-clipboard-copy js-copypasta" data-clipboard-target="#html-{{ include.title | slugify }}">Copy <abbr>HTML</abbr> to clipboard</button>
     </div>
     <cite class="guide-example--cite">
       <svg role="img" title="GitHub icon" aria-labelledby="fa-github-alt-source">
@@ -33,22 +33,3 @@
     </cite>
   </div>
 </div>
-
-
-{% comment %}
-  This uses clipboard.js v1.5.15, as included minified in _assets/js/.
-
-  For documentation see: https://github.com/zenorocha/clipboard.js
-
-  I’m not sure if we should be including these script tags here for each code
-  example include?
-{% endcomment %}
-<script>
-    var clipboard = new Clipboard('#clipboard-{{ include.title | slugify }}');
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-</script>
