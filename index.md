@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: homepage
 ---
-
-<svg role="img" title="Hero image" aria-labelledby="design_hero-title">
-  <title id="design_hero-title" lang="en">Design Guide hero image</title>
-  <use xlink:href="/assets/spritesheet.svg#design_hero"/>
-</svg>
 
 ## Getting started
 
@@ -15,7 +10,7 @@ Design system principles and basics for designers and developers.
 
 ## Foundations
 
-Guidance on the UI&#8209;Kit core modules: typography, layout and colours.
+Guidance on the UI-Kit core modules: typography, layout and colours.
 
 <a href="/foundations/" role="button">View foundations</a>
 
