@@ -132,6 +132,54 @@ main {
     }
   }
 
+  &.homepage {
+    .collection-listing {
+      @include clearfix;
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include ie-lte(8) {
+        @include ie-clearfix;
+      }
+
+      > li {
+        margin-bottom: $base-spacing;
+
+        @include media($tablet) {
+          @include span-columns(6 of 12);
+          @include omega(2n);
+
+          @include ie-lte(8) {
+            width: 45%;
+          }
+
+          padding-left: $medium-spacing;
+          border-left: 1px solid $border-colour;
+
+          & > h2 {
+            margin-top: 0;
+          }
+        }
+
+        @include media($desktop) {
+          @include omega-reset(2n);
+          @include span-columns(4 of 12);
+          @include omega(3n);
+
+          @include ie-lte(8) {
+            width: 30%;
+          }
+        }
+
+        & > h2:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   // This gives us a little pilcrow (trad. paragraph marker) to the left of any
   // h2s that have an ID and contain an anchor with the .headline-slug-link
   // class on hover.
