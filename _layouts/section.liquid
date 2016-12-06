@@ -2,61 +2,14 @@
 layout: default
 ---
 
-{% for section in site.data.data-sections %}
-  {% unless section.referenceNumber contains '.' %}
-    {% capture section_name %}{{ section.header }}{% endcapture %}
-  {% endunless %}
+<main role="main">
 
-  {% if section_name == page.header %}
-    {% assign section_title = page.header %}
-  {% endif %}
-{% endfor %}
+  <aside class="sidebar">
+    {% include local_nav.liquid %}
+  </aside>
 
-<header>
-  <h1>{{ section_title }}</h1>
+  <article id="content" class="content-main">
+    {{ content }}
+  </article>
 
-  <nav class="index-links">
-    <h2>In this section</h2>
-    <ul>
-    {% for section in site.data.data-sections %}
-      {% if section_title == section.header %}
-        {% for child in section.children %}
-
-      <li><a href="/sections/{{ section.header | slugify }}.html#{{ child.header | slugify }}">{{ child.header }}</a></li>
-
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </nav>
-
-  {{ page.description }}
-
-</header>
-
-{% for section in site.data.data-sections %}
-  {% if section_title == section.header %}
-    {% for child in section.children %}
-
-<h2 id="{{ child.header | slugify }}">{{ child.header }}</h2>
-
-{{ child.description }}
-
-      {% unless child.markup == "" %}
-
-      {% include guide_example.liquid
-        title=child.header
-        markup=child.markup
-        sourceFile=child.sourceFile.path
-        sourceLine=child.sourceFile.line %}
-
-      {% endunless %}
-
-      {% if child.tags %}
-      {% assign tags_array = child.tags | split: ", " | sort %}
-      {% include tags_list.liquid tags=tags_array %}
-      {% endif %}
-
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+</main>
