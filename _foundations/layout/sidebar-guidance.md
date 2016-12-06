@@ -4,7 +4,7 @@
 
   <p>The sidebar sits to the right of the main content by default.</p>
 
-  <p>Use the class <code>.sidebar-has-controls</code> on the parent <code>main</code> element:</p>
+  <p>To move the sidebar to the left use the class <code>.sidebar-has-controls</code> on the parent <code>main</code> element:</p>
 
   <pre><code>&lt;main class=&quot;sidebar-has-controls&quot;&gt;
     &lt;aside class=&quot;sidebar&quot;&gt;

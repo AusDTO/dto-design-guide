@@ -33,7 +33,7 @@
 
   <h4>Create elements</h4>
 
-  <p>Before you build your own element, <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">log a GitHub issue</a> so we can provide it for everyone.</p>
+  <p>Before you build your own element, find out how to <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/develop/CONTRIBUTING.md" rel="external">contribute to UI-Kit</a> so you can help other teams meet user needs.</p>
 
   <p>There are no non-semantic grid classes to set block elements. Instead use the <a href="http://thoughtbot.github.io/neat-docs/latest/#span-columns" rel="external">Neat <code>span-columns</code> function</a>.</p>
 
@@ -73,6 +73,7 @@
 <details open data-label="sidebar-accessibility-accordion" aria-expanded="false">
   <summary>Accessibility <span class="visuallyhidden">guidance for sidebar</span></summary>
   <div class="accordion-panel">
-    <p>Low-vision users should be able to increase the size of the text by up to 200 per cent without breaking the layout.</p>
+    <p>Set layout so that content wraps properly when zoomed in and out.</p>
+    <p>Users who need to enlarge the page (for example, with <a href="http://www.zoomtext.com/products/zoomtext-magnifierreader/" rel="external">ZoomText</a>) should be able to increase the size of text by up to 200%.</p>
   </div>
 </details>

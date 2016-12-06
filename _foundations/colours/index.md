@@ -7,7 +7,7 @@ sections:
   - md: Palette top
   - md: Palette guidance
 
-  - headline: Text accessibility
+  - headline: Accessibility
   - md: Text accessibility top
   - md: Text accessibility guidance
 ---
