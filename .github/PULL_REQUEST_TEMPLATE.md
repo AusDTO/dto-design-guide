@@ -8,7 +8,7 @@ Use the title line as the title of your pull request, then delete these comment 
 
 ## Description
 
-Include a high-level description for what the pull request fixes and links to Github issues it would resolve.
+Include a high-level description for what the pull request fixes and links to GitHub issues it resolves.
 
 ## Additional information
 
@@ -19,7 +19,7 @@ Include a high-level description for what the pull request fixes and links to Gi
 
 ## Definition of Done
 
-- [ ] Content/documentation reviewed by Julian or someone in the Content Team
+- [ ] Content/documentation reviewed by Jools or someone in the #content-design team
 - [ ] UX reviewed by Gary or someone the Design team
 - [ ] Code reviewed by one of the core developers
 - [ ] Acceptance Testing
