@@ -6,29 +6,27 @@ Feature Request - [Name the feature you'd like added]
 
 Bug - [A brief statement describing what's wrong]
 
-Use a title line as the title of your issue, then delete these lines.
+Use a title line as the title of your issue, then delete these comment lines.
 
 -->
 
-## What I did
+## Housekeeping
 
-Describe the task you were trying to complete, or the steps you carried out before
-you encountered the issue. Include screenshots or any other information that you think might be useful.
+- [ ] I’ve checked to see if there might be an issue open for this problem/need already.
+- [ ] I’ve assigned this issue to someone who I think can help.
 
-### What browser and device I was using
+## What do you need?
 
-Include the browser and device you were using while trying to complete your task (if relevant to the feedback)
+What is the problem?
 
-## What I expected to see
+## Which entry/section is this related to?
 
-If something behaved differently to what you expected, describe how. And if
-something's not working that was before, let us know when it last worked.
+For example: design principles or the global navigation pattern.
 
-## What I saw
+## Good example
 
-Include screenshots if it makes things easier to explain. If you encountered
-an error message, include it here.
+Have you seen content or a solution elsewhere we should look at?
 
-### Additional information (optional)
+## Additional information (optional)
 
-If there's anything else you think might give context, include it here.
+If there’s anything else you think might give context — eg a screenshot — include it here.
