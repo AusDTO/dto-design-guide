@@ -21,7 +21,7 @@ What is the problem?
 
 ## Which entry/section is this related to?
 
-For example: design principles or the global navigation pattern.
+For example: [design principles](/getting-started/design-principles/) or the [site navigation pattern](/patterns/navigation/index.html#site-navigation).
 
 ## Good example
 
@@ -29,4 +29,4 @@ Have you seen content or a solution elsewhere we should look at?
 
 ## Additional information (optional)
 
-If there’s anything else you think might give context — eg a screenshot — include it here.
+If there’s anything else you think might give context — for example a screenshot — include it here.
