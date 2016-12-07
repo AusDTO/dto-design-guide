@@ -12,7 +12,7 @@ Use a title line as the title of your issue, then delete these comment lines.
 
 ## Housekeeping
 
-- [ ] I’ve checked to see if there might be an issue open for this problem/need already.
+- [ ] There isn't annother issue already open for this problem/need.
 - [ ] I’ve assigned this issue to someone who I think can help.
 
 ## What do you need?
