@@ -65,7 +65,7 @@ layout: default
 
     {% if headlines > 1 %}
       {% unless forloop.first %}
-        <span class="back-to-index-link"><a href="#index-links">Back to section index &uarr;</a></span>
+        <span class="back-to-index-link"><a href="#index-links">Back to contents &uarr;</a></span>
       {% endunless %}
       <h2 id="{{ headline | slugify }}">
         <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
