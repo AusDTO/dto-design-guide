@@ -223,6 +223,13 @@ main {
   .guide-example--rendered {
     margin: ($base-spacing * 1.5) 0;
     padding: 0 ($medium-spacing + $small-spacing);
+
+    // This ensures that we don’t allow rendered examples to overflow their
+    // containing boxes.
+    .wrapper {
+      box-sizing: border-box;
+      min-width: 0;
+    }
   }
 
   figure {
