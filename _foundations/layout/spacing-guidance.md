@@ -1,79 +1,75 @@
-<details open data-label="spacing-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for spacing</span></summary>
-  <div class="accordion-panel">
-  <h4>Spacing variables</h4>
+{% assign ID = "spacing" %}
 
-  <p>Grid unit proportions, gutters and spacing are defined in <code>_grid-settings.scss</code>:</p>
-  <pre><code>$max-width: em(1200) !global;
-  $gutter: em(32);</code></pre>
+{% capture content %}
+#### Spacing variables
 
-  These breakpoints are set to <code>max-width</code>:
-  <ul>
-  <li><code>$mobile-only</code></li>
-  <li><code>$tablet-only</code></li>
-  </ul>
+Grid unit proportions, gutters and spacing are defined in `_grid-settings.scss`:
 
-  <p>Gutter spacing is set using <code>$gutter</code>.</p>
+{% highlight scss %}
+$max-width: em(1200) !global;
+$gutter: em(32);
+{% endhighlight %}
 
-  <h4>Page layout elements</h4>
+These breakpoints are set to `max-width`:
 
-  <ul>
-  <li><code>header[role=&#39;banner&#39;]</code></li>
-  <li><code>footer[role=&#39;contentinfo&#39;]</code></li>
-  <li><code>main.content-main</code></li>
-  <li><code>aside</code>.</li>
-  </ul>
+- `$mobile-only`
+- `$tablet-only`
 
-  <h4>Wrapper class</h4>
+Gutter spacing is set using `$gutter`.
 
-  <p>You can use
-  <code>&lt;div class=&quot;wrapper&quot;&gt;</code> to wrap the contents of a block in the grid in the full viewport width.</p>
+#### Page layout elements
 
-  <p>For example, the page header, footer and breadcrumbs.</p>
+- `header[role="banner"]`
+- `footer[role="contentinfo"]`
+- `main.content-main`
+- `aside`
 
-  <h4>Create elements</h4>
+#### Wrapper class
 
-  <p>Before you build your own element, find out how to <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/develop/CONTRIBUTING.md" rel="external">contribute to UI-Kit</a> so you can help other teams meet user needs.</p>
+You can use `<div class="wrapper">` to wrap the contents of a block in the grid in the full viewport width.
 
-  <p>There are no non-semantic grid classes to set block elements. Instead use the <a href="http://thoughtbot.github.io/neat-docs/latest/#span-columns" rel="external">Neat <code>span-columns</code> function</a>.</p>
+For example, the page header, footer and breadcrumbs.
 
-  <p>Set column properties for the <code>$mobile</code>, <code>$tablet</code> and <code>$desktop</code> breakpoints. Make sure you consider font size at the different breakpoints.</p>
+#### Create elements
 
-  <p>Set the <code>viewport</code> to the <code>device-width</code> in your <code>&lt;head&gt;</code>:</p>
+Before you build your own element, find out how to <a href="https://github.com/AusDTO/gov-au-ui-kit/blob/develop/CONTRIBUTING.md" rel="external">contribute to UI-Kit</a> so you can help other teams meet user needs.
 
-  <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+There are no non-semantic grid classes to set block elements. Instead use the <a href="http://thoughtbot.github.io/neat-docs/latest/#span-columns" rel="external">Neat `span-columns` function</a>.
 
-  <h4>Omega reset</h4>
+Set column properties for the `$mobile`, `$tablet` and `$desktop` breakpoints. Make sure you consider font size at the different breakpoints.
 
-  <p>You may need to reset <a href="http://thoughtbot.github.io/neat-docs/latest/#omega">Neat's omega properties</a> to apply grid columns to responsive layouts:</p>
-  <pre>
-  <code>
-  .grid-item {
-     @include span-columns(2 of 4);
-     @include omega(2n);
+Set the `viewport` to the `device-width` in your `<head>`:
 
-     @include media($desktop) {
-       @include omega-reset(2n);
-       @include span-columns(4 of 12);
-       @include omega(3n);
-     }
-  }</code>
-  </pre>
+{% highlight html %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endhighlight %}
 
-  <h4>Debugging</h4>
-  <p>Turn on the visual grid to help debugging:</p>
-  <pre>
-  <code>$visual-grid: true;</code>
-  </pre>
-  <p>See the example <a href="http://neat.bourbon.io/examples/" rel="external">Bourbon Neat working grid layout</a>.</p>
+#### Omega reset
 
-  </div>
-</details>
+You may need to reset [Neat's omega properties](http://thoughtbot.github.io/neat-docs/latest/#omega) to apply grid columns to responsive layouts:
 
-<details open data-label="sidebar-accessibility-accordion" aria-expanded="false">
-  <summary>Accessibility <span class="visuallyhidden">guidance for sidebar</span></summary>
-  <div class="accordion-panel">
-    <p>Set layout so that content wraps properly when zoomed in and out.</p>
-    <p>Users who need to enlarge the page (for example, with <a href="http://www.zoomtext.com/products/zoomtext-magnifierreader/" rel="external">ZoomText</a>) should be able to increase the size of text by up to 200%.</p>
-  </div>
-</details>
+{% highlight scss %}
+.grid-item {
+   @include span-columns(2 of 4);
+   @include omega(2n);
+
+   @include media($desktop) {
+     @include omega-reset(2n);
+     @include span-columns(4 of 12);
+     @include omega(3n);
+   }
+ }
+{% endhighlight %}
+
+
+#### Debugging
+Turn on the visual grid to help debugging:
+
+{% highlight scss %}
+$visual-grid: true;
+{% endhighlight %}
+
+See the example [Bourbon Neat working grid layout](http://neat.bourbon.io/examples/).
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}
