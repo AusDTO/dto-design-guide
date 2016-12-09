@@ -6,6 +6,7 @@ sections:
   - headline: Grid
   - md: Spacing top
   - md: Spacing guidance
+  - md: layout a11y
 
   - headline: Sidebar
   - md: Sidebar top
