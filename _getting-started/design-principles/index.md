@@ -3,7 +3,8 @@ layout: collections/item
 title: Design principles
 ---
 
-<p class="abstract">Use UI&#8209;Kit to build consistent and responsive services that meet the user's needs.</p>
+Use UI-Kit to build consistent and responsive services that meet the user's needs.
+{: .abstract }
 
 These principles build on the <a href="https://www.dta.gov.au/standard/" rel="external">Digital Service Standard</a> and the <a href="https://www.dta.gov.au/standard/design-principles/" rel="external">DTA design principles</a>.
 
