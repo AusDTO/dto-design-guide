@@ -22,6 +22,26 @@ table {
   margin-bottom: $base-spacing * 2;
 }
 
+// Some spritesheet svg/png icon things.
+//
+// The class implementation here could be buggy -- might need to target the SVGs
+// directly.
+.icon-inline {
+  margin-right: $tiny-spacing;
+}
+
+.fa-envelope-o {
+  width: rem(22);
+  height: rem(17);
+  vertical-align: middle;
+}
+
+.fa-github {
+  width: rem(22);
+  height: rem(22);
+  vertical-align: text-bottom;
+}
+
 // Custom styling for the inverted feedback button in the header.
 // This will likely be removed/replaced by a global site search.
 // The @extend .inverted is not working in:
@@ -298,14 +318,6 @@ main {
 
     .guide-example--cite {
       font-size: $small-font-size;
-
-      svg,
-      img {
-        width: rem(22);
-        height: rem(22);
-        margin-right: $tiny-spacing;
-        vertical-align: text-bottom;
-      }
     }
   }
 }
