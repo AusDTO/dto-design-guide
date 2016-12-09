@@ -5,9 +5,9 @@
 
 Install dependencies:
 
-```
+{% highlight shell %}
 npm install
-```
+{% endhighlight %}
 
 We use Bourbon 4.2.7. We include its `.scss` files directly rather than calling it via its node (or gem) package.
 
@@ -16,21 +16,23 @@ Bourbon and Neat are in `/assets/sass/vendor`.
 ### Using npm
 
 Run a build:
-```
+
+{% highlight shell %}
 npm run-script build
-```
+{% endhighlight %}
 
 Run a build with livereloading:
-```
+
+{% highlight shell %}
 npm start
-```
+{% endhighlight %}
 
 ### Key libraries
 
-- gulp ^3.9.1
-- gulp-sass ^2.3.1
-- kss ^3.0.0-beta.14
-- sass-lint ^1.7.0
+- gulp `^3.9.1`
+- gulp-sass `^2.3.1`
+- kss `^3.0.0-beta.14`
+- sass-lint `^1.7.0`
 
 ^ = compatible with version (see <a href="https://docs.npmjs.com/misc/semver#caret-ranges-123-025-004" rel="external">semver</a>)
 

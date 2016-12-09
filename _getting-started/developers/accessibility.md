@@ -2,9 +2,9 @@ UI&#8209;Kit aims to be WCAG2 AA compliant, and AAA where possible.
 
 Run accessibility tests:
 
-```
+{% highlight shell %}
 npm test
-```
+{% endhighlight %}
 
 Check you meet [Pa11y's requirements for automated accessibility testing](https://github.com/pa11y/pa11y#requirements).
 

@@ -195,8 +195,27 @@ main {
   }
 }
 
-// Custom styling for the rendered example and code blocks.
+// Styling for code blocks outside of the rendered + HTML code examples.
+.highlight {
+  pre {
+    overflow: auto;
+    white-space: pre;
 
+    code {
+      font-size: rem(14);
+    }
+
+    .language-shell {
+      display: block;
+      margin-bottom: $base-spacing;
+      font-size: rem(15);
+    }
+  }
+}
+
+
+// Custom styling for the rendered example and code blocks.
+//
 // Extract the repeating bits plz
 .guide-example {
   border: solid $guide-eg-border-width $lighter-grey;
@@ -231,7 +250,7 @@ main {
     }
   }
 
-  figure {
+  .highlight {
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
 
@@ -242,9 +261,6 @@ main {
       padding-top: $medium-spacing;
       padding-left: ($medium-spacing + $small-spacing);
       padding-right: $small-spacing;
-      font-size: rem(16);
-      overflow: auto;
-      white-space: pre;
     }
   }
 
