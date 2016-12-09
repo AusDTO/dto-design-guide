@@ -238,29 +238,34 @@ main {
 //
 // Extract the repeating bits plz
 .guide-example {
-  border: solid $guide-eg-border-width $lighter-grey;
-  border-radius: $base-border-radius;
+  // border: solid $guide-eg-border-width $lighter-grey;
+  // border-radius: $base-border-radius;
   padding-top: 0;
 
   .guide-example--heading {
-    @extend .content-full-width;
-
     margin: 0;
-    background-color: $lighter-grey;
-    padding: $small-spacing $medium-spacing;
+    display: inline;
 
     span {
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       font-size: $smaller-font-size;
-      color: $grey;
     }
   }
 
   .guide-example--rendered {
+    position: relative;
+    border: solid 2px $non-white;
     margin: ($base-spacing * 1.5) 0;
-    padding: 0 ($medium-spacing + $small-spacing);
+    padding: rem(60) ($medium-spacing + $small-spacing) 0 ($medium-spacing + $small-spacing);
+
+    .guide-example--rendered--heading {
+      position: absolute;
+      top: -22px;
+      left: 0;
+      font-weight: normal;
+      background-color: $non-white;
+      font-size: $small-font-size;
+      padding: $tiny-spacing $small-spacing;
+    }
 
     // This ensures that we don’t allow rendered examples to overflow their
     // containing boxes.
@@ -279,7 +284,7 @@ main {
 
       margin: 0;
       padding-top: $medium-spacing;
-      padding-left: ($medium-spacing + $small-spacing);
+      // padding-left: ($medium-spacing + $small-spacing);
       padding-right: $small-spacing;
     }
   }
@@ -299,11 +304,23 @@ main {
     }
   }
 
+  .guide-example--code-accordion {
+    .accordion-panel {
+      background-color: $non-white;
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
+    .guide-example--html-copy,
+    .guide-example--code {
+      margin: 0 $base-spacing;
+    }
+  }
+
   .guide-example--meta {
-    padding: $medium-spacing ($medium-spacing + $small-spacing);
-    border-bottom-left-radius: $base-border-radius;
-    border-bottom-right-radius: $base-border-radius;
-    border-top: solid $guide-eg-border-width $lighter-grey;
+    background-color: $lighter-grey;
+    padding: $medium-spacing $base-spacing;
 
     .guide-example--html-copy {
       @include button-colours(transparent, $dark-aqua, $dark-aqua, $dark-aqua, $non-white);
