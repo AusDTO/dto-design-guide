@@ -1,4 +1,4 @@
-UI&#8209;Kit aims to be WCAG2 AA compliant, and AAA where possible.
+UI-Kit aims to be WCAG2 AA compliant, and AAA where possible and appropriate.
 
 Run accessibility tests:
 
@@ -6,14 +6,8 @@ Run accessibility tests:
 npm test
 {% endhighlight %}
 
-Check you meet [Pa11y's requirements for automated accessibility testing](https://github.com/pa11y/pa11y#requirements).
+These tests are part of our build process, and are intended to catch common mistakes. Pa11y uses the <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>, which we also use for manual testing.
 
-We use automated testing:
-- WCAG 2.0 criteria using <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>
-- HTML validation using <a href="http://validator.github.io/validator/" rel="external">Nu HTML Checker</a>.
+Where possible we also test with users. These sessions commonly test products that use the UI-Kit, because it is difficult for us to test our components and patterns in isolation.
 
-We are working on:
-- manual evaluation using <a href="http://wave.webaim.org/" rel="external">Wave by WebAIM</a>
-- manual checking of page structure, content and keyboard navigation
-- testing with users and assistive technologies
-- an audit.
+In the future we intend to also be audited.
