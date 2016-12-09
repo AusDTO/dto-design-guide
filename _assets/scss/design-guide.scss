@@ -255,7 +255,7 @@ main {
     position: relative;
     border: solid 2px $non-white;
     margin: ($base-spacing * 1.5) 0;
-    padding: rem(60) ($medium-spacing + $small-spacing) 0 ($medium-spacing + $small-spacing);
+    padding: rem(60) ($medium-spacing + $small-spacing) rem(30) ($medium-spacing + $small-spacing);
 
     .guide-example--rendered--heading {
       position: absolute;
