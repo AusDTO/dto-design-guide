@@ -1,4 +1,4 @@
-<details open data-label="{{ include.ID }}-guidance-accordion" aria-expanded="true">
+<details open data-label="{{ include.ID | slugify }}-guidance-accordion" aria-expanded="true">
   <summary>Guidance<span class="visuallyhidden"> for {{ include.ID }}</span></summary>
   <div class="accordion-panel">
     {{ include.content | markdownify }}
