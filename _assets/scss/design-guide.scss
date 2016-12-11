@@ -253,7 +253,7 @@ main {
     position: relative;
     border: solid 2px $non-white;
     margin: ($base-spacing * 1.5) 0;
-    padding: rem(60) ($medium-spacing + $small-spacing) rem(30) ($medium-spacing + $small-spacing);
+    padding: rem(75) ($medium-spacing + $small-spacing) rem(30) ($medium-spacing + $small-spacing);
 
     .guide-example--rendered--heading {
       position: absolute;
@@ -313,6 +313,15 @@ main {
     .guide-example--html-copy,
     .guide-example--code {
       margin: 0 $base-spacing;
+    }
+
+    .guide-example--html-copy {
+      @include button-colours(transparent, $dark-aqua, $dark-aqua, $dark-aqua, $non-white);
+
+      button {
+        font-size: $small-font-size;
+        border-radius: $base-border-radius;
+      }
     }
   }
 
