@@ -22,8 +22,120 @@ table {
   margin-bottom: $base-spacing * 2;
 }
 
+
+.hero {
+  padding-top: 0;
+
+  .wrapper {
+    @include ie-lte(8) {
+      @include ie-clearfix;
+    }
+
+    background-image: url('/assets/hero.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 50%) calc(100% - 60%);
+    background-size: 70%;
+    //background-position: calc(100% - 15%) calc(100% - 25%);
+
+    @include media($tablet) {
+      background-position: bottom 10% left 8%;
+      background-size: 35%;
+      min-height: 0;
+    }
+
+    @include media($desktop) {
+      background-position: bottom 0% left 8%;
+      background-size: 30%;
+      min-height: rem(350);
+    }
+
+    .site-description {
+      margin-top: 55%;
+
+      @include media($tablet) {
+        width: 50%;
+        float: right;
+        margin-top: 2.5%;
+        margin-right: 5%;
+      }
+
+      @include media($desktop) {
+        width: 55%;
+        float: right;
+        margin-top: 5%;
+        margin-right: 5%;
+      }
+    }
+  }
+}
+
+.no-svg {
+  .hero {
+    background-image: url('/assets/hero.png');
+  }
+}
+
+
+// Logo styling for the homepage (h1), and internal site header logo (anchor).
+.page-header__logo {
+  padding-top: 0;
+  margin-bottom: $tiny-spacing;
+
+  @include media($tablet) {
+    height: rem(132);
+    margin-bottom: 0;
+  }
+
+  .logo {
+    display: inline-block;
+    position: relative;
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      width: rem(48);
+      height: auto;
+
+      @include media($tablet) {
+        width: rem(64);
+      }
+    }
+
+    span,
+    h1 {
+      font-size: rem(26);
+      display: inline-block;
+      margin-top: rem(50);
+      margin-left: rem(60);
+
+      @include media($tablet) {
+        margin-top: rem(50);
+        margin-left: rem(80);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $light-aqua;
+        color: $link-colour;
+      }
+    }
+  }
+}
+
+
 // Custom styling for the inverted feedback button in the header.
 // This will likely be removed/replaced by a global site search.
+// If other guides need it we might want to look into this.
+//
+// Either way we may want to revisit how the feedback button (*cough*) is set.
+// It’s also undocumented.
+//
 // The @extend .inverted is not working in:
 // https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
 
@@ -32,62 +144,12 @@ header[role='banner'] {
     padding-top: 0;
   }
 
-  .page-header__logo {
-    padding-top: 0;
-    margin-bottom: $tiny-spacing;
-
-    @include media($tablet) {
-      height: rem(132);
-      margin-bottom: 0;
-    }
-
-    .logo {
-      display: inline-block;
-      position: relative;
-      border-bottom: none;
-
-      &:hover,
-      &:focus {
-        background-color: transparent;
-      }
-
-      svg {
-        position: absolute;
-        top: 0;
-        width: rem(48);
-        height: auto;
-
-        @include media($tablet) {
-          width: rem(64);
-        }
-      }
-
-      span {
-        display: inline-block;
-        margin-top: rem(50);
-        margin-left: rem(60);
-        border-bottom: 1px solid $light-aqua;
-
-        @include media($tablet) {
-          margin-top: rem(50);
-          margin-left: rem(80);
-        }
-
-        &:hover,
-        &:focus {
-          background-color: $light-aqua;
-          color: $link-colour;
-        }
-      }
-    }
-  }
-
   .badge--default {
     display: inline-block;
     margin-left: 0.5em;
     vertical-align: super;
 
-    // I feel a bit dirty too, but hey -- this lets the badge wrap nicely.
+    // Magic numbers! but hey -- this lets the badge wrap nicely.
     @include media(min-width 300px max-width 410px) {
       margin: $small-spacing 0 0 rem(60);
     }
@@ -134,18 +196,15 @@ main {
 
   &.homepage {
     .collection-listing {
-      @include clearfix;
+      @include ie-clearfix;
 
       list-style: none;
       margin: 0;
       padding: 0;
 
-      @include ie-lte(8) {
-        @include ie-clearfix;
-      }
-
       > li {
         margin-bottom: $base-spacing;
+        min-height: 17rem;
 
         @include media($tablet) {
           @include span-columns(6 of 12);
@@ -160,6 +219,7 @@ main {
 
           & > h2 {
             margin-top: 0;
+            margin-bottom: $small-spacing;
           }
         }
 
@@ -361,7 +421,7 @@ details,
 
 // Custom styling for abstract
 //
-// This seems defunkt?
+// This seems defunct?
 p.abstract {
   border-bottom: none;
   padding-bottom: 0;
