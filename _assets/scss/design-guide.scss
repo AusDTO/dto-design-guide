@@ -110,6 +110,7 @@ table {
     span,
     h1 {
       font-size: rem(26);
+      line-height: $base-leading;
       display: inline-block;
       margin-top: rem(50);
       margin-left: rem(60);
