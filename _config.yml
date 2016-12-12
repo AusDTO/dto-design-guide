@@ -150,6 +150,8 @@ defaults:
     children:
       - folder: navigation
         title: Navigation
+      - folder: calendar-table
+        title: Calendar table
 
 - scope: # TEMPLATES CATEGORY
     path: _templates
