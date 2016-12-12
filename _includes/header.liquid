@@ -38,12 +38,23 @@
   {% if page.url == '/' %}
     <section class="hero">
       <div class="wrapper">
-        <h1>{{ site.title }}</h1>
-        <p class="tagline">{{ site.description }}</p>
+        <div class="page-header__logo">
+          <a href="/" class="logo">
+            <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
+              <title id="dg_logo-title" lang="en">Design Guide logo</title>
+              <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
+            </svg>
 
-        <p><small>Documents UI-Kit version <code>{% uikit_version %}</code>.</small></p>
+            <h1>{{ site.title }}</h1>
+          </a>
 
-        {% include feedback.liquid %}
+          <span class="badge--default">Draft</span>
+        </div>
+
+        <div class="site-description">
+          <p class="tagline">{{ site.description }}</p>
+          <p><small>Documents UI-Kit version <code>{% uikit_version %}</code>.</small></p>
+        </div>
       </div>
     </section>
   {% endif %}
