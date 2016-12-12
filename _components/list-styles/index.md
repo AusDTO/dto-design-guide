@@ -4,12 +4,12 @@ title: List styles
 section: List styles
 sections:
 
-- headline: Highlighted words style
-- md: Highlighted words style top
+- headline: Repeating words style
+- md: Repeating words style top
 - code:
   - scss: assets/sass/components/_lists
   - markup: lists-highlighted
-- md: Highlighted words style guidance
+- md: Repeating words style guidance
 
 - headline: Vertical style
 - md: Vertical style top
