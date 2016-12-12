@@ -7,6 +7,11 @@ layout: collections/overview
 
 The DTA Design Guide documents the design system the Digital Transformation Agency is building with the <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS and JS framework</a>.
 
+- [Foundations](/foundations/) guides how to use the core modules used by all services, including typography and grids.
+- [Components](/components/) guides how to use the UI-Kit building blocks, including forms and buttons.
+- [Patterns](/patterns/) shows how to combine UI-Kit components in ways that meet user needs, such as for navigation.
+- [Templates](/templates/) will contain examples of multiple patterns for common pages like 'Contact us'.
+
 ## Use the UI-Kit
 
 - [Read the design principles for using UI&#8209;Kit](/getting-started/design-principles/).
