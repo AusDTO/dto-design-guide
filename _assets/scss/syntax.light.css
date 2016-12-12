@@ -83,7 +83,7 @@
 }
 
 .highlighter-rouge {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
