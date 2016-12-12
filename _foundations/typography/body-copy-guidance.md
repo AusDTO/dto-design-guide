@@ -8,6 +8,7 @@
 - Avoid using **bold**. Bolding a word can help scannability. **But blocks of bold text are hard to read**.
 - Use the [kbd element to show users which keys to press](http://w3c.github.io/html/textlevel-semantics.html#the-kbd-element), for example <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 - To use an element that spans the maximum space, use the class `.content-full-width`.
+- Read more <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/s.html#structuring-a-page" rel="external">guidance on structuring body copy in the DTA Content Style Guide</a>.
 {% endcapture %}
 
 {% include guidance.liquid  content = content  ID = ID %}

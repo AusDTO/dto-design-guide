@@ -7,8 +7,7 @@
 - Don't make everything into a list. Use lists only for content that really is a list.
 - Avoid second and third level nested lists.
 - Use description lists only for description. For example, a glossary of definitions.
-
-Follow the [DTO Content Style Guide advice on lists](http://content-style-guide.apps.staging.digital.gov.au/az-indexes/b.html#bullet-point-lists).
+- Read more <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/b.html#bullet-point-lists" rel="external">guidance on lists in the DTA Content Style Guide</a>.
 {% endcapture %}
 
 {% include guidance.liquid  content = content  ID = ID %}
