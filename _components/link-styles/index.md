@@ -17,7 +17,7 @@ sections:
     - markup: groups-links
   - md: Special link blocks guidance
 
-  - headline: In-page tabs
+  - headline: In-page tabs (experimental)
   - md: In-page tabs top
   - code:
     - scss: assets/sass/components/_navigation
