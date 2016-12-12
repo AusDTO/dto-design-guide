@@ -195,48 +195,47 @@ main {
     }
   }
 
-  &.homepage {
-    .collection-listing {
-      @include ie-clearfix;
+  // Homepage collection listing nav.
+  .collection-listing {
+    @include ie-clearfix;
 
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-      > li {
-        margin-bottom: $base-spacing;
-        min-height: 17rem;
+    > li {
+      margin-bottom: $base-spacing;
+      min-height: 17rem; // more magic numbers
 
-        @include media($tablet) {
-          @include span-columns(6 of 12);
-          @include omega(2n);
+      @include media($tablet) {
+        @include span-columns(6 of 12);
+        @include omega(2n);
 
-          @include ie-lte(8) {
-            width: 45%;
-          }
-
-          padding-left: $medium-spacing;
-          border-left: 1px solid $border-colour;
-
-          & > h2 {
-            margin-top: 0;
-            margin-bottom: $small-spacing;
-          }
+        @include ie-lte(8) {
+          width: 45%;
         }
 
-        @include media($desktop) {
-          @include omega-reset(2n);
-          @include span-columns(4 of 12);
-          @include omega(3n);
+        padding-left: $medium-spacing;
+        border-left: 1px solid $border-colour;
 
-          @include ie-lte(8) {
-            width: 30%;
-          }
-        }
-
-        & > h2:first-of-type {
+        & > h2 {
           margin-top: 0;
+          margin-bottom: $small-spacing;
         }
+      }
+
+      @include media($desktop) {
+        @include omega-reset(3n);
+        @include span-columns(4 of 12);
+        @include omega(3n);
+
+        @include ie-lte(8) {
+          width: 30%;
+        }
+      }
+
+      & > h2:first-of-type {
+        margin-top: 0;
       }
     }
   }
