@@ -12,7 +12,7 @@ general:
 
 dependencies:
   pre:
-    npm i kss@3.0.0-beta.16
+    - npm i kss@3.0.0-beta.16
   override:
     - bin/ciprepare.sh
 
