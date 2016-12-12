@@ -34,7 +34,8 @@ main() {
       git submodule init
       git submodule update
       INSTALL_DIR="`printf $(git submodule | awk '{ printf $2 }')`"
-      npm --prefix ${INSTALL_DIR} install ${INSTALL_DIR}
+      # npm --prefix ${INSTALL_DIR} install ${INSTALL_DIR}
+      npm i
       npm start
       echo "Building with normal jekyll config"
       bundle exec jekyll build
