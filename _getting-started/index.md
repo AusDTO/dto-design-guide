@@ -5,7 +5,7 @@ layout: collections/overview
 
 <p class="abstract">How to start building Australian Government services with UI-Kit.</p>
 
-The DTA Design Guide documents the design system and branding the Digital Transformation Agency is building with the <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS and JS framework</a>.
+The DTA Design Guide documents the design system the Digital Transformation Agency is building with the <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS and JS framework</a>.
 
 ## Use the UI-Kit
 
