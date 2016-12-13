@@ -1,6 +1,7 @@
-<details open data-label="text-input-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for text input</span></summary>
-  <div class="accordion-panel">
-    Trigger the iPhone numpad using <code>pattern="[0-9]*"</code> attribute in the input element. Don't add a <code>type</code> attribute.
-  </div>
-</details>
+{% assign ID = "text-input" %}
+
+{% capture content %}
+Trigger the iPhone numpad using `pattern="[0-9]*"` attribute in the input element. Don't add a `type` attribute.
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}

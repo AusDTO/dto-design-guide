@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<main role="main" class="homepage">
+
+
+  <nav aria-label="main navigation">
+
+    <ul class="collection-listing">
+      {% comment %}
+        Much like for the site-nav/global nav, and like the logic of the
+        breadcrumbs, we’re iterating through all collections and fetching their
+        titles and abstracts.
+      {% endcomment %}
+      {% assign collections = site.collections | sort: "order" %}
+      {% for collection in collections %}
+        {% comment %}
+          This unless is here currently because there is a mystery/ghost
+          collection, with a value of nil. Any ideas?
+        {% endcomment %}
+        {% unless collection.title == nil %}
+        <li>
+          <h2>{{ collection.title }}</h2>
+          <p>{{ collection.abstract }}</p>
+          <p><a href="/{{ collection.title | slugify }}/" role="button">View {{ collection.title | downcase }}</a></p>
+        </li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {{ content }}
+
+</main>

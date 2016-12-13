@@ -3,4 +3,9 @@ title: Templates
 layout: collections/overview
 ---
 
-This is the overview page for the Templates collection.
+We are working on templates for common pages, such as:
+
+- contact us
+- media releases
+- home/landing page
+- generic content page.

@@ -1,10 +1,11 @@
 # SITE SETTINGS
 title: DTA Design Guide
-description: A design guide for building government services with <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS framework</a>.
+description: A design guide for building Australian Government services with <a href="https://github.com/AusDTO/gov-au-ui-kit" rel="external">UI-Kit CSS framework</a>.
 github_url: https://github.com/AusDTO/dto-design-guide
 #google_analytics: UA-72255206-3
 
 # UI Kit URL for javascript includes
+uikit_github_url: https://github.com/AusDTO/gov-au-ui-kit
 uikit_base_url: https://gov-au-ui-kit.apps.staging.digital.gov.au/
 
 # Markdown flavor
@@ -41,15 +42,15 @@ gems:
 # Asset sources
 # More info: https://github.com/jekyll/jekyll-assets
 assets:
-  compress:
-    css: true
   assets:
     - "*.png"
     - "*.gif"
+    - "*.svg"
   sources:
     - _assets/scss
     - _assets/vendor/dto-ui-kit/assets/sass/ui-kit
     - _assets/img
+    - _assets/js
 
 
 # Highlight engine
@@ -67,27 +68,27 @@ collections:
   getting-started:
     output: true
     title: "Getting started"
-    abstract: "TBC."
+    abstract: "Design system principles and basics for designers and developers."
     order: 0
   foundations:
     output: true
     title: "Foundations"
-    abstract: "TBC."
+    abstract: "Guidance on the UI-Kit core modules: typography, layout and colours."
     order: 1
   components:
     output: true
     title: "Components"
-    abstract: "TBC."
+    abstract: "How to use the building blocks of UI‑Kit: forms and buttons, list styles, accordions, badges and tables."
     order: 2
   patterns:
     output: true
     title: "Patterns"
-    abstract: "TBC."
+    abstract: "We are building a library of patterns that meet user needs. Find guidance on global, local and inline navigation."
     order: 3
   templates:
     output: true
     title: "Templates"
-    abstract: "TBC."
+    abstract: "We are working on templates for common types of service pages."
     order: 4
 
 
@@ -147,6 +148,8 @@ defaults:
     children:
       - folder: navigation
         title: Navigation
+      - folder: calendar-table
+        title: Calendar table
 
 - scope: # TEMPLATES CATEGORY
     path: _templates

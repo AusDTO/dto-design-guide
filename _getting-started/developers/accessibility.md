@@ -1,32 +1,17 @@
+UI-Kit aims to be WCAG2 AA compliant, and AAA where possible and appropriate.
+
 Run accessibility tests:
 
-```
+{% highlight shell %}
 npm test
-```
+{% endhighlight %}
 
-Check [Pa11y's requirements](https://github.com/pa11y/pa11y#requirements) to use automated accessibility testing.
+These tests are part of our build process.
 
+We use <a href="https://github.com/pa11y/pa11y" rel="external">Pa11y</a> for the automated testing. Pa11y uses <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>. We also use HTML_CodeSniffer for manual testing.
 
+We use an automated accessibility testing to catch common mistakes. Automated testing is not a substitution for testing with users.
 
-UI Kit aims to be WCAG2 AA compliant, and AAA where possible.
+Where possible we test with users. These tests are usually on products that use the UI-Kit, because it is difficult to test components and patterns in isolation.
 
-We use automated testing:
-- WCAG 2.0 criteria using <a href="http://squizlabs.github.io/HTML_CodeSniffer/" rel="external">HTML_CodeSniffer</a>
-- HTML validation using <a href="http://validator.github.io/validator/" rel="external">Nu HTML Checker</a>.
-
-We are working on:
-- manual evaluation using <a href="http://wave.webaim.org/" rel="external">Wave by WebAIM</a>
-- manual checking of page structure, content and keyboard navigation
-- testing with users and assistive technologies
-- an audit.
-
-### Browser support
-Read [cross browser and device support](BROWSER-SUPPORT.md) table.
-
-The kit uses a [conditional styling mixin for specific versions of IE](https://github.com/AusDTO/gov-au-ui-kit/tree/develop/assets/sass/_ie.scss). Use this when extending the kit.
-
-We are working on:
-
-- automated browser testing as part of our build process
-- manual testing of all CSS, JS and markup
-- documenting browser support for each component.
+We plan to audit UI-Kit.

@@ -3,4 +3,10 @@ title: Patterns
 layout: collections/overview
 ---
 
-This is the overview page for the Patterns collection.
+<p class="abstract">How to combine components to meet user needs.</p>
+
+Guidance on:
+- using site, local and contents navigation
+- tables for showing date information.
+
+We are working on more patterns.

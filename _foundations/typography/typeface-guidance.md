@@ -1,12 +1,13 @@
-<details open data-label="typeface-guidance-accordion" aria-expanded="true">
-  <summary>Guidance<span class="visuallyhidden"> for typeface</span></summary>
-  <div class="accordion-panel">
-    <ul>
-      <li>Use just 1 sans serif font (Open Sans).</li>
-      <li>Include Open Sans by calling <a href="https://github.com/typekit/webfontloader" rel="external">Web Font Loader</a> in the <code>head</code>.</li>
-      <li>Set <code>line-height</code> (leading) to at least 1.5 (UI-Kit uses 1.6).</li>
-      <li>UI-Kit applies a maximum width of 38 rem (about 70 characters) to typographic elements in the main content container (<code>h1</code>-<code>h5</code>, <code>p</code>, <code>li</code> and <code>dl</code>). This gives a <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-reading" rel="external">readable line length</a>.</li>
-      <li>Don’t apply a <code>font-size</code> to a container element (for example, a <code>footer</code>).</li>
-    </ul>
-  </div>
-</details>
+{% assign ID = "typeface" %}
+
+{% capture content %}
+- Use just 1 sans-serif font (Open Sans). Open Sans is a sans-serif font selected for accessibility and readability.
+- Include Open Sans by calling <a href="https://github.com/typekit/webfontloader" rel="external">Web Font Loader</a> in the HTML `head`.
+- Refer to the `$base-sans-serif` variable to access the sans-serif font-stack.
+- Use monospace fonts only for numeric data in tables or for code snippets.
+- Set `line-height` (leading) to at least 1.5 (UI-Kit uses 1.6). Use 'unitless' line-heights. These act as a multiplier of the font-size.
+- UI-Kit applies a maximum width of 38 rem (about 70 characters) to typographic elements in the main content container (`h1`–`h5`, `p`, `li` and `dl`). This gives a <a href="https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-length-measure-and-readin" rel="external">readable line length</a>.
+- Don’t apply a `font-size` to a container element (for example, a `footer`); apply them to the content elements directly.
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}

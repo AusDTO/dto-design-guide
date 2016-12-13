@@ -3,4 +3,10 @@ title: Components
 layout: collections/overview
 ---
 
-This is the overview page for the Components collection.
+<p class="abstract">How to use the UI&#8209;Kit building blocks.</p>
+
+Guidance on:
+- form elements and controls
+- styles for lists of links and other content
+- accordions and status badges
+- data tables.
