@@ -1,10 +1,10 @@
-<details open data-label="footer-navigation-guidance-accordion" aria-expanded="true">
-  <summary>Guidance<span class="visuallyhidden"> for footer navigation</span></summary>
-  <div class="accordion-panel">
-    <p>UI-Kit uses CSS Flexboxes to provide a horizontal list of links:</p>
-    <ul>
-      <li>2 columns for <code>$mobile</code> and <code>$tablet</code> breakpoints</li>
-      <li>4 columns for <code>$desktop</code> breakpoint.</li>
-    </ul>
-</div>
-</details>
+{% assign ID = "footer-navigation" %}
+
+{% capture content %}
+UI-Kit uses CSS Flexboxes to provide a horizontal list of links:
+
+- 2 columns for `$mobile` and `$tablet` breakpoints
+- 4 columns for `$desktop` breakpoint.
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}

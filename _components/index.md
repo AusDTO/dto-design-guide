@@ -3,9 +3,9 @@ title: Components
 layout: collections/overview
 ---
 
-<p class="abstract">How to use the building blocks of UI&#8209;Kit.</p>
+<p class="abstract">How to use the UI&#8209;Kit building blocks.</p>
 
-This section provides guidance on:
+Guidance on:
 - form elements and controls
 - styles for lists of links and other content
 - accordions and status badges

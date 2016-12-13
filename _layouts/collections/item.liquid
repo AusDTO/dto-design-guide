@@ -41,7 +41,7 @@ layout: section
   {% endcomment %}
   {% if headlines > 1 %}
     <nav class="index-links">
-      <h2>Contents</h2>
+      <h2 id="index-links">Contents</h2>
       <ul>
         {{ navigation }}
       </ul>
@@ -57,17 +57,19 @@ layout: section
 {% for page_section in page.sections %}
 
   {% comment %}
-    Display a headline only if we have more than one on the page
+    Display a headline and the back to contents link
     We also save the headline for later possible use in our "code" section
   {% endcomment %}
   {% if page_section.first[ 0 ] == 'headline' %}
     {% assign headline = page_section.first[ 1 ] %}
 
-    {% if headlines > 1 %}
-      <h2 id="{{ headline | slugify }}">
-        <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
-      </h2>
-    {% endif %}
+    {% unless forloop.first %}
+      <span class="back-to-index-link"><a href="#index-links">Back to contents &uarr;</a></span>
+    {% endunless %}
+
+    <h2 id="{{ headline | slugify }}">
+      <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
+    </h2>
 
     {% continue %}
   {% endif %}

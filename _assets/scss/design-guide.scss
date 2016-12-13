@@ -23,6 +23,31 @@ table {
 }
 
 
+// Some spritesheet svg/png icon things.
+//
+// The class implementation here could be buggy -- might need to target the SVGs
+// directly.
+.icon-inline {
+  margin-right: $tiny-spacing;
+}
+
+.fa-envelope-o {
+  width: rem(22);
+  height: rem(17);
+  vertical-align: middle;
+}
+
+.fa-github {
+  width: rem(22);
+  height: rem(22);
+  vertical-align: text-bottom;
+}
+
+// Custom styling for the inverted feedback button in the header.
+// This will likely be removed/replaced by a global site search.
+// The @extend .inverted is not working in:
+// https://github.com/AusDTO/gov-au-ui-kit/blob/master/assets/sass/components/_page-header.scss#L288
+
 .hero {
   padding-top: 0;
 
@@ -250,6 +275,8 @@ main {
   //
   // Might want to consider moving this into UI-Kit in the future.
   h2[id] {
+    // @include clearfix;
+
     .headline-slug-link {
       border-bottom: none;
       position: relative;
@@ -269,6 +296,13 @@ main {
         }
       }
     }
+  }
+
+  .back-to-index-link {
+    display: block;
+    font-size: $small-font-size;
+    float: right;
+    margin-top: rem(82);
   }
 
   // Custom styling for sidebar
@@ -295,37 +329,65 @@ main {
   }
 }
 
-// Custom styling for the rendered example and code blocks.
+// Styling for code blocks outside of the rendered + HTML code examples.
+.highlight {
+  pre {
+    overflow: auto;
+    white-space: pre;
 
+    code {
+      font-size: rem(14);
+    }
+
+    .language-shell {
+      display: block;
+      margin-bottom: $base-spacing;
+      font-size: rem(15);
+    }
+  }
+}
+
+
+// Custom styling for the rendered example and code blocks.
+//
 // Extract the repeating bits plz
 .guide-example {
-  border: solid $guide-eg-border-width $lighter-grey;
-  border-radius: $base-border-radius;
-  margin: $base-spacing 0;
   padding-top: 0;
 
   .guide-example--heading {
-    @extend .content-full-width;
-
     margin: 0;
-    background-color: $lighter-grey;
-    padding: $small-spacing $medium-spacing;
+    display: inline;
 
     span {
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       font-size: $smaller-font-size;
-      color: $grey;
     }
   }
 
   .guide-example--rendered {
+    position: relative;
+    border: solid 2px $non-white;
     margin: ($base-spacing * 1.5) 0;
-    padding: 0 ($medium-spacing + $small-spacing);
+    padding: rem(75) ($medium-spacing + $small-spacing) rem(30) ($medium-spacing + $small-spacing);
+
+    .guide-example--rendered--heading {
+      position: absolute;
+      top: -22px;
+      left: 0;
+      font-weight: normal;
+      background-color: $non-white;
+      font-size: $small-font-size;
+      padding: $tiny-spacing $small-spacing;
+    }
+
+    // This ensures that we don’t allow rendered examples to overflow their
+    // containing boxes.
+    .wrapper {
+      box-sizing: border-box;
+      min-width: 0;
+    }
   }
 
-  figure {
+  .highlight {
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
 
@@ -334,11 +396,8 @@ main {
 
       margin: 0;
       padding-top: $medium-spacing;
-      padding-left: ($medium-spacing + $small-spacing);
+      // padding-left: ($medium-spacing + $small-spacing);
       padding-right: $small-spacing;
-      font-size: rem(16);
-      overflow: auto;
-      white-space: pre;
     }
   }
 
@@ -357,11 +416,31 @@ main {
     }
   }
 
+  .guide-example--code-accordion {
+    .accordion-panel {
+      padding-right: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
+    .guide-example--html-copy,
+    .guide-example--code {
+      margin: 0 $base-spacing;
+    }
+
+    .guide-example--html-copy {
+      @include button-colours(transparent, $dark-aqua, $dark-aqua, $dark-aqua, $non-white);
+
+      button {
+        font-size: $small-font-size;
+        border-radius: $base-border-radius;
+      }
+    }
+  }
+
   .guide-example--meta {
-    padding: $medium-spacing ($medium-spacing + $small-spacing);
-    border-bottom-left-radius: $base-border-radius;
-    border-bottom-right-radius: $base-border-radius;
-    border-top: solid $guide-eg-border-width $lighter-grey;
+    background-color: $lighter-grey;
+    padding: $medium-spacing $base-spacing;
 
     .guide-example--html-copy {
       @include button-colours(transparent, $dark-aqua, $dark-aqua, $dark-aqua, $non-white);
@@ -376,14 +455,6 @@ main {
 
     .guide-example--cite {
       font-size: $small-font-size;
-
-      svg,
-      img {
-        width: rem(22);
-        height: rem(22);
-        margin-right: $tiny-spacing;
-        vertical-align: text-bottom;
-      }
     }
   }
 }

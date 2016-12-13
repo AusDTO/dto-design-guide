@@ -1,6 +1,7 @@
-<details open data-label="site-navigation-guidance-accordion" aria-expanded="true">
-  <summary>Guidance<span class="visuallyhidden"> for site navigation</span></summary>
-  <div class="accordion-panel">
-  Include skip links between the opening of the <code>&lt;body&gt;</code> and the page <code>&lt;header&gt;</code>.
-</div>
-</details>
+{% assign ID = "skip-links" %}
+
+{% capture content %}
+Include skip links between the opening of the `<body>` and the page `<header>`.
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}

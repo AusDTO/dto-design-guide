@@ -3,9 +3,9 @@ title: Foundations
 layout: collections/overview
 ---
 
-<p class="abstract">Guidance on the UI&#8209;Kit core modules.</p>
+<p class="abstract">The core modules all services need.</p>
 
-This section provides guidance on:
+Start here with:
 
 - typeface and styling for basic HTML elements including headings, links and lists
 - how to use the UI&#8209;Kit grid to lay out content

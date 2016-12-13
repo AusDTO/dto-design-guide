@@ -4,12 +4,12 @@ title: List styles
 section: List styles
 sections:
 
-- headline: Highlighted words style
-- md: Highlighted words style top
+- headline: Repeating words style
+- md: Repeating words style top
 - code:
   - scss: assets/sass/components/_lists
   - markup: lists-highlighted
-- md: Highlighted words style guidance
+- md: Repeating words style guidance
 
 - headline: Vertical style
 - md: Vertical style top
@@ -28,9 +28,16 @@ sections:
 - headline: Small list style
 - md: Small list style top
 - code:
-  - scss: assets/sass/components/_lists
+  - scss: assets/sass/components/_list
   - markup: lists-small
 - md: Small list style guidance
+
+- headline: See more link
+- md: See more top
+- code:
+  - scss: assets/sass/components/_lists
+  - markup: see-more-link
+- md: See more guidance
 ---
 
 <p class="abstract">Styles for lists of content.</p>

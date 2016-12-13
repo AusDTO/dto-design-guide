@@ -3,8 +3,10 @@ title: Patterns
 layout: collections/overview
 ---
 
-<p class="abstract">A library of patterns that meet user needs.</p>
+<p class="abstract">How to combine components to meet user needs.</p>
 
-This section provides guidance on navigation: site, local and inline.
+Guidance on:
+- using site, local and contents navigation
+- tables for showing date information.
 
 We are working on more patterns.

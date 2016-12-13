@@ -1,14 +1,13 @@
-<details open data-label="lists-guidance-accordion" aria-expanded="false">
-  <summary>Guidance <span class="visuallyhidden">for lists</span></summary>
-  <div class="accordion-panel">
-    <ul>
-      <li>Use bullet point (unordered) lists to display text in no specific order.</li>
-      <li>Use a numbered (ordered) list when you need to display text in some ranking, hierarchy or series of steps.</li>
-      <li>Write each item with the same grammar.</li>
-      <li>Don't make everything into a list. Use lists only for content that really is a list.</li>
-      <li>Avoid second and third level nested lists.</li>
-      <li>Use description lists only for description. For example, a glossary of definitions.</li>
-    </ul>
-  <p>Follow the <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/b.html#bullet-point-lists">DTO Content Style Guide advice on lists</a>.</p>
-  </div>
-</details>
+{% assign ID = "lists" %}
+
+{% capture content %}
+- Use bullet point (unordered) lists to display text in no specific order.
+- Use a numbered (ordered) list when you need to display text in some ranking, hierarchy or series of steps.
+- Write each item with the same grammar.
+- Don't make everything into a list. Use lists only for content that really is a list.
+- Avoid second and third level nested lists.
+- Use description lists only for description. For example, a glossary of definitions.
+- Read more <a href="http://content-style-guide.apps.staging.digital.gov.au/az-indexes/b.html#bullet-point-lists" rel="external">guidance on lists in the DTA Content Style Guide</a>.
+{% endcapture %}
+
+{% include guidance.liquid  content = content  ID = ID %}
