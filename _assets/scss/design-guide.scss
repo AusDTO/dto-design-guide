@@ -250,7 +250,7 @@ main {
       }
 
       @include media($desktop) {
-        @include omega-reset(3n);
+        @include omega-reset(2n);
         @include span-columns(4 of 12);
         @include omega(3n);
 
