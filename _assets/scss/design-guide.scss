@@ -659,3 +659,13 @@ p.abstract {
 .bg-light-blue {
   @include colour-palette($non-black, $light-blue);
 }
+
+
+footer[role='contentinfo'] a.footer-link[rel~='external'] { //specificity craziness :)
+  border: none;
+  margin-right: 0;
+
+  &:after {
+    display: none;
+  }
+}
