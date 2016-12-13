@@ -18,11 +18,13 @@ basicauth() {
   fi
 }
 
+basicauth $@
+
+
 # main script function
 #
 main() {
   readonly GITBRANCH="${CIRCLE_BRANCH}"
-
 
   case "${GITBRANCH}" in
     master)
