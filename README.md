@@ -17,7 +17,7 @@ Development dependencies:
 
 * Ruby (= 2.3.1)
 * jekyll (= 3.3.1)
-* Node & npm (+= 5.10)
+* Node (>= 6)
 
 Clone the repo:
 

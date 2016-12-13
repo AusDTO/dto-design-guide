@@ -1,7 +1,7 @@
 ### Dependencies
 
-- Ruby 2.3.1
-- Node.js v5.0.0+
+- `Ruby ^2.3.1`
+- `Node.js >=v6.0.0`
 
 Install dependencies:
 
@@ -9,7 +9,7 @@ Install dependencies:
 npm install
 {% endhighlight %}
 
-We use Bourbon 4.2.7. We include its `.scss` files directly rather than calling it via its node (or gem) package.
+We use Bourbon `4.2.7`. We include its `.scss` files directly rather than calling it via its node (or gem) package.
 
 Bourbon and Neat are in `/assets/sass/vendor`.
 
