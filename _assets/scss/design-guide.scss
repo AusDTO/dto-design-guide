@@ -228,9 +228,13 @@ main {
     margin: 0;
     padding: 0;
 
+    @include media($tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     > li {
       margin-bottom: $base-spacing;
-      min-height: 17rem; // more magic numbers
 
       @include media($tablet) {
         @include span-columns(6 of 12);
@@ -240,8 +244,13 @@ main {
           width: 45%;
         }
 
+        min-height: 17rem; // more magic numbers
         padding-left: $medium-spacing;
         border-left: 1px solid $border-colour;
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
         & > h2 {
           margin-top: 0;
@@ -257,10 +266,21 @@ main {
         @include ie-lte(8) {
           width: 30%;
         }
+
+        display: flex;
+        flex-direction: column;
       }
 
       & > h2:first-of-type {
         margin-top: 0;
+      }
+    }
+
+    @include media($tablet) {
+      .collection-listing-btn {
+        margin-top: auto;
+        text-align: center;
+        width: 70%;
       }
     }
   }
