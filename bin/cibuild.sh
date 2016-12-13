@@ -20,7 +20,7 @@ main() {
       git submodule update                                                  # Updating submodule
       npm i                                                                 # Installing dependencies for our build
       npm start                                                             # Starting build
-      bundle exec jekyll build --config _config.yml,_config-production.yml  # JEKYLL_ENV=production bundle exec jekyll build
+      bundle exec jekyll build --config _config.yml,_config-production.yml  # Building jekyll with two configs
       ;;
     *)
       echo "Building with develop jekyll config"
@@ -28,7 +28,7 @@ main() {
       git submodule update                                               # Updating submodule
       npm i                                                              # Installing dependencies for our build
       npm start                                                          # Starting build
-      bundle exec jekyll build --config _config.yml,_config-develop.yml  # JEKYLL_ENV=production bundle exec jekyll build
+      bundle exec jekyll build --config _config.yml,_config-develop.yml  # Building jekyll with two configs
       ;;
   esac
 }
