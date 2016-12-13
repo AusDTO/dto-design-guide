@@ -1,0 +1,5 @@
+# Asset sources
+# More info: https://github.com/jekyll/jekyll-assets
+assets:
+  compress:
+    css: true
