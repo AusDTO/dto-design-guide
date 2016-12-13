@@ -1,6 +1,12 @@
 {% include templates/skip-link.html %}
 
 <header role="banner">
+  {% comment %}
+    This is the (internal) site logo and site-nav.
+
+    Logic: only show if it isn’t the homepage.
+  {% endcomment %}
+  {% if page.url != '/' %}
   <section class="page-header">
     <div class="wrapper">
       <div class="page-header__logo">
@@ -22,19 +28,33 @@
 
     </div>
   </section>
+  {% endif %}
 
   {% comment %}
-    Only show if this is the homepage
+    This is the homepage header hero.
+
+    Logic: only show if this is the homepage.
   {% endcomment %}
   {% if page.url == '/' %}
     <section class="hero">
       <div class="wrapper">
-        <h1>{{ site.title }}</h1>
-        <p class="tagline">{{ site.description }}</p>
+        <div class="page-header__logo">
+          <a href="/" class="logo">
+            <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
+              <title id="dg_logo-title" lang="en">Design Guide logo</title>
+              <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
+            </svg>
 
-        <p><small>Documents UI-Kit version <code>{% uikit_version %}</code>.</small></p>
+            <h1>{{ site.title }}</h1>
+          </a>
 
-        {% include feedback.liquid %}
+          <span class="badge--default">Draft</span>
+        </div>
+
+        <div class="site-description">
+          <p class="tagline">{{ site.description }}</p>
+          <p><small>Documents UI-Kit version <code>{% uikit_version %}</code>.</small></p>
+        </div>
       </div>
     </section>
   {% endif %}
