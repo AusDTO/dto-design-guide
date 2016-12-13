@@ -1,4 +1,4 @@
-<p class="abstract">All navigation must be keyboard accessible and include ARIA tags.</p>
+<p class="abstract">All navigation must be keyboard accessible and include <a href="https://www.w3.org/WAI/intro/aria" rel="external">ARIA tags</a>.</p>
 - Use the `<nav>` element for navigation controls.
 - Use the given state classes to show which page the user is on.
 - Use short navigation links. They don't have to be the full page title.
