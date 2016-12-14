@@ -16,7 +16,7 @@ The DTA Design Guide documents the design system the Digital Transformation Agen
 
 - [Design principles for using UI&#8209;Kit](/getting-started/design-principles/).
 - [Develop with UI-Kit](/getting-started/developers/).
-- Use the DTA Design Guide with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">Content Style Guide for writing</a>.
+- Use the DTA Design Guide with the <a href="http://content-style-guide.apps.staging.digital.gov.au/" rel="external">DTA Content Style Guide for writing</a>.
 
 ## Get help
 
