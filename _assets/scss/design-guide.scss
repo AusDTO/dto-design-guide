@@ -661,11 +661,6 @@ p.abstract {
 }
 
 
-footer[role='contentinfo'] a.footer-link[rel~='external'] { //specificity craziness :)
-  border: none;
-  margin-right: 0;
-
-  &:after {
-    display: none;
-  }
+footer[role='contentinfo'] .footer-links a.footer-link {
+  display: inline;
 }

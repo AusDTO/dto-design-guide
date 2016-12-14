@@ -1,5 +1,10 @@
 # DTA Design Guide
 
+[![Build passing/failing](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
+[![license link](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/AusDTO/dto-design-guide/master/README.md)
+[![Latest release](https://img.shields.io/github/release/AusDTO/gov-au-ui-kit.svg?maxAge=1209600)](https://github.com/AusDTO/gov-au-ui-kit/releases)
+
+
 How to use the UI-Kit CSS framework to build accessible and usable sites.
 
 ---
