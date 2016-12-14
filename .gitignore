@@ -25,3 +25,6 @@ _assets/scss/.sass-lint.yml
 *.sublime-project
 *.sublime-workspace
 
+### Yarn ###
+yarn.lock
+

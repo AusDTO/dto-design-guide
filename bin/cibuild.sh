@@ -1,19 +1,36 @@
 #!/usr/bin/env bash
 
-# Fail fast and be aware of exit codes
-set -eo pipefail
+# Exit immediately if there is an error
+set -e
 
-# Install bundler conservatively
-gem install --conservative bundler
+# cause a pipeline (for example, curl -s http://sipb.mit.edu/ | grep foo) to produce a failure
+# return code if any command errors not just the last command of the pipeline.
+set -o pipefail
 
-# Use bundle to install dependencies
-bundle install
+# echo out each line of the shell as it executes
+set -x
 
-# Initalises install and seed tasks (pulls UI-Kit as a submodule)
-bundle exec rake init
+main() {
+  readonly GITBRANCH="${CIRCLE_BRANCH}"
 
-# Run Jekyll hyde (lint)
-#bundle exec jekyll hyde
+  case "${GITBRANCH}" in
+    master)
+      echo "Building with production jekyll config"
+      git submodule init                                                    # Pulling submodule
+      git submodule update                                                  # Updating submodule
+      npm i                                                                 # Installing dependencies for our build
+      npm start                                                             # Starting build
+      bundle exec jekyll build --config _config.yml,_config-production.yml  # Building jekyll with two configs
+      ;;
+    *)
+      echo "Building with develop jekyll config"
+      git submodule init                                                 # Pulling submodule
+      git submodule update                                               # Updating submodule
+      npm i                                                              # Installing dependencies for our build
+      npm start                                                          # Starting build
+      bundle exec jekyll build --config _config.yml,_config-develop.yml  # Building jekyll with two configs
+      ;;
+  esac
+}
 
-# Run Jekyll
-bundle exec jekyll build
+main $@

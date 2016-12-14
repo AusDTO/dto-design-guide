@@ -1,4 +1,4 @@
-# DTO Design Guide
+# DTA Design Guide
 
 How to use the UI-Kit CSS framework to build accessible and usable sites.
 
@@ -9,39 +9,52 @@ How to use the UI-Kit CSS framework to build accessible and usable sites.
 1. [Contributing](#contributing)
 1. [Copyright & license](#copyright--license)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Development
 
 Development dependencies:
 
 * Ruby (= 2.3.1)
-* Node & npm (+= 5.10)
+* jekyll (= 3.3.1)
+* Node (>= 6)
 
 Clone the repo:
 
-```
+```shell
 git clone https://github.com/AusDTO/dto-design-guide.git
+git submodule init
+git submodule update
 ```
 
 Install dependencies and set up project:
 
-```
+```shell
 cd dto-design-guide
-bundle install && bundle exec rake init
+bundle install && yarn
 ```
 
-**Note:** If you see the error `bundle: command not found`, run `gem install bundler` then try again.
+To generate the `uikit.json` and move the template files run this.
+_(You only have to run this once after initial pulling or after the submodule version has changed)_
+
+```shell
+npm start
+```
 
 Fire up Jekyll:
 
-```
-bundle exec jekyll serve
+```shell
+jekyll serve --watch --incremental
 ```
 
 Open the site at [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Updating content from UI-Kit
 
-This guide includes the [UI-Kit](https://github.com/AusDTO/gov-au-ui-kit) as a [git submodule](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules) to `_assets/vendor/dto-ui-kit`.
+This guide includes the [UI-Kit](https://github.com/AusDTO/gov-au-ui-kit) as a
+[git submodule](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#submodules) to `_assets/vendor/dto-ui-kit`.
 
 ```
 ├── _assets
@@ -49,18 +62,23 @@ This guide includes the [UI-Kit](https://github.com/AusDTO/gov-au-ui-kit) as a [
 │       └── dto-ui-kit
 ```
 
-There are two Rake tasks available for interacting with UI-Kit: `uikit:install` sets up the submodule and installs UI-Kit's npm dependencies. `uikit:json_comments` pulls out the KSS comments from UI-Kit's SASS files and adds it to the `_data` directory for Jekyll to use. It also copies UI-Kit's HTML template files into the `_includes` directory.
+The node script in `./generate-json.js` will be run with `npm start` and extracts out all template files and puts them into the `_includes/templates` folder
+for jekyll to reuse. The script also generates the `_data/uikit.json` after it parses the ui kit via [KSS](https://github.com/kneath/kss).
 
 ```
 ├── _data
-│   └── data-sections.json
+│   └── uikit.json
 ├── _includes
 │   └── templates
 ```
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Contributing
 
-Open an issue first to discuss potential changes/additions. We encourage you to read our [Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all contributors follow this guide we can maintain an inclusive and friendly community.
+Open an issue first to discuss potential changes/additions. We encourage you to read our
+[Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all contributors follow this guide we
+can maintain an inclusive and friendly community.
 
 ## Copyright & license
 
