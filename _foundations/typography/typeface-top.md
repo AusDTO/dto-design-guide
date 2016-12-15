@@ -1,6 +1,6 @@
 <p class="abstract">Use the <a href="https://www.google.com/fonts/specimen/Open+Sans" rel="external">Open Sans font family</a>.</p>
 
-![Specimen of Open Sans in regular 400, bold 700 and italic 400](/assets/font-specimen.png)
+![Specimen of Open Sans in regular 400, bold 700 and italic 400]({{ site.baseurl }}/assets/font-specimen.png)
 
 <!-- <p style="font-size:5em">Aa <strong>Aa</strong> <em>Aa</em></p> -->
 

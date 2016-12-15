@@ -23,7 +23,7 @@ layout: default
         <li>
           <h2>{{ collection.title }}</h2>
           <p>{{ collection.abstract }}</p>
-          <a class="collection-listing-btn" href="/{{ collection.title | slugify }}/" role="button">View {{ collection.title | downcase }}</a>
+          <a class="collection-listing-btn" href="{{ site.baseurl }}/{{ collection.title | slugify }}/" role="button">View {{ collection.title | downcase }}</a>
         </li>
         {% endunless %}
       {% endfor %}

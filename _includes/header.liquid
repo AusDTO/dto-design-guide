@@ -10,10 +10,10 @@
   <section class="page-header">
     <div class="wrapper">
       <div class="page-header__logo">
-        <a href="/" class="logo">
+        <a href="{{ site.baseurl }}/" class="logo">
           <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
             <title id="dg_logo-title" lang="en">Design Guide logo</title>
-            <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
+            <use xlink:href="{{ site.baseurl }}/assets/spritesheet.svg#dg_logo"/>
           </svg>
 
           <span>{{ site.title }}</span>
@@ -42,7 +42,7 @@
           <a href="/" class="logo">
             <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
               <title id="dg_logo-title" lang="en">Design Guide logo</title>
-              <use xlink:href="/assets/spritesheet.svg#dg_logo"/>
+              <use xlink:href="{{ site.baseurl }}/assets/spritesheet.svg#dg_logo"/>
             </svg>
 
             <h1>{{ site.title }}</h1>
@@ -63,35 +63,37 @@
     Only show if this if it isn’t the homepage.
   {% endcomment %}
   {% unless page.url == '/' %}
-  <nav class="breadcrumbs" aria-label="breadcrumb">
-    {% comment %}
-      Our breadcrumb logic is very simple, and runs 2-tiers deep. It assumes the
-      usage of Jekyll Collections: https://jekyllrb.com/docs/collections
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      {% comment %}
+        Our breadcrumb logic is very simple, and runs 2-tiers deep. It assumes the
+        usage of Jekyll Collections: https://jekyllrb.com/docs/collections
 
-      The capture is only done for brevity and future re-use.
+        The capture is only done for brevity and future re-use.
 
-      The if condition sets the page title to ‘Overview’ if it’s the index page
-      for its page.parent.
-    {% endcomment %}
-    {% capture page_title_slugified %}{{ page.title | slugify }}{% endcapture %}
-    <div class="wrapper">
-      <ul>
-        <li><a href="/">Home</a></li>
-        {% for collection in site.collections %}
-          {% if collection.label == page.parent %}
-            <li><a href="/{{ page.parent }}">{{ collection.title }}</a></li>
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        <li>
-          {% if page_title_slugified == page.parent %}
-            Overview
-          {% else %}
-            {{ page.title }}
-          {% endif %}
-        </li>
-      </ul>
-    </div>
-  </nav>
+        The if condition sets the page title to ‘Overview’ if it’s the index page
+        for its page.parent.
+      {% endcomment %}
+      {% capture page_title_slugified %}{{ page.title | slugify }}{% endcapture %}
+      <div class="wrapper">
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Home</a></li>
+
+          {% for collection in site.collections %}
+            {% if collection.label == page.parent %}
+              <li><a href="{{ site.baseurl }}/{{ page.parent }}">{{ collection.title }}</a></li>
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          <li>
+            {% if page_title_slugified == page.parent %}
+              Overview
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </nav>
   {% endunless %}
 </header>

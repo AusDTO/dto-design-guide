@@ -4,9 +4,10 @@
       {% comment %}
         Build current URL
       {% endcomment %}
-      {% capture thisURL %}/{{ page.parent }}/index.html{% endcapture %}
+      {% capture thisURL %}{{ site.baseurl }}/{{ page.parent }}/index.html{% endcapture %}
+      {% assign thisIteration = page.url | prepend: site.baseurl %}
 
-      <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active is-current"{% endif %}>
+      <a href="{{ thisURL }}"{% if thisURL == thisIteration %} class="is-active is-current"{% endif %}>
         Overview
       </a>
     </li>
@@ -15,9 +16,10 @@
       Page sections as ordered inherited from our config file _config.yml
     {% endcomment %}
     {% for page_section in page.children %}
-      {% capture thisURL %}/{{ page.parent | slugify }}/{{ page_section.folder | slugify }}/index.html{% endcapture %}
+      {% capture thisURL %}{{ site.baseurl }}/{{ page.parent | slugify }}/{{ page_section.folder | slugify }}/index.html{% endcapture %}
+      {% assign thisIteration = page.url | prepend: site.baseurl %}
       <li>
-        <a href="{{ thisURL }}"{% if thisURL == page.url %} class="is-active is-current"{% endif %}>
+        <a href="{{ thisURL }}"{% if thisURL == thisIteration %} class="is-active is-current"{% endif %}>
           {{ page_section.title }}
         </a>
       </li>
