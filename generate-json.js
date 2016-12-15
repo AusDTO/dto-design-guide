@@ -178,7 +178,8 @@ GEN.copy = (() => {
 
 
       //create folder just in case this is the first time we run this
-      let script = `mkdir ${GEN.TEMPLATES}`;
+      script = `mkdir ${GEN.TEMPLATES}`;
+
       Exec(script, ( error ) => {
         if( error ) {
           GEN.log.error(`Folder already created. All good...`);
