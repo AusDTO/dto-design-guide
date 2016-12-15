@@ -27,6 +27,7 @@ main() {
       echo "Building with develop jekyll config"
       git submodule init                                                 # Pulling submodule
       git submodule update                                               # Updating submodule
+      ls _assets/vendor/dto-ui-kit/
       npm i                                                              # Installing dependencies for our build
       npm start                                                          # Starting build
       bundle exec jekyll build --config _config.yml,_config-develop.yml  # Building jekyll with two configs
