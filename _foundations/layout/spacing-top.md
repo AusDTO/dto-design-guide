@@ -1,4 +1,4 @@
-![Diagram of the layout across 16 columns](/assets/img_grid_layout.png)
+![Diagram of the layout across 16 columns]({{ site.baseurl }}/assets/img_grid_layout.png)
 
 ### Spacing
 
