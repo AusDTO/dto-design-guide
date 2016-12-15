@@ -679,3 +679,8 @@ p.abstract {
 .bg-light-blue {
   @include colour-palette($non-black, $light-blue);
 }
+
+
+footer[role='contentinfo'] .footer-links a.footer-link {
+  display: inline;
+}
