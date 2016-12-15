@@ -28,7 +28,8 @@ main() {
       git submodule update                                               # Updating submodule
       npm i                                                              # Installing dependencies for our build
       npm start                                                          # Starting build
-      bundle exec jekyll build --config _config.yml,_config-develop.yml  # Building jekyll with two configs
+                                                                         # Building jekyll with two configs plus the path variable
+      bundle exec jekyll build --config _config.yml,_config-develop.yml --destination ./_site/$CF_PATH --baseurl /$CF_PATH
       ;;
   esac
 }

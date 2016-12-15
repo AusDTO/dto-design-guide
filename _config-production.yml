@@ -1,9 +1,3 @@
-# Change destination folder for prod only
-destination: ./_site/design-guide
-
-# Path variable
-baseurl: /design-guide
-
 # Asset sources
 # More info: https://github.com/jekyll/jekyll-assets
 assets:
