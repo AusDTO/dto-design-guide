@@ -177,6 +177,18 @@ GEN.copy = (() => {
       });
 
 
+      //create folder just in case this is the first time we run this
+      let script = `mkdir ${GEN.TEMPLATES}`;
+      Exec(script, ( error ) => {
+        if( error ) {
+          GEN.log.error(`Folder already created. All good...`);
+          return;
+        }
+
+        GEN.log.success(`successfully created the folder: ${GEN.TEMPLATES}/`);
+      });
+
+
       //copy files from submodule to includes folder of jekyll
       script = `cp ${GEN.UIKIT}/${GEN.UIKIT_templates}/* ${GEN.TEMPLATES}`;
 
