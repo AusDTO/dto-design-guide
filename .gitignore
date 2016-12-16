@@ -28,3 +28,5 @@ _assets/scss/.sass-lint.yml
 ### Yarn ###
 yarn.lock
 
+## template files ##
+_includes/templates/
