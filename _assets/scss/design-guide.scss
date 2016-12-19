@@ -318,11 +318,18 @@ main {
     }
   }
 
+  .guide-example + .back-to-index-link {
+    margin-top: rem(82);
+  }
+
+  p + .back-to-index-link {
+    margin-top: rem(64);
+  }
+
   .back-to-index-link {
     display: block;
     font-size: $small-font-size;
     float: right;
-    margin-top: rem(82);
   }
 
   // Custom styling for sidebar
