@@ -21,5 +21,5 @@ The DTA Design Guide documents the design system the Digital Transformation Agen
 ## Get help
 
 - [Email the Guides team](mailto:guides@digital.gov.au).
-- Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI&#8209;Kit GitHub issue register</a>.
-- If you work in a Digital Transformation Agency team join the <a href="https://ausdto.slack.com/messages/guides-uikit/" rel="external">Slack channel #guides&#8209;uikit</a>.
+- Log an issue in the <a href="https://github.com/AusDTO/gov-au-ui-kit/issues" rel="external">UI-Kit GitHub issue register</a>.
+- If you work in a Digital Transformation Agency team join the <a href="https://ausdto.slack.com/messages/guides-uikit/" rel="external">Slack channel #guides-uikit</a>.
