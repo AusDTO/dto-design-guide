@@ -7,27 +7,27 @@
     Logic: only show if it isn’t the homepage.
   {% endcomment %}
   {% if page.url != '/' %}
-  <section class="page-header">
-    <div class="wrapper">
-      <div class="page-header__logo">
-        <a href="{{ site.baseurl }}/" class="logo">
-          <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
-            <title id="dg_logo-title" lang="en">Design Guide logo</title>
-            <use xlink:href="{{ site.baseurl }}/assets/spritesheet.svg#dg_logo"/>
-          </svg>
+    <section class="page-header">
+      <div class="wrapper">
+        <div class="page-header__logo">
+          <a href="{{ site.baseurl }}/" class="logo">
+            <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
+              <title id="dg_logo-title" lang="en">Design Guide logo</title>
+              <use xlink:href="{{ site.baseurl }}/assets/spritesheet.svg#dg_logo"/>
+            </svg>
 
-          <span>{{ site.title }}</span>
-        </a>
+            <span>{{ site.title }}</span>
+          </a>
 
-        <span class="badge--default">Draft</span>
+          <span class="badge--default">Draft</span>
+        </div>
+
+        <div class="site-nav">
+          {% include global_nav.liquid %}
+        </div>
+
       </div>
-
-      <div class="site-nav">
-        {% include global_nav.liquid %}
-      </div>
-
-    </div>
-  </section>
+    </section>
   {% endif %}
 
   {% comment %}
@@ -39,7 +39,7 @@
     <section class="hero">
       <div class="wrapper">
         <div class="page-header__logo">
-          <a href="/" class="logo">
+          <a href="{{ site.baseurl }}/" class="logo">
             <svg role="img" title="Design Guide logo" aria-labelledby="dg_logo-title">
               <title id="dg_logo-title" lang="en">Design Guide logo</title>
               <use xlink:href="{{ site.baseurl }}/assets/spritesheet.svg#dg_logo"/>
@@ -74,6 +74,7 @@
         for its page.parent.
       {% endcomment %}
       {% capture page_title_slugified %}{{ page.title | slugify }}{% endcapture %}
+
       <div class="wrapper">
         <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>
