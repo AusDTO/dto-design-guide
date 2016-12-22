@@ -7,10 +7,10 @@ To move the sidebar to the left use the class `.sidebar-has-controls` on the par
 {% highlight html %}
 <main class="sidebar-has-controls">
   <aside class="sidebar">
-    &hellip;
+    ...
   </aside>
   <article role="main" id="content" class="content-main">
-    &hellip;
+    ...
   </article>
 </main>
 {% endhighlight %}
