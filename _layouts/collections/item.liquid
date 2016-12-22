@@ -68,7 +68,7 @@ layout: section
     {% endunless %}
 
     <h2 id="{{ headline | slugify }}">
-      <a href="{{ page.url }}#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
+      <a href="{{ site.baseurl }}/{{ page.collection }}/{{ page.section | slugify }}/index.html#{{ headline | slugify }}" class="headline-slug-link">{{ headline }}</a>
     </h2>
 
     {% continue %}
