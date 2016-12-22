@@ -60,7 +60,6 @@ table {
     background-repeat: no-repeat;
     background-position: calc(100% - 50%) calc(100% - 60%);
     background-size: 70%;
-    //background-position: calc(100% - 15%) calc(100% - 25%);
 
     @include media($tablet) {
       background-position: bottom 10% left 8%;
@@ -318,11 +317,18 @@ main {
     }
   }
 
-  .guide-example + .back-to-index-link {
+  // These provide adequate margins for the back to contents links.
+  //
+  // It would be nice to improve the templates for these to have the whitespace
+  // for each of the sections handled in a more consistent manner, eg.
+  // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+  .guide-example + .back-to-index-link,
+  details + .back-to-index-link {
     margin-top: rem(82);
   }
 
-  p + .back-to-index-link {
+  p + .back-to-index-link,
+  ul + .back-to-index-link {
     margin-top: rem(64);
   }
 
