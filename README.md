@@ -87,4 +87,4 @@ can maintain an inclusive and friendly community.
 
 ## Copyright & license
 
-Copyright Digital Transformation Agency. Licensed under the [MIT license](https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md).
+© Copyright Commonwealth of Australia. Licensed under the [MIT license](https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md).
