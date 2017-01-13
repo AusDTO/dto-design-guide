@@ -62,7 +62,7 @@
   <div class="guide-colour">
     <div class="swatch bg-lighter-aqua"></div>
     <p class="text"><strong>lighter aqua</strong><br/>
-      <small><code>$lighter-aqua<br/> #5BCBE3</code></small></p>
+      <small><code>$lighter-aqua<br/> #DEF4F9</code></small></p>
   </div>
 
   <div class="guide-colour">
