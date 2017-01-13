@@ -74,7 +74,7 @@
   <div class="guide-colour">
     <div class="swatch bg-navy"></div>
     <p class="text"><strong>navy</strong><br/>
-      <small><code>$navy<br/> #224A61</code></small></p>
+      <small><code>$navy<br/> #043751</code></small></p>
   </div>
 
   <div class="guide-colour">
