@@ -8,5 +8,6 @@ layout: collections/overview
 Guidance on:
 - using site, local and contents navigation
 - tables for showing date information.
+- alerts and callouts
 
 We are working on more patterns.
