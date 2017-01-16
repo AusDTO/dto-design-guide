@@ -82,9 +82,10 @@ for jekyll to reuse. The script also generates the `_data/uikit.json` after it p
 ## Contributing
 
 Open an issue first to discuss potential changes/additions. We encourage you to read our
-[Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all contributors follow this guide we
-can maintain an inclusive and friendly community.
+[Contributor Code of Conduct](https://github.com/AusDTO/gov-au-ui-kit/blob/master/code_of_conduct.md). By ensuring that all contributors follow this guide we can maintain an inclusive and friendly community.
 
 ## Copyright & license
 
-Copyright Digital Transformation Agency. Licensed under the [MIT license](https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md).
+© Copyright Commonwealth of Australia.
+
+With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is [licensed under the MIT license](https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md).

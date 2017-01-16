@@ -150,6 +150,8 @@ defaults:
         title: Navigation
       - folder: calendar-table
         title: Calendar table
+      - folder: callouts
+        title: Callouts
 
 - scope: # TEMPLATES CATEGORY
     path: _templates
