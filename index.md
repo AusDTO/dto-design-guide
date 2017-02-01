@@ -4,7 +4,7 @@ layout: homepage
 
 ## License
 
-<a href="(https://github.com/AusDTO/gov-au-ui-kit/blob/master/LICENSE" rel="external">Licensed under the MIT license</a>.
+<a href="https://github.com/AusDTO/dto-design-guide/blob/master/LICENSE.md" rel="external">Licensed under the MIT license</a>.
 
 Some documentation was adapted from:
 - <A href="https://standards.usa.gov/" rel="external">Draft U.S. Web Design Standards</a>
