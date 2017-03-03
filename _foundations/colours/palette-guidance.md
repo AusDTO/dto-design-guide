@@ -32,7 +32,7 @@
   <div class="guide-colour">
     <div class="swatch bg-white"></div>
     <p class="text"><strong>white</strong><br/>
-      <small><code>$white<br/> #F0F3F5</code></small></p>
+      <small><code>$white<br/> #FFFFFF</code></small></p>
   </div>
 
   <div class="guide-colour">
