@@ -30,3 +30,6 @@ yarn.lock
 
 ## template files ##
 _includes/templates/
+
+## uikit2 artifacts ##
+uikit2
