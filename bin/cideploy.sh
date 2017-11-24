@@ -32,14 +32,14 @@ main() {
       cf auth $CF_USER_PROD $CF_PASSWORD_PROD
       cf target -o $CF_ORG_PROD
       cf target -s $CF_SPACE_PROD
-      cf push -f manifest-production.yml
+      cf zero-downtime-push design-guide -f manifest-production.yml
       ;;
     develop)
       cf api $CF_API_STAGING
       cf auth $CF_USER_STAGING $CF_PASSWORD_STAGING
       cf target -o $CF_ORG_STAGING
       cf target -s $CF_SPACE_STAGING
-      cf push -f manifest-develop.yml
+      cf zero-downtime-push design-guide -f manifest-develop.yml
       ;;
     *)
       echo "I do not know how to deploy that branch"
