@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-$gov-ui-kit-image-base-url: 'https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/';
+$gov-ui-kit-image-base-url: '../images/uikit/';
 
 @import '../vendor/dto-ui-kit/assets/sass/ui-kit';
 @import '../vendor/uikit2/uikit2';
