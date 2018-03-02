@@ -1,3 +1,10 @@
+# == DEPRICATED ==
+
+# This is not supported anymore. Please use https://gold.service.gov.au
+
+
+Below is for archive purpose only:
+
 # DTA Design Guide
 
 [![Build passing/failing](https://circleci.com/gh/AusDTO/gov-au-ui-kit.svg?style=shield)](https://circleci.com/gh/AusDTO/gov-au-ui-kit)
