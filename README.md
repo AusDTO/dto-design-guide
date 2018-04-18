@@ -1,6 +1,6 @@
 # == DEPRICATED ==
 
-# This is not supported anymore. Please use https://gold.service.gov.au
+# This is not supported anymore. Please use https://designsystem.gov.au
 
 
 Below is for archive purpose only:
